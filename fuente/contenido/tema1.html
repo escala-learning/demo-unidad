@@ -1,0 +1,332 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Cómo se lee <span class="sl-suave">un</span> <span class="sl-italic">tema</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal de la tabla del DI -->
+        <p class="ova-screen__lead">
+          Reconocer cada bloque de un tema por su forma y saber qué tiene que traer el
+          Word para que ese bloque pueda existir.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · en una unidad real sale de la tabla 3×2 que encabeza
+           el tema en el Word. Es la primera de las tres tarjetas violeta de la pantalla. -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Identifica qué componente le corresponde a cada bloque de un documento de
+            diseño instruccional y reconoce cuál de ellos no debería estar ahí.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · el mismo párrafo en tres envases: ordena, destaca,
+           contrasta. El texto no cambia, cambia cómo se lee
+           (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-tres-formas.svg"
+             alt="La hoja de un documento con un párrafo marcado en amarillo. De ese párrafo sale una línea que se reparte en tres bloques distintos: uno numerado que encabeza una secuencia, una tarjeta violeta destacada y un comparativo de dos columnas con un visto y una equis. El texto dentro de los tres es exactamente el mismo." />
+      </figure>
+
+      <p data-reveal>
+        Un tema Scala no es un texto corrido con subtítulos. Es una secuencia de bloques, y
+        cada bloque tiene una forma que le dice al estudiante cómo leerlo: los hay que
+        <strong>ordenan</strong> una secuencia, los que destacan lo que conviene retener y
+        los que ponen dos cosas una frente a otra. Este tema empieza por el molde que todos comparten y después recorre esas tres familias.
+      </p>
+
+      <!-- Respiro · el remate del párrafo de arriba, sacado a primer plano. Es la única
+           superficie oscura del cuerpo, y por eso funciona como pausa. -->
+      <div class="sl-respiro" data-reveal>
+        <p>Un bloque nunca cambia lo que dice el texto. Cambia <strong>cómo se lee</strong>.</p>
+      </div>
+
+      <!-- ════ Sección {{NUM}}.1 · Qué contiene siempre un tema ════ -->
+      <section class="sl-seccion" id="que-contiene" data-reveal>
+        <h2 class="sl-seccion__titulo">Qué contiene <span class="sl-suave">siempre</span> <span class="sl-italic">un tema</span></h2>
+        <p class="sl-seccion__lead">Antes de las piezas, el molde. Todo tema numerado tiene la misma cabecera y el
+          mismo primer bloque, y eso es lo que estás viendo arriba en esta pantalla.</p>
+      </section>
+
+      <p data-reveal>
+        Mira hacia arriba: el eyebrow <strong>Tema 1</strong>, el título con sus tres
+        registros, un párrafo de propósito, la tarjeta «Resultado / criterio» y una
+        ilustración a ancho completo. Ninguna de esas piezas la elige quien maqueta: son
+        el molde de un tema Scala, y el diseño instruccional las alimenta desde el Word.
+      </p>
+
+      <!-- Infografía de lista · las cinco piezas fijas de la cabecera de un tema, en el
+           orden en que aparecen. Número + rótulo + una línea de apoyo -->
+      <div class="ova-infografia" data-reveal>
+        <div class="ova-infografia__paso"><div class="ova-infografia__num">01</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:tag-outline"></iconify-icon></div><div><h3 class="ova-infografia__label">El eyebrow y el título</h3><p class="ova-infografia__desc">«Tema N» lo pone el sistema; el título es literal del Word y lleva un solo remate en itálica.</p></div></div>
+        <div class="ova-infografia__paso" style="--tinte:var(--c-info);"><div class="ova-infografia__num">02</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:text-short"></iconify-icon></div><div><h3 class="ova-infografia__label">El propósito</h3><p class="ova-infografia__desc">Un párrafo de entrada: en el Word es la fila «Propósito del tema» de la tabla que encabeza el tema.</p></div></div>
+        <div class="ova-infografia__paso"><div class="ova-infografia__num">03</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div><div><h3 class="ova-infografia__label">Resultado y criterio</h3><p class="ova-infografia__desc">La tarjeta violeta con lo que el estudiante logra; sale de la misma tabla del Word.</p></div></div>
+        <div class="ova-infografia__paso" style="--tinte:var(--c-calido);"><div class="ova-infografia__num">04</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:draw-pen"></iconify-icon></div><div><h3 class="ova-infografia__label">La ilustración de apertura</h3><p class="ova-infografia__desc">La temática principal del tema vuelta escena. La propone el agente ilustrador; el Word no la pide.</p></div></div>
+        <div class="ova-infografia__paso" style="--tinte:var(--c-info);"><div class="ova-infografia__num">05</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:format-list-bulleted-square"></iconify-icon></div><div><h3 class="ova-infografia__label">Las secciones</h3><p class="ova-infografia__desc">Cada subtema del Word es una sección con viñeta amarilla y sube al menú como sub-ítem. Sin numeral.</p></div></div>
+      </div>
+
+      <p style="margin-top:40px;" data-reveal>
+        La pieza 04 merece una línea más. La ilustración de apertura no la escribe el diseño
+        instruccional ni la dibuja el diseñador gráfico: <strong>la propone el agente
+        ilustrador</strong> a partir del concepto que da nombre al tema, con la escena
+        concreta que el Word cuenta y nada más. Por eso se lista como capa editorial y Scala
+        la valida como al resto. La que abre esta pantalla (el mismo párrafo en tres envases)
+        es una de ellas.
+      </p>
+
+      <!-- ════ Sección {{NUM}}.2 ════ -->
+      <section class="sl-seccion" id="piezas-ordenan" data-reveal>
+        <h2 class="sl-seccion__titulo">Las piezas <span class="sl-suave">que</span> <span class="sl-italic">ordenan</span></h2>
+        <p class="sl-seccion__lead">Cuando el documento enumera pasos, preguntas o criterios, la maquetación tiene
+          que decidir una sola cosa: si conviene verlos todos a la vez.</p>
+      </section>
+
+      <p data-reveal>
+        El primer componente es el <strong>stepper</strong>: una columna de pasos con su
+        número, su título y su descripción. Este de aquí abajo es uno, y lo que explica es
+        de qué está hecho.
+      </p>
+
+      <!-- Stepper · el número lo pone el componente; el título y la descripción, el Word.
+           Ningún ova-step__tag inventado ("Paso 1"): esa es justamente la regla. -->
+      <div class="ova-stepper" data-reveal>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>01</span></div>
+          <div class="ova-step__card">
+            <h3>El número lo pone el componente</h3>
+            <p>
+              No se escribe en el documento. Si el Word rotula cada paso con «Paso 1»,
+              «Paso 2», ese rótulo sobra al maquetar: el stepper ya numera, y
+              <strong>el chip repetido convierte la lista en un tartamudeo</strong>.
+            </p>
+          </div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>02</span></div>
+          <div class="ova-step__card">
+            <h3>El título es la acción</h3>
+            <p>
+              Una línea corta que diga qué ocurre en ese paso. Sale literal del documento;
+              si los pasos del Word no traen título, <strong>se pide al diseño
+              instruccional</strong>, no se inventa en la maquetación.
+            </p>
+          </div>
+        </div>
+        <div class="ova-step">
+          <div class="ova-step__num"><span>03</span></div>
+          <div class="ova-step__card">
+            <h3>La descripción va completa</h3>
+            <p>
+              Dos o tres líneas, las del documento, sin recortar. La composición se ajusta
+              con espacio y con el componente que se elige; <strong>resumir el texto sería
+              cambiar el curso, no maquetarlo</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:40px;" data-reveal>
+        El segundo componente es el <strong>acordeón</strong>, y la pregunta de cuándo usar
+        uno u otro se responde sola en cuanto se miran los bloques del Word. Este acordeón
+        trae esa respuesta:
+      </p>
+
+      <!-- Acordeón · el primer ítem arranca abierto para que la pantalla no se lea vacía -->
+      <div class="ova-acordeon" data-reveal>
+        <div class="ova-acordeon__item is-open">
+          <button class="ova-acordeon__head">
+            <span><span class="num">01</span> <strong>Cuando los bloques son largos</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            El acordeón deja los títulos a la vista y abre solo el que interesa. Un stepper
+            con párrafos de ocho líneas cada uno se vuelve una pared de texto que nadie
+            recorre entera.
+          </div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head">
+            <span><span class="num">02</span> <strong>Cuando no hay un orden obligatorio</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            El stepper promete secuencia: primero esto, después aquello. Si el documento
+            enumera criterios que valen por igual, el acordeón dice la verdad y el stepper
+            no.
+          </div></div>
+        </div>
+        <div class="ova-acordeon__item">
+          <button class="ova-acordeon__head">
+            <span><span class="num">03</span> <strong>Nunca para esconder lo esencial</strong></span>
+            <iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon>
+          </button>
+          <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">
+            Lo que hay que leer sí o sí va abierto o va fuera del acordeón. Por eso el
+            primer ítem arranca desplegado: una pantalla que abre con tres títulos cerrados
+            parece vacía.
+          </div></div>
+        </div>
+      </div>
+
+
+      <!-- Foto en franja · una foto vertical junto a un párrafo corto siempre descuadra
+           el bloque; a ancho completo y recortada, acompaña sin competir. -->
+      <figure class="sl-foto-ancha" data-reveal>
+        <img src="assets/img/curso/tema1-leer.webp"
+             alt="Una profesional lee en su portátil con un libro abierto al lado y paneles de datos y citas alrededor." />
+        <figcaption>
+          Leer un tema es reconocer sus piezas: la forma de cada bloque ya dice qué clase
+          de contenido trae.
+        </figcaption>
+      </figure>
+
+
+      <!-- ════ Sección {{NUM}}.3 ════ -->
+      <section class="sl-seccion" id="piezas-destacan" data-reveal>
+        <h2 class="sl-seccion__titulo">Las piezas <span class="sl-suave">que</span> <span class="sl-italic">destacan</span></h2>
+        <p class="sl-seccion__lead">No todo lo que el documento marca como destacado pesa igual. Hay tres formas,
+          y elegir mal la más fuerte es el error más frecuente de una primera unidad.</p>
+      </section>
+
+      <!-- Idea clave · la tarjeta violeta, segunda de las tres de la pantalla -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:lightbulb-on-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Idea clave</span>
+          <p style="margin:8px 0 0;">
+            Esto es una Idea clave, y la tarjeta violeta se reserva para lo que hay que
+            retener. En el Word es una tabla de una sola celda con el rótulo
+            <em>Idea clave</em> o <em>Importante</em> y un párrafo breve. Con etiqueta,
+            porque dentro de un tema la etiqueta es lo que la distingue del cuerpo.
+            <strong>Tres por pantalla es el tope</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Dato curioso · el bloque ligero, sin caja: eyebrow, texto, fuente y línea a la izquierda -->
+      <div class="sl-dato" data-reveal>
+        <span class="sl-dato__tag">Dato curioso</span>
+        <p>
+          Esto es un Dato curioso, y no lleva caja. Se lee de lado, sin interrumpir el hilo:
+          un eyebrow, el texto y su fuente sobre una línea fina a la izquierda. En el Word es la tabla
+          rotulada <em>Dato curioso</em>. Mapear todas esas tablas a la tarjeta violeta fue
+          justamente el error que dio origen a la regla: <strong>con seis destacados por
+          tema, la pantalla se convierte en un muro</strong>.
+        </p>
+        <p class="sl-fuente">
+          Fuente: Scala Learning, guía de producción, §3 7.6 (decisión tomada en la
+          Unidad 2, 15 de septiembre de 2026).
+        </p>
+      </div>
+
+      <!-- Cifra destacada · el tope, dibujado: se entiende antes de leerlo.
+           Una sola cifra por bloque, con su explicación al lado. -->
+      <div class="sl-cifras" data-reveal>
+        <div class="sl-cifras__datos">
+          <div class="sl-cifra">
+            <svg class="sl-proporcion" style="max-width:100%;" viewBox="0 0 220 32" role="img"
+                 aria-label="Diez puntos: tres en amarillo y siete atenuados. De cada diez bloques de una pantalla, como mucho tres son tarjeta violeta.">
+              <circle cx="16.0" cy="16" r="9" fill="#F8B716"/>
+              <circle cx="36.4" cy="16" r="9" fill="#F8B716"/>
+              <circle cx="56.8" cy="16" r="9" fill="#F8B716"/>
+              <circle cx="77.2" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="97.6" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="118.0" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="138.4" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="158.8" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="179.2" cy="16" r="9" fill="#CFC8E4"/>
+              <circle cx="199.6" cy="16" r="9" fill="#CFC8E4"/>
+            </svg>
+            <span class="sl-cifra__valor">3 de cada 10</span>
+            <span class="sl-cifra__label">bloques de una pantalla pueden ir en tarjeta violeta</span>
+          </div>
+        </div>
+        <div class="sl-cifras__texto">
+          <span class="sl-cifras__tag">Dato en cifras</span>
+          <p>
+            La regla es un tope, no un promedio: por muchos destacados que traiga el
+            documento, en una pantalla caben tres tarjetas violeta. Una pantalla típica
+            ronda los diez bloques, así que el tope equivale más o menos a tres de cada
+            diez. Los demás destacados bajan a nota lateral, a nota o a banda:
+            <strong>cuatro rectángulos violeta seguidos no crean jerarquía, la anulan</strong>.
+          </p>
+          <p class="sl-fuente">
+            Fuente: Scala Learning, guía de producción, §4 (revisión de una pantalla
+            terminada) y §3 7.3.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.4 ════ -->
+      <section class="sl-seccion" id="piezas-contrastan" data-reveal>
+        <h2 class="sl-seccion__titulo">Las piezas <span class="sl-suave">que</span> <span class="sl-italic">contrastan</span></h2>
+        <p class="sl-seccion__lead">Cuando el documento pone dos cosas una frente a otra —error frecuente y
+          criterio, aplique y no aplique— hay dos formas de maquetarlo, y la segunda
+          existe para que la pantalla no se vuelva una pared de cajas.</p>
+      </section>
+
+      <!-- Comparativo con caja · el primero de la pantalla -->
+      <div class="ova-vs" data-reveal>
+        <div class="ova-vs__card">
+          <span class="ova-vs__card-tag" style="background:color-mix(in srgb, var(--danger) 14%, transparent); color:var(--danger);">✗ Error frecuente</span>
+          <p style="margin-top:14px;">
+            Inventar el rótulo de un bloque —«Condición 1», «Paso 2»— porque la pieza
+            parecía pedirlo. El número lo pone el componente; el título y la descripción,
+            el documento.
+          </p>
+        </div>
+        <div class="ova-vs__divider">VS</div>
+        <div class="ova-vs__card ova-vs__card--alt">
+          <span class="ova-vs__card-tag" style="background:color-mix(in srgb, var(--success) 14%, transparent); color:var(--success);">✓ Criterio de aceptación</span>
+          <p style="margin-top:14px;">
+            Cada chip, eyebrow y etiqueta de la pantalla se puede señalar en una línea del
+            documento. Lo que no aparece ahí no aparece en el curso.
+          </p>
+        </div>
+      </div>
+
+      <!-- Respiro · el remate del párrafo que sigue, a primer plano; de paso separa los
+           dos comparativos, que son las dos formas más parecidas de la pantalla -->
+      <div class="sl-respiro" data-reveal>
+        <p>Ese comparativo lleva caja, sombra y etiqueta de color: <strong>pesa</strong>.</p>
+      </div>
+
+      <p data-reveal>
+        Si en la misma pantalla hace falta un segundo contraste, se usa el
+        <strong>comparativo ligero</strong>, que es el mismo contenido sin el envase.
+      </p>
+
+      <!-- Comparativo ligero · segundo contraste de la pantalla: sin caja ni sombra -->
+      <div class="sl-vs-ligero" data-reveal>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--si">
+          <span class="sl-vs-ligero__signo">✓</span>
+          <span class="sl-vs-ligero__tag">Aplique</span>
+          <p>Dejar el comparativo con caja para el contraste principal y bajar los siguientes a esta forma ligera, que es solo el signo y el texto.</p>
+        </div>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--no">
+          <span class="sl-vs-ligero__signo">✕</span>
+          <span class="sl-vs-ligero__tag">No aplique</span>
+          <p>Encadenar tres comparativos con caja y sombra: la pantalla pierde jerarquía y ninguno de los tres termina destacando.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:36px;" data-reveal>
+        <span class="sl-termino" tabindex="0" data-def="Todo lo que aparece en el curso y no viene del documento de diseño instruccional: títulos de pantalla, pies de figura, ilustraciones, bloques de audio. Se entrega en una lista aparte para que el cliente lo apruebe.">Capa editorial</span>
+        es, en los dos casos, solo la forma: el texto de las dos columnas sigue siendo el
+        del Word, y elegir el envase no lo cambia.
+      </p>
+
+      <!-- Para reflexionar · el callout de borde amarillo; tercera y última tarjeta -->
+      <div class="ova-callout ova-callout--reflexion" style="margin-top:44px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Para reflexionar</span>
+          <p style="margin:8px 0 0;">
+            Toma el último documento que escribiste o revisaste. ¿Cuántos de sus bloques
+            destacados sobrevivirían al tope de tres por pantalla, y cuál dejarías fuera
+            primero?
+          </p>
+        </div>
+      </div>

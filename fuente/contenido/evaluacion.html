@@ -1,0 +1,270 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Evaluación</div>
+        <h1 class="ova-screen__title">Pon a prueba <span class="sl-suave">lo que reconoces de una</span> <span class="sl-italic">unidad</span></h1>
+      </header>
+
+      <!-- En una unidad real, preguntas, opciones y retroalimentación salen literales del
+           banco de preguntas que entrega el diseño instruccional. Aquí son texto demo.
+           Nada de términos con tooltip dentro de la evaluación: sería una pista. -->
+      <div class="ova-evalquiz" data-ova-evalquiz data-label-item="Pregunta" data-label-items="preguntas" data-reveal>
+
+        <div class="ova-evalquiz__slide is-active" data-slide="intro">
+          <div class="sl-eval__cuerpo">
+            <p class="sl-eval__lead">Ocho preguntas sobre el propio demo —siete de opción múltiple y un
+              apareamiento—: <strong>cómo se lee un tema</strong>, <strong>las piezas gráficas</strong>,
+              <strong>las pautas de diseño</strong>, <strong>cómo se marca el Word</strong> y
+              <strong>el catálogo</strong>.</p>
+
+            <div class="sl-eval__datos">
+              <div class="sl-eval__dato">
+                <span class="v">8</span>
+                <span class="l">preguntas, la última de apareamiento</span>
+              </div>
+              <div class="sl-eval__dato">
+                <span class="v">8</span>
+                <span class="l">temas cubiertos</span>
+              </div>
+              <div class="sl-eval__dato">
+                <span class="v"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon></span>
+                <span class="l">retroalimentación en cada respuesta, aciertes o no</span>
+              </div>
+            </div>
+
+            <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-go="1">
+              Comenzar <iconify-icon icon="mdi:arrow-right"></iconify-icon>
+            </button>
+            <p class="sl-eval__ayuda">También puedes moverte con las flechas del teclado.</p>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r1" data-section="Tema 1 — Cómo se lee un tema" data-section-color="acento">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Tema 1 — Cómo se lee un tema</span>
+              <p class="sl-eval__contexto">Un documento llega con seis tablas destacadas en el mismo tema: dos rotuladas «Idea clave», tres «Dato curioso» y una «Para reflexionar». Hay que decidir qué forma le toca a cada una.</p>
+              <h3 class="ova-quiz__question">¿Qué bloque se reserva para lo que hay que retener?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> El nota lateral, sin caja, con su fuente al pie
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> La banda navy que corta la pantalla con una sola frase
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> La tarjeta violeta rotulada «Idea clave» o «Importante»
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> El comparativo ligero, con su signo y su texto
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="La tarjeta violeta se reserva para lo que el estudiante debería llevarse, y por eso tiene tope: tres por pantalla. Las demás tablas destacadas del documento bajan a formas más ligeras. El nota lateral se lee de lado sin interrumpir; la banda es una pausa que no aporta información nueva, porque su frase ya estaba en el texto; y el comparativo ligero es la versión sin caja de un contraste, no un destacado."
+                   data-wrong="La tarjeta violeta se reserva para lo que el estudiante debería llevarse, y por eso tiene tope: tres por pantalla. Las demás tablas destacadas del documento bajan a formas más ligeras. El nota lateral se lee de lado sin interrumpir; la banda es una pausa que no aporta información nueva, porque su frase ya estaba en el texto; y el comparativo ligero es la versión sin caja de un contraste, no un destacado."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r2" data-section="Tema 1 — Cómo se lee un tema" data-section-color="acento">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Tema 1 — Cómo se lee un tema</span>
+              <p class="sl-eval__contexto">El documento enumera tres pasos y rotula cada uno con «Paso 1», «Paso 2», «Paso 3». Además, cada paso trae su título y su descripción.</p>
+              <h3 class="ova-quiz__question">¿Cómo se maqueta esa lista?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>A.</strong> Stepper: el número lo pone el componente, y van el título y la descripción
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Stepper con un chip «Paso 1» encima de cada tarjeta, como en el Word
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Tres tarjetas violeta, una por paso, para darles peso
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Un acordeón con los tres pasos cerrados, para ahorrar altura
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="El stepper ya numera: repetir «Paso 1» dentro de la tarjeta es decir dos veces lo mismo y convierte la lista en un tartamudeo. El título y la descripción sí son del documento y van completos. Tres tarjetas violeta gastarían de golpe el tope de la pantalla en algo que no es una idea clave, y un acordeón cerrado escondería contenido que hay que leer y además prometería que el orden da igual, cuando aquí sí importa."
+                   data-wrong="El stepper ya numera: repetir «Paso 1» dentro de la tarjeta es decir dos veces lo mismo y convierte la lista en un tartamudeo. El título y la descripción sí son del documento y van completos. Tres tarjetas violeta gastarían de golpe el tope de la pantalla en algo que no es una idea clave, y un acordeón cerrado escondería contenido que hay que leer y además prometería que el orden da igual, cuando aquí sí importa."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r3" data-section="Tema 2 — Cómo se explica con piezas gráficas" data-section-color="info">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Tema 2 — Cómo se explica con piezas gráficas</span>
+              <p class="sl-eval__contexto">En mitad de un tema, el documento trae un bloque «DISEÑO GRÁFICO · Figura 3» con su descripción y su leyenda. El diseñador ya entregó el archivo de esa figura.</p>
+              <h3 class="ova-quiz__question">¿Qué corresponde hacer en ese punto?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Maquetar el texto del bloque como una tarjeta con icono más
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Dibujar una ilustración propia del mismo contenido, para no depender del diseñador
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> Poner ahí la figura del diseñador con su leyenda literal, y no dibujar nada sobre ese contenido
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Omitir la leyenda, porque la figura ya se entiende sola
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="El bloque no es contenido para el estudiante: es una instrucción que ubica la figura. Su descripción va al texto alternativo de la imagen, y la leyenda al pie, literal y precedida de «Figura 3.» en negrilla. Dibujar una pieza propia de lo que la figura ya muestra deja dos versiones del mismo contenido en la pantalla; y quitar la leyenda es quitar texto que el documento declaró."
+                   data-wrong="El bloque no es contenido para el estudiante: es una instrucción que ubica la figura. Su descripción va al texto alternativo de la imagen, y la leyenda al pie, literal y precedida de «Figura 3.» en negrilla. Dibujar una pieza propia de lo que la figura ya muestra deja dos versiones del mismo contenido en la pantalla; y quitar la leyenda es quitar texto que el documento declaró."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r4" data-section="Tema 3 — Pautas de diseño" data-section-color="info">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Tema 3 — Pautas de diseño</span>
+              <p class="sl-eval__contexto">Al revisar una pantalla, alguien propone que el botón «Siguiente» vaya en amarillo para que resalte más, porque el amarillo es el color más vistoso de la marca.</p>
+              <h3 class="ova-quiz__question">¿Qué dice la pauta de color de Scala sobre esa propuesta?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Se acepta: el amarillo es un color de marca y puede ir en cualquier pieza
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>B.</strong> Se rechaza: el violeta es el único color de lo que se acciona; el amarillo guía la lectura
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Se acepta si el botón lleva texto navy para cumplir el contraste
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Se rechaza solo en móvil, donde el amarillo pierde contraste
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="En Scala el violeta significa «aquí se actúa»: botones, enlaces, estado activo del menú. El amarillo señala dónde mirar (eyebrow, filo, viñeta, numeración) y nunca es un control. Además, como texto sobre fondo claro no cumple el contraste mínimo, así que tampoco sirve el remedio de ponerle texto encima."
+                   data-wrong="En Scala el violeta significa «aquí se actúa»: botones, enlaces, estado activo del menú. El amarillo señala dónde mirar (eyebrow, filo, viñeta, numeración) y nunca es un control. Además, como texto sobre fondo claro no cumple el contraste mínimo, así que tampoco sirve el remedio de ponerle texto encima."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r5" data-section="Tema 4 — Cómo se marca el Word" data-section-color="acento">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Tema 4 — Cómo se marca el Word</span>
+              <p class="sl-eval__contexto">En el Word llega una tabla de una celda titulada «Dato curioso en cifras» con un párrafo, una cifra y su fuente.</p>
+              <h3 class="ova-quiz__question">¿Por cuál de las tres vías llega ese bloque a su componente?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Vía 1: el Word nombra el componente en una línea propia
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>B.</strong> Vía 2: el rótulo de la tabla dice qué componente le toca
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>C.</strong> Vía 3: producción elige del catálogo y lo declara como capa editorial
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Ninguna: una tabla siempre se maqueta como tabla
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="El título de la tabla es un rótulo, y los rótulos son la segunda vía: «Dato curioso en cifras» va a cifra destacada, «Idea clave» a tarjeta con icono, «Dato curioso» a nota lateral. La vía 1 es cuando el Word escribe el nombre del componente en línea propia («Acordeón:»); la vía 3 es la única que añade una decisión, y por eso se lista para que Scala la valide."
+                   data-wrong="El título de la tabla es un rótulo, y los rótulos son la segunda vía: «Dato curioso en cifras» va a cifra destacada, «Idea clave» a tarjeta con icono, «Dato curioso» a nota lateral. La vía 1 es cuando el Word escribe el nombre del componente en línea propia («Acordeón:»); la vía 3 es la única que añade una decisión, y por eso se lista para que Scala la valide."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r6" data-section="Temas 5 y 6 — Catálogo" data-section-color="info">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Temas 5 y 6 — Catálogo</span>
+              <p class="sl-eval__contexto">Un tema trae un proceso de cuatro pasos que se repite cada vez que termina: cuando acaba el cuarto, vuelve a empezar el primero. El diseño instruccional lo marcó como «Carrusel:».</p>
+              <h3 class="ova-quiz__question">¿Qué componente le corresponde y por qué?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Carrusel, porque así lo marcó el Word y el texto es el contrato
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Acordeón, para que los cuatro pasos no alarguen la pantalla
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> Ciclo: la rueda de marca con un cuarto por paso y los pasos visibles a la vez
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Recorrido de pasos, porque son pasos y tienen orden
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Lo que es contrato es el texto, no el componente: se elige el componente, no las palabras. Un ciclo que se repite se dibuja como rueda, con un cuarto por paso y el último en amarillo, y los pasos al lado todos visibles. El carrusel escondería tres de cada cuatro, y el sentido de un ciclo es verlo completo. El cambio de componente se declara como capa editorial."
+                   data-wrong="Lo que es contrato es el texto, no el componente: se elige el componente, no las palabras. Un ciclo que se repite se dibuja como rueda, con un cuarto por paso y el último en amarillo, y los pasos al lado todos visibles. El carrusel escondería tres de cada cuatro, y el sentido de un ciclo es verlo completo. El cambio de componente se declara como capa editorial."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="r7" data-section="Temas 7 y 8 — Catálogo" data-section-color="acento">
+          <div class="sl-eval__cuerpo">
+            <div class="ova-quiz">
+              <span class="sl-eval__tema">Temas 7 y 8 — Catálogo</span>
+              <p class="sl-eval__contexto">En el banco de preguntas, la retroalimentación de una respuesta incorrecta dice solamente: «Incorrecto. La respuesta correcta es la C».</p>
+              <h3 class="ova-quiz__question">¿Qué le falta a esa retroalimentación para cumplir la pauta de actividades?</h3>
+              <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>A.</strong> Un signo de exclamación y un ánimo, para que no desmotive
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>B.</strong> Nada: dice cuál es la correcta y eso basta
+            </button>
+            <button class="ova-quiz__opt" data-correct="true">
+              <strong>C.</strong> Explicar por qué esa opción no funciona y qué revisar, y en qué tema
+            </button>
+            <button class="ova-quiz__opt" data-correct="false">
+              <strong>D.</strong> Ocultar la respuesta correcta, para que el estudiante vuelva a intentar
+            </button>
+              </div>
+              <div class="ova-quiz__feedback"
+                   data-correct="Toda respuesta recibe retroalimentación, acierte o no, y la retroalimentación explica: la de acierto dice por qué esa opción funciona; la de error orienta qué revisar y en qué tema, sin dar la respuesta de forma seca. Sin exclamaciones de celebración: la etiqueta y el color ya dicen el resultado. Y la evaluación es de práctica, no genera nota."
+                   data-wrong="Toda respuesta recibe retroalimentación, acierte o no, y la retroalimentación explica: la de acierto dice por qué esa opción funciona; la de error orienta qué revisar y en qué tema, sin dar la respuesta de forma seca. Sin exclamaciones de celebración: la etiqueta y el color ya dicen el resultado. Y la evaluación es de práctica, no genera nota."></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="apareamiento" data-section="Componentes de una unidad" data-section-color="acento">
+          <div class="sl-eval__cuerpo">
+            <span class="sl-eval__tema">Componentes de una unidad</span>
+            <h3 class="ova-quiz__question">Relaciona cada componente de la columna izquierda con la situación en la que se usa.</h3>
+            <p style="color:var(--text-mut);margin:0 0 20px;">Primero el componente, después la situación.</p>
+            <div class="ova-empar">
+              <div class="ova-empar__col">
+              <button class="ova-empar__item" data-ova-match="C">Stepper</button>
+              <button class="ova-empar__item" data-ova-match="A">Banner destacado</button>
+              <button class="ova-empar__item" data-ova-match="D">Diagrama</button>
+              <button class="ova-empar__item" data-ova-match="B">Nota lateral</button>
+              </div>
+              <div class="ova-empar__col">
+              <button class="ova-empar__item" data-ova-match="A">Una pantalla larga necesita un corte, y hay una frase del texto que puede ir a primer plano.</button>
+              <button class="ova-empar__item" data-ova-match="B">Un dato con su fuente acompaña la lectura sin merecer el peso de una tarjeta.</button>
+              <button class="ova-empar__item" data-ova-match="C">El documento enumera pasos y el orden entre ellos importa.</button>
+              <button class="ova-empar__item" data-ova-match="D">El documento describe una relación o una secuencia que se entiende mejor dibujada.</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__slide" data-slide="cierre">
+          <div class="ova-evalquiz__section" style="text-align:left;">
+            <h2 style="margin:0 0 14px;">Evaluación completada</h2>
+            <p style="max-width:60ch;">Repasar las retroalimentaciones vale tanto como acertar: cada una explica
+              por qué una forma sirve para ese contenido y las otras no.</p>
+            <button class="ova-evalquiz__btn" data-evalquiz-restart style="margin-top:22px;">
+              <iconify-icon icon="mdi:refresh"></iconify-icon> Volver a intentarlo
+            </button>
+          </div>
+        </div>
+
+        <div class="ova-evalquiz__nav" data-evalquiz-nav>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--prev" data-evalquiz-prev aria-label="Pregunta anterior" title="Anterior"><iconify-icon icon="mdi:arrow-left"></iconify-icon></button>
+          <div class="ova-evalquiz__progress-bar">
+            <div class="ova-evalquiz__progress-fill" data-evalquiz-progress></div>
+          </div>
+          <span class="ova-evalquiz__counter" data-evalquiz-counter></span>
+          <button class="ova-evalquiz__btn ova-evalquiz__btn--primary" data-evalquiz-next>Siguiente <iconify-icon icon="mdi:arrow-right"></iconify-icon></button>
+        </div>
+      </div>

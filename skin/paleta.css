@@ -1,0 +1,60 @@
+/* =========================================================
+   Preset · Scala Learning
+   ---------------------------------------------------------
+   Hex verificados contra Brandbook_ScalaLearning.pdf (p. 9),
+   los SVG del logo y el aula real de scalacampus.instructure.com.
+   Guía completa: ../INSTITUCION.md
+
+   Nota de arquitectura: este archivo se carga ANTES de core.css,
+   así que los tokens que core.css también define se declaran con
+   `html:root` (especificidad 0,1,1 > 0,1,0) para ganarle sin
+   tocar el motor compartido.
+   ========================================================= */
+
+/* --- Los 3 tokens que el motor lee vía var() --- */
+:root {
+  --c-acento: #503B96;   /* Violeta · acción: botones, links, énfasis */
+  --c-info:   #7A67C9;   /* Lavanda · callouts informativos (derivado del violeta) */
+  --c-deep:   #303651;   /* Navy · sidebar y superficies profundas */
+}
+
+html:root {
+
+  /* --- Marca --- */
+  --c-calido:       #F8B716;  /* Golden Yellow · acento de lectura, nunca un control */
+  --c-violeta-deep: #261D4A;  /* fondo del hero, extremo frío del gradiente */
+  --c-crema:        #F4EFE7;  /* superficie cálida (se despega del fondo #FAF6F3) */
+
+  --grad-scala: linear-gradient(100deg,
+    #261D4A 0%, #3F2E75 32%, #503B96 55%, #9E7452 78%, #F8B716 100%);
+
+  /* --- Tipografía ---
+     Google Sans y Borax VF son licenciadas: van primero por si el cliente
+     las auto-hospeda; el fallback libre es el que ve todo el mundo hoy.
+     La línea Scala no usa monoespaciada: los eyebrows son sans con tracking. */
+  --brand-sans: 'Google Sans', 'Product Sans', 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-display: var(--brand-sans);
+  --font-body:    var(--brand-sans);
+  --font-mono:    var(--brand-sans);
+  --font-serif:   'Borax VF', 'Newsreader', Georgia, serif;
+
+  /* --- Estados ---
+     El warning del motor (#FFB020) es casi idéntico al amarillo de marca:
+     se oscurece para que "atención" no se lea como acento de Scala. */
+  --warning: #C9761A;
+
+  /* --- Forma · un solo radio por escala (brandbook p. 16) --- */
+  --r-sm: 10px;  --r-md: 18px;  --r-lg: 18px;  --r-xl: 28px;
+
+  /* --- Superficies claras y luminosas (se evita el gris azulado) --- */
+  --bg-app:     #FAF6F3;
+  --bg-surface: #FFFFFF;
+  --bg-card:    #FFFFFF;
+  --bg-muted:   #F1ECE6;
+  --border-c:   #E7E0D8;
+
+  /* --- Sombras tintadas en navy, nunca negro puro --- */
+  --shadow-sm: 0 4px 14px rgba(48, 54, 81, 0.07);
+  --shadow-md: 0 8px 28px rgba(48, 54, 81, 0.10);
+  --shadow-lg: 0 24px 60px rgba(48, 54, 81, 0.16);
+}

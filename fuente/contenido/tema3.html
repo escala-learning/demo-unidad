@@ -1,0 +1,298 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Pautas <span class="sl-suave">de</span> <span class="sl-italic">diseño</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal del Word -->
+        <p class="ova-screen__lead">
+          Reconocer lo que hace que una pantalla se vea Scala: qué hace cada color, cómo
+          se construye la jerarquía con pocos pesos, cuánto aire lleva un bloque y qué se mueve.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · primera de las dos tarjetas violeta de la pantalla -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Señala en una pantalla qué color actúa y cuál guía, dónde hay más de una idea
+            resaltada por frase y qué pieza rompe el radio o el aire de la marca.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · la propuso el agente ilustrador (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-actua-y-guia.svg" alt="Una pantalla Scala vista de frente. Arriba, el eyebrow con su línea amarilla y el título; debajo, el texto y un único botón violeta, sobre el que descansa el cursor. Al pie de la pantalla, la banda navy con su frase. Lo único que se pulsa es el botón violeta; el amarillo solo marca por dónde empieza la lectura." />
+      </figure>
+
+      <p data-reveal>
+        Las reglas salen del brandbook de Scala y del aula real. Ninguna se aplica a mano
+        pantalla por pantalla: viven en la capa de marca que todos los cursos heredan.
+        <strong>Esta pantalla las cumple mientras las explica</strong>: cada pauta se
+        demuestra con la pieza que la usa.
+      </p>
+
+
+      <!-- ════ Sección {{NUM}}.1 ════ -->
+      <section class="sl-seccion" id="color" data-reveal>
+        <h2 class="sl-seccion__titulo">Color: <span class="sl-suave">el violeta actúa,</span> <span class="sl-italic">el amarillo guía</span></h2>
+        <p class="sl-seccion__lead">Tres colores de marca, cada uno con un papel. El estudiante aprende a leerlos
+          sin que nadie se lo diga.</p>
+      </section>
+
+      <!-- Paleta · tres muestras con su papel. SVG inline para heredar la tipografía. -->
+      <figure class="sl-diagrama" data-reveal>
+        <svg viewBox="0 0 1160 168" role="img"
+             aria-label="Tres muestras de color: violeta, que actúa en botones, enlaces y el estado activo del menú; amarillo, que guía la lectura en eyebrows, filos y numeración y nunca es un control; navy, que estructura el menú, la banner destacado y la portada. Al lado, el crema del fondo.">
+          <rect x="24" y="24" width="340" height="120" rx="18" fill="#503B96"/>
+          <text x="48" y="64" font-size="15" font-weight="600" letter-spacing="2" fill="#FBF8F4" opacity=".8">VIOLETA</text>
+          <text x="48" y="98" font-size="22" font-weight="600" fill="#FBF8F4">Actúa</text>
+          <text x="48" y="124" font-size="15" fill="#FBF8F4" opacity=".85">botones · enlaces · menú activo · énfasis</text>
+
+          <rect x="410" y="24" width="340" height="120" rx="18" fill="#F8B716"/>
+          <text x="434" y="64" font-size="15" font-weight="600" letter-spacing="2" fill="#303651" opacity=".75">AMARILLO</text>
+          <text x="434" y="98" font-size="22" font-weight="600" fill="#303651">Guía la lectura</text>
+          <text x="434" y="124" font-size="15" fill="#303651" opacity=".85">eyebrow · filo · viñeta · numeración</text>
+
+          <rect x="796" y="24" width="340" height="120" rx="18" fill="#303651"/>
+          <text x="820" y="64" font-size="15" font-weight="600" letter-spacing="2" fill="#FBF8F4" opacity=".8">NAVY</text>
+          <text x="820" y="98" font-size="22" font-weight="600" fill="#FBF8F4">Estructura</text>
+          <text x="820" y="124" font-size="15" fill="#FBF8F4" opacity=".85">menú · banner destacado · portada</text>
+
+        </svg>
+        <figcaption>Y debajo de todo, <strong>crema</strong>: el fondo de trabajo es luminoso, nunca gris azulado. Máximo tres colores de marca por pantalla; si están los tres, uno ocupa menos del 10 %.</figcaption>
+      </figure>
+
+      <p data-reveal>
+        Mira esta misma pantalla: el único botón es violeta, el eyebrow de arriba lleva su
+        línea amarilla, la viñeta de cada sección es amarilla, y la banda del final es
+        navy. <strong>El amarillo señala dónde mirar; nunca es algo que se pueda pulsar.</strong>
+      </p>
+
+      <p data-reveal><a class="ova-btn ova-btn--primary" href="#tipografia">Así se ve un botón <iconify-icon icon="mdi:arrow-down"></iconify-icon></a></p>
+
+      <div class="sl-vs-ligero" style="margin-top:32px;" data-reveal>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--si">
+          <span class="sl-vs-ligero__signo">✓</span>
+          <span class="sl-vs-ligero__tag">Aplique</span>
+          <p>El amarillo al menos una vez por pantalla, como señal de sección: el eyebrow, el filo de un bloque, el cuarto de rueda que cierra. Sombras tintadas en navy.</p>
+        </div>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--no">
+          <span class="sl-vs-ligero__signo">✕</span>
+          <span class="sl-vs-ligero__tag">No aplique</span>
+          <p>Un botón o un enlace amarillo: dejaría de significar «acción». Texto amarillo sobre crema o blanco: el contraste es 1,8 a 1 y no se lee. El guiño amarillo en cada ítem de una lista: satura.</p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.2 ════ -->
+      <section class="sl-seccion" id="tipografia" data-reveal>
+        <h2 class="sl-seccion__titulo">Tipografía: <span class="sl-suave">tres pesos y</span> <span class="sl-italic">un remate</span></h2>
+        <p class="sl-seccion__lead">La jerarquía se construye combinando pocos pesos, no apilando tamaños ni
+          colores. El título de esta sección ya usa los tres registros.</p>
+      </section>
+
+      <p data-reveal>
+        La marca usa Google Sans y Borax como serif itálica. Ninguna es libre, así que el
+        curso sale con sus sustitutos, DM Sans y Newsreader, y cambia a las originales
+        cuando Scala las licencie, sin tocar nada más. Esta es la escala, con texto real:
+      </p>
+
+      <!-- Escala tipográfica · cada línea es el registro que dice ser -->
+      <div class="t3-escala" data-reveal>
+        <div class="t3-fila">
+          <p class="t3-h1"><strong>El criterio</strong> <span class="sl-suave">en la era de la</span> <span class="sl-italic">IA generativa</span></p>
+          <p class="t3-nota">Título de tema · <b>600</b> lo que carga el sentido · <b>300</b> lo que acompaña · <b>itálica serif</b> el remate, uno por titular y de tres palabras como mucho</p>
+        </div>
+        <div class="t3-fila">
+          <p class="t3-h2">Las tres preguntas que hacen la diferencia</p>
+          <p class="t3-nota">Título de sección · viñeta amarilla, sin numeral: es el subtema del Word</p>
+        </div>
+        <div class="t3-fila">
+          <p class="t3-h3">Título de bloque</p>
+          <p class="t3-nota">Tercer nivel, dentro de un componente: acordeón, pestaña, tarjeta</p>
+        </div>
+        <div class="t3-fila">
+          <p class="t3-cuerpo">La IA generativa no «sabe» cuál es la mejor alternativa; <strong>genera la más probable</strong> dado cómo se le preguntó.</p>
+          <p class="t3-nota">Cuerpo en 400 con interlínea generosa · una sola idea resaltada por frase · la negrilla va en color de título, nunca en violeta</p>
+        </div>
+        <div class="t3-fila">
+          <blockquote class="sl-quote" style="margin:0;">La IA generativa no «sabe» cuál es la mejor alternativa; <span class="sl-italic">genera la más probable dado cómo se le preguntó.</span></blockquote>
+          <p class="t3-nota">Cita o frase destacada · serif redonda sobre crema, la itálica solo en el remate · una por bloque</p>
+        </div>
+      </div>
+
+      <div class="ova-grid-2" style="margin-top:28px;" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Topes</span>
+          <p>Tres pesos por pantalla y <strong>una sola idea resaltada por frase</strong>. En un párrafo que enumera se admite una por elemento; si hay dos en la misma frase, ninguna destaca.</p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Excepción</span>
+          <p>Un titular de tres palabras o menos, como «Referencias», no lleva el registro suave: no hay nada que acompañe, y forzarlo convierte el sistema en un tic.</p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.3 ════ -->
+      <section class="sl-seccion" id="forma-y-aire" data-reveal>
+        <h2 class="sl-seccion__titulo">Forma <span class="sl-suave">y</span> <span class="sl-italic">aire</span></h2>
+        <p class="sl-seccion__lead">Del brandbook: alineación, jerarquía clara y uso estratégico del espacio en
+          blanco. El espacio no es vacío, es comunicación.</p>
+      </section>
+
+      <p data-reveal>
+        Tres reglas separan una pantalla Scala de un motor pintado de morado: <strong>un
+        solo radio de esquina</strong>, sombras suaves tintadas en navy y aire de sobra.
+      </p>
+
+      <!-- Respiro · el remate del párrafo de arriba, a primer plano; a mitad de la pantalla,
+           donde descansa. Una por pantalla. -->
+      <div class="sl-respiro" data-reveal>
+        <p>Cuando una pantalla se ve saturada, la solución nunca es cambiar un componente por otro: <strong>es darle espacio</strong>.</p>
+      </div>
+
+      <div class="sl-cifras" data-reveal>
+        <div class="sl-cifras__datos">
+          <div class="sl-cifra">
+            <span class="sl-cifra__valor">18 px</span>
+            <span class="sl-cifra__label">un solo radio para módulos, tarjetas e imágenes</span>
+          </div>
+        </div>
+        <div class="sl-cifras__texto">
+          <span class="sl-cifras__tag">Forma</span>
+          <p>La imagen es un módulo más y lleva el mismo radio. Los contenedores grandes de la portada suben a 28; las píldoras son redondas. Nunca 8 px y 22 px en la misma pantalla. Las sombras son difusas y van tintadas en navy, no en negro.</p>
+        </div>
+      </div>
+
+      <div class="ova-grid-2" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Aire</span>
+          <p>Dentro de una tarjeta, 28 px o más. Entre bloques, 40 o más. Las piezas grandes separan 56 px arriba y abajo, y la banner destacado, 72.</p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Luminosidad</span>
+          <p>El fondo de trabajo es crema o blanco. Las fotos oscuras van contenidas en su marco; la pantalla nunca se lee oscura. La única superficie oscura del cuerpo es la banda.</p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.4 ════ -->
+      <section class="sl-seccion" id="la-rueda" data-reveal>
+        <h2 class="sl-seccion__titulo">La <span class="sl-italic">rueda</span></h2>
+        <p class="sl-seccion__lead">Evolución del arco del logo: cuatro cuartos de círculo, tres violeta y uno
+          amarillo, con separación entre segmentos.</p>
+      </section>
+
+      <div class="ova-grid-2 t3-rueda" data-reveal>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 300 300" role="img" aria-label="La rueda de marca: cuatro cuartos de círculo separados, tres en violeta y el último en amarillo.">
+            <g transform="rotate(-90 150 150)" fill="none" stroke-width="30">
+              <circle cx="150" cy="150" r="100" stroke="#503B96" stroke-dasharray="135 493" stroke-dashoffset="0"/>
+              <circle cx="150" cy="150" r="100" stroke="#503B96" stroke-dasharray="135 493" stroke-dashoffset="-157"/>
+              <circle cx="150" cy="150" r="100" stroke="#503B96" stroke-dasharray="135 493" stroke-dashoffset="-314"/>
+              <circle cx="150" cy="150" r="100" stroke="#F8B716" stroke-dasharray="135 493" stroke-dashoffset="-471"/>
+            </g>
+          </svg>
+        </figure>
+        <div>
+          <p style="margin-top:0;">
+            Representa <strong>sistema, proceso y movimiento continuo</strong>. No reemplaza
+            al logo ni compite con él. Aparece grande y casi transparente en la portada,
+            pequeña junto a un eyebrow, como marco de una fotografía, como diagrama de un
+            ciclo con un cuarto por paso, y apenas insinuada al fondo de la banda.
+          </p>
+          <div class="sl-nota">
+            <span class="sl-nota__tag">Dónde no</span>
+            <p>Rotada arbitrariamente, con más de un cuarto amarillo, como viñeta de lista, ni como carrusel: el punto de un ciclo es verlo completo.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.5 ════ -->
+      <section class="sl-seccion" id="foto-e-ilustracion" data-reveal>
+        <h2 class="sl-seccion__titulo">Fotografía <span class="sl-suave">e</span> <span class="sl-italic">ilustración</span></h2>
+        <p class="sl-seccion__lead">La foto va en franja o enmarcada, nunca de columna. La ilustración de marca es
+          la pieza preferida para aperturas y conceptos abstractos.</p>
+      </section>
+
+      <p data-reveal>
+        Una foto vertical junto a un párrafo corto siempre descuadra el bloque y deja un
+        hueco. O va a todo el ancho recortada a franja, como esta, o enmarcada por la rueda,
+        que es como la marca trata sus imágenes. Clave alta, escenas reales, tonos naturales:
+        el brandbook evita los filtros oscuros y las estéticas frías.
+      </p>
+
+      <figure class="sl-foto-ancha" data-reveal>
+        <img src="assets/img/curso/tema1-leer.webp"
+             alt="Una profesional lee en su portátil con un libro abierto al lado y paneles de datos y citas alrededor." />
+        <figcaption>La misma foto de la Unidad 1 que usa el tema 1: a franja, acompaña sin competir con la altura del texto.</figcaption>
+      </figure>
+
+      <p data-reveal>
+        La ilustración de marca no arrastra licencias, se dibuja con los colores exactos y
+        escala sin perder nitidez. Tiene una familia fija: fondo crema-lavanda, esquinas de
+        18 px, violeta para la masa y <strong>un solo elemento amarillo</strong>, el que
+        carga el sentido. Y una regla que no se negocia: <strong>solo dibuja lo que el Word
+        afirma</strong>. La de apertura de este tema la propuso el agente ilustrador con
+        esa misma regla.
+      </p>
+
+      <!-- Idea clave · segunda y última tarjeta violeta de la pantalla -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:draw-pen"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Idea clave</span>
+          <p style="margin:8px 0 0;">
+            Si el documento cita una cifra, la cifra se puede dibujar. Si menciona un
+            experimento sin explicarlo, no se dibuja su mecánica: eso sería añadir contenido
+            que nadie validó.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.6 ════ -->
+      <section class="sl-seccion" id="movimiento-y-movil" data-reveal>
+        <h2 class="sl-seccion__titulo">Movimiento <span class="sl-suave">y</span> <span class="sl-italic">móvil</span></h2>
+        <p class="sl-seccion__lead">Nada se mueve donde hay texto que leer. Y en un teléfono, una imagen se ve
+          legible o no se ve.</p>
+      </section>
+
+      <div class="ova-grid-2" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Movimiento</span>
+          <p>Solo las piezas gráficas, y con duraciones largas: la rueda de la portada tarda 90 segundos en dar una vuelta. Se percibe viva, no se percibe girando. Quien pide menos movimiento en su sistema no ve ninguno, y nada queda a medio dibujar.</p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Móvil</span>
+          <p>Un diagrama pensado a 1160 px no se encoge hasta letras de 5 px: mantiene su ancho mínimo y <strong>se desliza dentro de su propio contenedor</strong>, nunca la página entera. Y lo contrario también: la foto de portada no se oculta para ahorrar espacio.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:40px;" data-reveal>
+        Lo demás es accesibilidad de base: estructura semántica, navegación por teclado
+        con flechas en la evaluación, foco visible, texto alternativo en toda imagen y
+        contraste suficiente en todo el texto. Prueba esta pantalla en tu teléfono: el
+        diagrama de la paleta se desliza y el menú se pliega.
+      </p>
+
+<!-- ova:extras -->
+<style>
+  /* Escala tipográfica demostrada con texto real. Cada fila muestra el registro que
+     dice ser, con la nota debajo en el registro suave. */
+  .t3-escala{ display:flex; flex-direction:column; gap:26px; padding:28px 30px; border-radius:var(--r-md); background:var(--bg-surface); border:1px solid var(--border-c); box-shadow:0 8px 28px rgba(48,54,81,.08); }
+  .t3-fila > p{ margin:0; }
+  .t3-h1{ font-family:var(--font-display); font-weight:600; font-size:clamp(1.6rem, 3.6vw, 2.2rem); line-height:1.1; letter-spacing:-.02em; color:var(--text-head); }
+  .t3-h1 strong{ font-weight:600; }
+  .t3-h2{ position:relative; padding-left:22px; font-family:var(--font-display); font-weight:600; font-size:1.3rem; line-height:1.2; color:var(--text-head); }
+  .t3-h2::before{ content:''; position:absolute; left:0; top:.4em; width:10px; height:10px; border-radius:2px; background:var(--c-calido); }
+  .t3-h3{ font-family:var(--font-display); font-weight:600; font-size:1.05rem; color:var(--text-head); }
+  .t3-cuerpo{ font-size:1rem; line-height:1.7; max-width:64ch; }
+  .t3-nota{ margin-top:6px !important; font-size:.8rem; line-height:1.45; color:var(--text-sec); font-weight:300; }
+  .t3-nota b{ font-weight:600; color:var(--text-head); }
+  .t3-rueda{ align-items:center; }
+  .t3-rueda svg{ display:block; width:100%; max-width:260px; height:auto; margin:0 auto; }
+  .sl-cifras{ margin-top:32px; }
+</style>

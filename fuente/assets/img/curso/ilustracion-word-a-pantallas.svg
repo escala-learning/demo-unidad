@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="A la izquierda, la hoja del Word con un párrafo que lleva una frase en negrilla, una tabla rotulada Idea clave y una tabla DISEÑO GRÁFICO. A la derecha, la unidad en tres pantallas apiladas: el mismo párrafo con la misma negrilla, la tabla vuelta tarjeta con el rótulo Idea clave y el bloque de diseño gráfico vuelto figura, cada uno a la altura de su bloque en el documento. Arriba, la pantalla lleva una fila más, su título, que en el documento no existe: es la única marcada y lleva un visto de aprobación.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, introducción (apertura)
+       Concepto: «Una unidad es un Word convertido en pantallas». Los mismos bloques,
+       en el mismo orden y a la misma altura, vueltos componentes; el párrafo conserva
+       su negrilla. Arriba, la única fila que no viene del Word —el título de pantalla—,
+       marcada y con el visto: es lo único que se pide aprobar.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: esa marca. -->
+  <defs>
+    <linearGradient id="ilu-word-a-pantallas-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-word-a-pantallas-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-word-a-pantallas-fondo)"/>
+
+  <!-- ══════════ El Word ══════════ -->
+  <g filter="url(#ilu-word-a-pantallas-sombra)">
+    <rect x="80" y="96" width="356" height="294" rx="16" fill="#FFFFFF"/>
+  </g>
+
+  <!-- El párrafo, con una frase en negrilla -->
+  <rect x="108" y="126" width="300" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="108" y="148" width="100" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="220" y="147" width="110" height="11" rx="5.5" fill="#303651" opacity=".85"/>
+  <rect x="342" y="148" width="66"  height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="108" y="170" width="224" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+
+  <!-- Tabla con rótulo · Idea clave -->
+  <rect x="108" y="200" width="300" height="72" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M108 228 V208 a8 8 0 0 1 8 -8 H400 a8 8 0 0 1 8 8 V228 Z" fill="#E7E1F3"/>
+  <text x="124" y="219" font-family="DM Sans, system-ui, sans-serif" font-size="17"
+        font-weight="600" fill="#503B96">Idea clave</text>
+  <rect x="124" y="240" width="234" height="8" rx="4" fill="#303651" opacity=".26"/>
+  <rect x="124" y="254" width="176" height="8" rx="4" fill="#303651" opacity=".26"/>
+
+  <!-- Tabla con rótulo · DISEÑO GRÁFICO (señala dónde irá la figura) -->
+  <rect x="108" y="288" width="300" height="68" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M108 314 V296 a8 8 0 0 1 8 -8 H400 a8 8 0 0 1 8 8 V314 Z" fill="#E7E1F3"/>
+  <text x="124" y="306" font-family="DM Sans, system-ui, sans-serif" font-size="16"
+        font-weight="700" letter-spacing="1.2" fill="#503B96" opacity=".85">DISEÑO GRÁFICO</text>
+  <g opacity=".5">
+    <rect x="124" y="322" width="44" height="26" rx="4" fill="none" stroke="#503B96" stroke-width="2"/>
+    <circle cx="134" cy="330" r="3.5" fill="#503B96"/>
+    <path d="M126 346 l12 -11 7 7 6 -6 11 10 z" fill="#503B96"/>
+  </g>
+  <rect x="182" y="326" width="150" height="8" rx="4" fill="#303651" opacity=".26"/>
+  <rect x="182" y="340" width="108" height="8" rx="4" fill="#303651" opacity=".26"/>
+
+  <!-- ══════════ La conversión: un bloque, una línea ══════════ -->
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" opacity=".5">
+    <path d="M444 148 H722" stroke-dasharray="7 7"/>
+    <path d="M444 236 H722" stroke-dasharray="7 7"/>
+    <path d="M444 322 H722" stroke-dasharray="7 7"/>
+  </g>
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".7">
+    <path d="M720 140 l10 8 -10 8"/>
+    <path d="M720 228 l10 8 -10 8"/>
+    <path d="M720 314 l10 8 -10 8"/>
+  </g>
+
+  <!-- ══════════ Las pantallas ══════════ -->
+  <rect x="776" y="62" width="376" height="330" rx="16" fill="#FFFFFF"
+        stroke="#CFC8E4" stroke-width="2" opacity=".55"/>
+  <rect x="756" y="52" width="376" height="330" rx="16" fill="#FFFFFF"
+        stroke="#CFC8E4" stroke-width="2" opacity=".8"/>
+  <g filter="url(#ilu-word-a-pantallas-sombra)">
+    <rect x="736" y="42" width="376" height="330" rx="16" fill="#FFFFFF"/>
+  </g>
+
+  <!-- El encabezado de la pantalla: eyebrow y título -->
+  <rect x="764" y="66" width="64"  height="8"  rx="4" fill="#503B96" opacity=".45"/>
+  <rect x="764" y="82" width="196" height="16" rx="8" fill="#303651" opacity=".82"/>
+
+  <!-- El mismo párrafo, con la misma negrilla -->
+  <rect x="764" y="126" width="300" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="764" y="148" width="100" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="876" y="147" width="110" height="11" rx="5.5" fill="#303651" opacity=".85"/>
+  <rect x="998" y="148" width="66"  height="9" rx="4.5" fill="#303651" opacity=".26"/>
+  <rect x="764" y="170" width="224" height="9" rx="4.5" fill="#303651" opacity=".26"/>
+
+  <!-- La tabla, vuelta tarjeta · conserva su rótulo -->
+  <rect x="764" y="200" width="316" height="72" rx="10" fill="#503B96"/>
+  <circle cx="794" cy="238" r="17" fill="#FFFFFF" opacity=".16"/>
+  <circle cx="794" cy="231" r="2.5" fill="#FFFFFF" opacity=".8"/>
+  <rect x="792.5" y="236" width="3" height="11" rx="1.5" fill="#FFFFFF" opacity=".8"/>
+  <text x="826" y="230" font-family="DM Sans, system-ui, sans-serif" font-size="16"
+        font-weight="600" letter-spacing=".6" fill="#FFFFFF" opacity=".92">Idea clave</text>
+  <rect x="826" y="240" width="204" height="8" rx="4" fill="#FFFFFF" opacity=".42"/>
+  <rect x="826" y="254" width="152" height="8" rx="4" fill="#FFFFFF" opacity=".28"/>
+
+  <!-- El bloque de diseño gráfico, vuelto figura -->
+  <rect x="764" y="288" width="316" height="68" rx="10" fill="#CFC8E4"/>
+  <circle cx="812" cy="311" r="9" fill="#FBF8F3" opacity=".9"/>
+  <path d="M776 352 L832 302 L876 340 L912 314 L996 352 Z" fill="#503B96" opacity=".45"/>
+
+  <!-- Lo único que no viene del Word: el título de la pantalla -->
+  <rect x="748" y="56" width="232" height="54" rx="12" fill="none"
+        stroke="#F8B716" stroke-width="3.5" stroke-dasharray="9 7" stroke-linecap="round"/>
+  <circle cx="980" cy="56" r="15" fill="#F8B716"/>
+  <path d="M973 56 l5.5 6 10.5 -12.5" fill="none" stroke="#303651" stroke-width="3.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

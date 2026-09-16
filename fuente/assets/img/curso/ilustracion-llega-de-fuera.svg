@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img"
+     aria-label="A la izquierda, una hoja del Word con texto corrido y tres bloques con rótulo que solo tienen líneas de descripción: DISEÑO GRÁFICO · Figura 1, Video de apoyo y Pódcast. Desde fuera del borde derecho entran tres piezas ya hechas, cada una por una línea punteada hacia su bloque: una imagen enmarcada, un video con su botón de reproducir y un audio con su onda.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 7 (apertura)
+       Concepto (texto de la pantalla): «Tres de sus piezas llegan de fuera (la figura del
+       diseñador, el video, el audio) y el Word solo tiene que ubicarlas y describirlas» ·
+       «Lo que llega hecho se ubica» · «Una figura del diseñador manda: donde el Word la pidió
+       en su bloque DISEÑO GRÁFICO, no se dibuja nada que cuente lo mismo».
+       Las piezas entran cortadas por el borde: vienen de fuera. Los bloques del Word solo
+       tienen descripción; la pieza llega hecha a su sitio.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: la pestaña DISEÑO GRÁFICO. -->
+  <defs>
+    <linearGradient id="ilu-llegadefuera-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-llegadefuera-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <clipPath id="ilu-llegadefuera-marco">
+      <rect width="1200" height="460" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="460" rx="18" fill="url(#ilu-llegadefuera-fondo)"/>
+
+  <!-- ══ La hoja del Word: ubica y describe ══ -->
+  <g filter="url(#ilu-llegadefuera-sombra)">
+    <rect x="120" y="30" width="440" height="400" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="148" y="60"  width="150" height="11" rx="5.5" fill="#303651" opacity=".82"/>
+  <rect x="148" y="86"  width="384" height="8"  rx="4"   fill="#303651" opacity=".20"/>
+  <rect x="148" y="102" width="330" height="8"  rx="4"   fill="#303651" opacity=".20"/>
+
+  <!-- DISEÑO GRÁFICO · Figura 1 · el bloque que manda -->
+  <rect x="148" y="124" width="384" height="92" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M148 154 V132 a8 8 0 0 1 8 -8 H524 a8 8 0 0 1 8 8 V154 Z" fill="#F8B716"/>
+  <text x="164" y="145" font-family="DM Sans, system-ui, sans-serif" font-size="15"
+        font-weight="700" letter-spacing=".8" fill="#303651">DISEÑO GRÁFICO · Figura 1</text>
+  <rect x="164" y="170" width="300" height="8" rx="4" fill="#303651" opacity=".35"/>
+  <rect x="164" y="188" width="240" height="8" rx="4" fill="#303651" opacity=".35"/>
+
+  <rect x="148" y="236" width="384" height="8" rx="4" fill="#303651" opacity=".20"/>
+  <rect x="148" y="252" width="300" height="8" rx="4" fill="#303651" opacity=".20"/>
+
+  <!-- Video de apoyo: -->
+  <rect x="148" y="272" width="384" height="56" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M148 300 V280 a8 8 0 0 1 8 -8 H524 a8 8 0 0 1 8 8 V300 Z" fill="#E7E1F3"/>
+  <text x="164" y="292" font-family="DM Sans, system-ui, sans-serif" font-size="15"
+        font-weight="600" fill="#503B96">Video de apoyo:</text>
+  <rect x="164" y="310" width="220" height="8" rx="4" fill="#303651" opacity=".35"/>
+
+  <!-- Pódcast: -->
+  <rect x="148" y="348" width="384" height="56" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M148 376 V356 a8 8 0 0 1 8 -8 H524 a8 8 0 0 1 8 8 V376 Z" fill="#E7E1F3"/>
+  <text x="164" y="368" font-family="DM Sans, system-ui, sans-serif" font-size="15"
+        font-weight="600" fill="#503B96">Pódcast:</text>
+  <rect x="164" y="386" width="180" height="8" rx="4" fill="#303651" opacity=".35"/>
+
+  <!-- ══ Entran a su sitio: una línea por pieza, hacia la hoja ══ -->
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" opacity=".5">
+    <path d="M888 170 H 584" stroke-dasharray="7 7"/>
+    <path d="M888 300 H 584" stroke-dasharray="7 7"/>
+    <path d="M888 376 H 584" stroke-dasharray="7 7"/>
+  </g>
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".7">
+    <path d="M594 162 l-10 8 10 8"/>
+    <path d="M594 292 l-10 8 10 8"/>
+    <path d="M594 368 l-10 8 10 8"/>
+  </g>
+
+  <!-- ══ Lo que llega hecho de fuera: cortado por el borde ══ -->
+  <g clip-path="url(#ilu-llegadefuera-marco)">
+    <!-- la figura del diseñador -->
+    <g filter="url(#ilu-llegadefuera-sombra)">
+      <rect x="900" y="112" width="320" height="116" rx="12" fill="#CFC8E4"/>
+    </g>
+    <circle cx="948" cy="142" r="11" fill="#FBF8F3" opacity=".95"/>
+    <path d="M912 228 L 984 164 L 1036 210 L 1076 182 L 1208 228 Z" fill="#503B96" opacity=".45"/>
+
+    <!-- el video -->
+    <g filter="url(#ilu-llegadefuera-sombra)">
+      <rect x="900" y="268" width="320" height="64" rx="12" fill="#303651"/>
+    </g>
+    <circle cx="936" cy="300" r="17" fill="#FFFFFF" opacity=".16"/>
+    <path d="M930 290 l14 10 -14 10 z" fill="#FFFFFF" opacity=".9"/>
+    <rect x="972" y="297" width="228" height="6" rx="3" fill="#FFFFFF" opacity=".28"/>
+    <rect x="972" y="297" width="84"  height="6" rx="3" fill="#FFFFFF" opacity=".8"/>
+
+    <!-- el audio -->
+    <g filter="url(#ilu-llegadefuera-sombra)">
+      <rect x="900" y="344" width="320" height="64" rx="12" fill="#FFFFFF"/>
+    </g>
+    <circle cx="936" cy="376" r="16" fill="#503B96"/>
+    <path d="M931 368 l12 8 -12 8 z" fill="#FFFFFF"/>
+    <g fill="#503B96" opacity=".55">
+      <rect x="970"  y="368" width="5" height="16" rx="2.5"/>
+      <rect x="982"  y="362" width="5" height="28" rx="2.5"/>
+      <rect x="994"  y="370" width="5" height="12" rx="2.5"/>
+      <rect x="1006" y="358" width="5" height="36" rx="2.5"/>
+      <rect x="1018" y="366" width="5" height="20" rx="2.5"/>
+      <rect x="1030" y="360" width="5" height="32" rx="2.5"/>
+      <rect x="1042" y="371" width="5" height="10" rx="2.5"/>
+      <rect x="1054" y="364" width="5" height="24" rx="2.5"/>
+      <rect x="1066" y="358" width="5" height="36" rx="2.5"/>
+      <rect x="1078" y="368" width="5" height="16" rx="2.5"/>
+      <rect x="1090" y="362" width="5" height="28" rx="2.5"/>
+      <rect x="1102" y="370" width="5" height="12" rx="2.5"/>
+      <rect x="1114" y="365" width="5" height="22" rx="2.5"/>
+      <rect x="1126" y="360" width="5" height="32" rx="2.5"/>
+      <rect x="1138" y="368" width="5" height="16" rx="2.5"/>
+      <rect x="1150" y="363" width="5" height="26" rx="2.5"/>
+      <rect x="1162" y="370" width="5" height="12" rx="2.5"/>
+      <rect x="1174" y="366" width="5" height="20" rx="2.5"/>
+      <rect x="1186" y="361" width="5" height="30" rx="2.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1208 @@
+/* =========================================================
+   Capa de marca · Scala Learning
+   ---------------------------------------------------------
+   Se carga DESPUÉS de core.css. Solo ajusta lo que distingue
+   a Scala; el motor no se toca. Ver ../INSTITUCION.md
+   ========================================================= */
+
+/* --- Eyebrow: la barrita que lo precede es el amarillo de marca
+       (guía de lectura), no el gradiente de acento --------------- */
+.ova-screen__eyebrow::before {
+  background: var(--c-calido);
+  width: 32px; height: 3px;
+}
+.ova-screen__eyebrow { letter-spacing: 0.12em; color: var(--c-deep); }
+
+/* --- Destacado tipográfico: la itálica serif dentro de un titular.
+       Máximo uno por titular (brandbook p. 12) --------------------- */
+.sl-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+/* --- Cita / highlight editorial ------------------------------------------
+   Serif redonda, no itálica: un párrafo entero en cursiva cansa (cliente,
+   2026-09-01). La itálica se reserva para un solo remate por bloque, en
+   .sl-italic — la misma regla de la apertura. */
+.sl-quote {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.32rem;
+  line-height: 1.55;
+  color: var(--text-head);
+  background: var(--c-crema);
+  border-radius: var(--r-md);
+  padding: 32px 36px;
+  margin: 36px 0;
+  border-left: 3px solid var(--c-calido);
+}
+
+/* --- Callout "Para reflexionar": el amarillo como marca, no como estado.
+       Se distingue del warning (ámbar oscuro) por color e icono --- */
+.ova-callout--reflexion {
+  background: color-mix(in srgb, var(--c-calido) 12%, transparent);
+  border-left-color: var(--c-calido);
+}
+.ova-callout--reflexion .ova-callout__tag { color: #8A6100; }
+.ova-callout--reflexion .ova-callout__ico {
+  background: color-mix(in srgb, var(--c-calido) 22%, transparent);
+  color: #8A6100;
+}
+
+/* --- KPI: filo amarillo arriba, el dato en violeta --- */
+.ova-kpi { border-top: 3px solid var(--c-calido); }
+.ova-kpi__value { color: var(--c-acento); }
+
+/* --- La rueda · recurso gráfico de marca ---------------------------
+   Tres cuartos violeta y uno amarillo. Vive en un SVG aparte para que el
+   cliente pueda reemplazarlo por el oficial sin tocar CSS. -------------- */
+.sl-rueda {
+  display: inline-block;
+  width: var(--sl-rueda-size, 120px);
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  background: url('../img/curso/scala-rueda.svg') center / contain no-repeat;
+}
+
+/* --- Imagen enmarcada: el radio de módulo también aplica a la foto --- */
+.sl-figura {
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 32px 0;
+}
+.sl-figura img { display: block; width: 100%; height: auto; }
+.sl-figura figcaption {
+  font-size: 0.86rem;
+  color: var(--text-mut);
+  padding: 14px 20px;
+  background: var(--c-crema);
+}
+
+/* --- Bloque de dos columnas texto + imagen --- */
+.sl-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 40px 0;
+}
+.sl-split .sl-figura { margin: 0; }
+@media (max-width: 860px) { .sl-split { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Logo de marca: el negativo de Scala no necesita la caja blanca que el
+       motor pone para logos a color; sobre el sidebar navy se pierde ------- */
+.ova-brand-logo--desktop {
+  background: none;
+  padding: 0;
+  max-width: 168px;
+}
+.ova-brand-logo--mobile { background: none; padding: 0; }
+
+/* --- Split: la foto no debe estirar la columna de texto --- */
+.sl-split { align-items: start; }
+.sl-split .sl-figura img { max-height: 420px; object-fit: cover; }
+
+/* --- Stepper: la numeración es amarilla (guía de lectura). El motor la pinta
+       con el gradiente de acento y sobre el navy queda sin contraste.
+       Se excluye el tema "clara": ahí el círculo es blanco y el amarillo daría
+       1.8:1 — sobre claro vuelve el violeta del motor. ---------------------- */
+:root:not([data-version="clara"]) .ova-step__num span {
+  background: none;
+  color: var(--c-calido);
+  -webkit-text-fill-color: var(--c-calido);
+}
+
+/* --- Logo por tema · el negativo (blanco + arco amarillo) se pierde sobre el
+       sidebar blanco del tema "clara": ahí entra la versión violeta.
+       En "hibrida" y "oscura" el sidebar es navy y sigue el negativo.
+       (Variante navy disponible en scala-logo-navy.svg: es la "full color"
+       oficial del brandbook, por si se prefiere sobre el violeta.) ---------- */
+[data-version="clara"] .ova-brand-logo--desktop {
+  content: url('../img/logos/scala-logo-violeta.svg');
+}
+[data-version="clara"] .ova-brand-logo--mobile {
+  content: url('../img/logos/scala-sello-violeta.svg');
+}
+
+/* --- Selector de tema minimalista ----------------------------------------
+   El motor lo dibuja como "🎨 Tema · [🌙 Oscura] [☀ Clara]". Compite con los
+   botones de la barra y no aporta: solo hay dos temas y cada botón ya tiene
+   su `title`. Se queda en dos iconos sin caja exterior; los textos se ocultan
+   de forma accesible (clip, no display:none) para que el botón conserve su
+   nombre accesible. ------------------------------------------------------- */
+.ova-version-switch {
+  padding: 0;
+  gap: 0;
+  background: none;
+  border: none;
+  backdrop-filter: none;
+}
+.ova-version-switch__label { display: none; }
+.ova-version-switch__pills {
+  gap: 2px;
+  padding: 3px;
+  background: color-mix(in srgb, var(--bg-muted) 60%, transparent);
+  box-shadow: none;
+}
+.ova-version-switch button { padding: 7px; gap: 0; }
+.ova-version-switch button span {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ova-version-switch button iconify-icon { font-size: 1.05rem; opacity: .6; }
+.ova-version-switch button.is-active {
+  background: color-mix(in srgb, var(--c-acento) 12%, transparent);
+  color: var(--c-acento);
+  box-shadow: none;
+}
+
+/* --- Apertura de unidad --------------------------------------------------
+   El bloque con el que abre cada introducción: una idea clave o una pregunta
+   que enmarca la unidad. No lleva etiqueta —el texto es el protagonista— y
+   resalta por escala y aire, no por encajonarse como un aviso más.
+   Uso: <div class="sl-apertura"><p>…</p></div>
+        modificador --pregunta cuando la apertura es una pregunta. ---------- */
+.sl-apertura {
+  position: relative;
+  margin: 44px 0;
+  padding: 38px 44px 38px 46px;
+  background: var(--c-crema);
+  border-radius: var(--r-md);
+  max-width: 920px;
+  font-size: clamp(1.18rem, 1.9vw, 1.46rem);
+  line-height: 1.52;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--text-head);
+}
+.sl-apertura::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 26px; bottom: 26px;
+  width: 5px;
+  background: var(--c-calido);
+  border-radius: 0 5px 5px 0;
+}
+.sl-apertura p { margin: 0; }
+.sl-apertura p + p { margin-top: 16px; }
+/* el remate: la frase que se quiere subrayar va en la itálica de marca */
+.sl-apertura .sl-italic { font-size: 1.06em; }
+
+/* Variante pregunta: el signo de interrogación hace de marca visual */
+.sl-apertura--pregunta { padding-left: 92px; }
+.sl-apertura--pregunta::after {
+  content: '?';
+  position: absolute;
+  left: 44px; top: 30px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--c-calido);
+}
+@media (max-width: 720px) {
+  .sl-apertura { padding: 28px 24px 28px 28px; }
+  .sl-apertura--pregunta { padding-left: 28px; }
+  .sl-apertura--pregunta::after { position: static; display: block; margin-bottom: 8px; }
+}
+
+
+/* --- Ilustración de marca a ancho completo -------------------------------
+   Alternativa a la foto en las aperturas: no deja huecos por diferencia de
+   altura con el texto, no depende de licencias y cumple la dirección
+   luminosa del brandbook (que descarta las estéticas oscuras). ----------- */
+.sl-ilustracion {
+  margin: 40px 0;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.sl-ilustracion img { display: block; width: 100%; height: auto; }
+.sl-ilustracion figcaption {
+  font-size: .86rem;
+  color: var(--text-mut);
+  padding: 14px 4px 0;
+}
+
+/* --- Sistema de énfasis tipográfico --------------------------------------
+   Tres pesos y un remate, nada más. El brandbook (p. 12) advierte contra
+   forzar contrastes extremos: la jerarquía se construye combinando pocos
+   pesos, no apilando tamaños.
+
+     .sl-suave  300  lo que acompaña: conectores del titular, leads
+     (cuerpo)   400  el texto por defecto
+     strong     600  la palabra o frase que carga el sentido
+     .sl-italic      un remate en serif itálica, uno por bloque
+
+   Tope: 3 pesos por pantalla, y **una sola idea resaltada por frase**. En un
+   párrafo que enumera (las tres capacidades, los cuatro pasos) se admite una
+   negrita por elemento; fuera de ese caso, si hay dos negritas en la misma
+   frase ninguna destaca. ------------------------------------------------- */
+.sl-suave { font-weight: 300; }
+
+.ova-screen__title .sl-suave {
+  font-weight: 300;
+  color: color-mix(in srgb, var(--text-head) 62%, transparent);
+}
+
+/* Lead: más grande y más ligero, para que la entrada respire */
+.ova-screen__lead {
+  font-weight: 300;
+  font-size: 1.22rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--text-pri) 88%, transparent);
+}
+
+/* Negrita del cuerpo: 600 y en el color de los títulos, para que se despegue
+   del párrafo sin recurrir al color de marca (que significa "clicable") */
+.ova-screen p strong,
+.sl-apertura strong {
+  font-weight: 600;
+  color: var(--text-head);
+}
+
+/* En la apertura el peso base baja: el tamaño ya hace el trabajo */
+.sl-apertura { font-weight: 400; }
+
+/* --- Escenas · pasos de un proceso en formato explicativo -----------------
+   Traducción del patrón "imagen grande, pocas palabras" al design system:
+   cada paso es una escena con número protagonista, icono grande y el texto
+   del DI íntegro. El impacto lo da la composición, no recortar el contenido.
+   Conector punteado entre escenas para que se lean como recorrido. -------- */
+.sl-escenas { display: flex; flex-direction: column; gap: 18px; margin: 44px 0; }
+
+.sl-escena {
+  position: relative;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 34px 38px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+/* conector: hilo punteado que baja de una escena a la siguiente */
+.sl-escena:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 90px; bottom: -18px;
+  width: 2px; height: 18px;
+  background: repeating-linear-gradient(
+    to bottom, color-mix(in srgb, var(--c-acento) 45%, transparent) 0 5px, transparent 5px 10px);
+}
+.sl-escena__marca { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.sl-escena__num {
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: color-mix(in srgb, var(--c-acento) 46%, transparent);
+}
+.sl-escena__icono {
+  width: 62px; height: 62px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 1.75rem;
+  background: color-mix(in srgb, var(--c-acento) 12%, transparent);
+  color: var(--c-acento);
+}
+.sl-escena__titulo {
+  margin: 4px 0 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-head);
+}
+.sl-escena__texto { margin: 0; }
+
+/* (la variante --final se descartó: las escenas van uniformes) */
+
+@media (max-width: 720px) {
+  .sl-escena { grid-template-columns: 1fr; gap: 16px; padding: 26px 24px; }
+  .sl-escena__marca { flex-direction: row; align-items: center; gap: 16px; }
+  .sl-escena:not(:last-child)::after { left: 42px; }
+}
+
+/* --- Ciclo · rueda + pasos ------------------------------------------------
+   Cuando el contenido es un ciclo, el recurso de marca ya lo dice todo: la
+   rueda representa sistema, proceso y movimiento continuo (brandbook p. 15).
+   La rueda hace de imagen grande y los cuatro pasos quedan visibles a la vez
+   —un carrusel escondería tres de cada cuatro. ---------------------------- */
+.sl-ciclo {
+  display: grid;
+  grid-template-columns: minmax(280px, 38%) 1fr;
+  gap: 44px;
+  align-items: center;
+  margin: 44px 0;
+}
+.sl-ciclo__rueda { width: 100%; height: auto; display: block; }
+.sl-ciclo__pasos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.sl-paso {
+  --tinte: var(--c-acento);
+  position: relative;
+  padding: 22px 22px 22px 24px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--tinte);
+}
+.sl-paso__num {
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  color: var(--tinte);
+}
+.sl-paso__titulo {
+  margin: 6px 0 8px;
+  font-size: 1.06rem;
+  font-weight: 600;
+  color: var(--text-head);
+  display: flex; align-items: center; gap: 9px;
+}
+.sl-paso__titulo iconify-icon { font-size: 1.3rem; color: var(--tinte); }
+.sl-paso__desc { margin: 0; font-size: .94rem; color: var(--text-mut); line-height: 1.55; }
+
+@media (max-width: 1000px) {
+  .sl-ciclo { grid-template-columns: 1fr; gap: 28px; }
+  .sl-ciclo__rueda { max-width: 340px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+  .sl-ciclo__pasos { grid-template-columns: 1fr; }
+}
+
+/* --- Dato en cifras ------------------------------------------------------
+   El motor ofrece KPIs y callouts por separado, y al usarlos seguidos la
+   misma cifra se lee dos veces. Aquí van en un solo bloque: el número es el
+   protagonista y el texto del DI lo explica al lado. -------------------- */
+.sl-cifras {
+  display: grid;
+  grid-template-columns: minmax(220px, 34%) 1fr;
+  gap: 36px;
+  align-items: center;
+  margin: 32px 0;
+  padding: 32px 36px;
+  background: var(--c-crema);
+  border-radius: var(--r-md);
+  border-left: 5px solid var(--c-calido);
+}
+.sl-cifras__datos { display: flex; flex-direction: column; gap: 22px; }
+.sl-cifra__valor {
+  display: block;
+  font-size: clamp(2rem, 3.4vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--c-acento);
+}
+.sl-cifra__label {
+  display: block;
+  margin-top: 8px;
+  font-size: .92rem;
+  line-height: 1.45;
+  color: var(--text-mut);
+}
+.sl-cifras__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #8A6100;
+  margin-bottom: 10px;
+}
+.sl-cifras__texto p { margin: 0; }
+.sl-fuente { margin-top: 12px !important; font-size: .86rem; color: var(--text-mut); }
+
+@media (max-width: 820px) {
+  .sl-cifras { grid-template-columns: 1fr; gap: 24px; padding: 26px 24px; }
+  .sl-cifras__datos { flex-direction: row; flex-wrap: wrap; gap: 28px; }
+}
+
+/* --- Diagrama a ancho completo (SVG inline) ------------------------------
+   Va inline, no como <img>, para heredar la tipografía de la página y poder
+   usar las variables de color. Rompe la lectura entre bloques de tarjetas. */
+.sl-diagrama {
+  margin: 40px 0;
+  padding: 30px 34px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+}
+.sl-diagrama svg { width: 100%; height: auto; display: block; }
+.sl-diagrama figcaption {
+  margin-top: 18px;
+  font-size: .9rem;
+  color: var(--text-mut);
+  line-height: 1.55;
+}
+/* Cuadrícula de proporción: 29 puntos, 6 destacados */
+.sl-proporcion { width: 100%; max-width: 190px; height: auto; display: block; margin-bottom: 12px; }
+
+/* --- Anatomía · una pieza gráfica con su explicación al lado -------------
+   Para cuando el DI describe algo que tiene partes ("el criterio incluye
+   una condición de éxito, una de fracaso y una señal observable"): se dibuja
+   el objeto y el texto lo acompaña, en vez de apilar callouts. ----------- */
+.sl-anatomia {
+  display: grid;
+  grid-template-columns: minmax(300px, 46%) 1fr;
+  gap: 44px;
+  align-items: center;
+  margin: 44px 0;
+}
+.sl-anatomia svg { width: 100%; height: auto; display: block; }
+.sl-nota + .sl-nota { margin-top: 26px; }
+.sl-nota__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-acento);
+  margin-bottom: 8px;
+}
+.sl-nota p { margin: 0; }
+@media (max-width: 900px) { .sl-anatomia { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Dato · el "Dato curioso" del DI, sin caja ---------------------------
+   La tarjeta violeta (ova-callout) se reserva para lo que hay que retener
+   (Idea clave, Importante). Un dato curioso es lectura lateral: eyebrow,
+   texto, fuente y un filete fino a la izquierda. Con seis tablas por tema,
+   mapearlas todas a la tarjeta convierte la pantalla en un muro. --------- */
+.sl-dato {
+  margin: 36px 0;
+  padding: 4px 0 4px 24px;
+  border-left: 2px solid color-mix(in srgb, var(--c-acento) 30%, transparent);
+  max-width: 68ch;
+}
+.sl-dato__tag {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-acento);
+  margin-bottom: 8px;
+}
+.sl-dato p { margin: 0; }
+.sl-dato .sl-fuente { margin-top: 10px !important; }
+/* Dos datos o dos notas seguidos: en pareja, como los callouts (7.3) */
+.ova-grid-2 > .sl-dato { margin: 0; max-width: none; }
+.ova-grid-2 > .sl-nota { margin: 8px 0; }
+
+/* --- Comparativo ligero · sin caja -------------------------------------
+   Tercer comparativo de una misma pantalla: si repite el formato con caja y
+   sombra, la pantalla se vuelve un muro de tarjetas. Aquí manda el signo. */
+.sl-vs-ligero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px 0; }
+.sl-vs-ligero__col { position: relative; padding-left: 52px; }
+.sl-vs-ligero__signo {
+  position: absolute; left: 0; top: -2px;
+  width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 1.2rem; font-weight: 700;
+}
+.sl-vs-ligero__col--si .sl-vs-ligero__signo { background: color-mix(in srgb, var(--success) 16%, transparent); color: #1F7A4C; }
+.sl-vs-ligero__col--no .sl-vs-ligero__signo { background: color-mix(in srgb, var(--danger) 14%, transparent); color: #B3303C; }
+.sl-vs-ligero__tag {
+  display: block; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 10px; color: var(--text-mut);
+}
+.sl-vs-ligero p { margin: 0; }
+@media (max-width: 760px) { .sl-vs-ligero { grid-template-columns: 1fr; gap: 28px; } }
+
+/* --- Caso a dos vías -----------------------------------------------------
+   Un comparativo donde cada lado trae su propia ilustración del caso y la
+   ruta que sigue. Evita el error de poner un diagrama y, debajo, unas cards
+   que repiten las mismas etiquetas: es una sola pieza. ------------------- */
+.sl-caso { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 40px 0; }
+.sl-caso__via {
+  display: flex; flex-direction: column;
+  padding: 28px 30px 26px;
+  background: var(--bg-surface);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--via);
+}
+.sl-caso__via--error { --via: #C1444F; }
+.sl-caso__via--ok    { --via: #F8B716; }
+.sl-caso__tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 600; color: var(--via); margin-bottom: 18px;
+}
+.sl-caso__via--ok .sl-caso__tag { color: #8A6100; }
+.sl-caso__ilustracion { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.sl-caso__texto { margin: 0 0 22px; }
+.sl-caso__ruta {
+  margin-top: auto; padding-top: 18px;
+  border-top: 1px dashed var(--border-c);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  font-size: .82rem;
+}
+.sl-caso__paso {
+  padding: 6px 12px; border-radius: 999px;
+  background: var(--bg-muted); color: var(--text-pri);
+}
+.sl-caso__paso--clave { background: #FDF3DC; color: #8A6100; font-weight: 600; }
+.sl-caso__paso--tarde { background: transparent; color: #C1444F; border: 1px dashed #E2A6AC; }
+.sl-caso__flecha { color: var(--text-mut); opacity: .6; }
+.sl-caso__pie {
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+  font-size: .9rem; color: var(--text-mut); line-height: 1.55;
+}
+@media (max-width: 860px) { .sl-caso { grid-template-columns: 1fr; } }
+
+/* --- Respiro · banda de descanso -----------------------------------------
+   Una pantalla densa necesita un corte: una banda que rompe la columna, en
+   navy, con una sola frase grande. No aporta información nueva —es la frase
+   de remate del propio texto, sacada a primer plano— y sirve de pausa entre
+   dos bloques de contenido. Máximo uno por pantalla. --------------------- */
+.sl-respiro {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 72px calc(-1 * clamp(20px, 5vw, 64px));
+  padding: clamp(56px, 7vw, 84px) clamp(28px, 6vw, 88px);
+  background: var(--c-deep);
+  color: #FFFFFF;
+}
+.sl-respiro::before {                      /* la rueda, apenas insinuada */
+  content: '';
+  position: absolute;
+  top: -30%; right: -6%;
+  width: min(46vw, 520px); aspect-ratio: 1;
+  background: url('../img/curso/scala-rueda.svg') center / contain no-repeat;
+  opacity: .09;
+  pointer-events: none;
+}
+.sl-respiro p {
+  position: relative; z-index: 1;
+  margin: 0;
+  max-width: 940px;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.42;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+/* La regla de negrita del cuerpo (.ova-screen p strong) tiene más especificidad
+   que .sl-respiro strong y pintaba el destacado en navy sobre navy: ilegible.
+   Se sube la especificidad para que gane el amarillo. */
+.ova-screen .sl-respiro strong,
+.sl-respiro strong { font-weight: 600; color: var(--c-calido); }
+.ova-screen .sl-respiro .sl-italic,
+.sl-respiro .sl-italic { color: #FFFFFF; }
+
+/* --- Más aire entre las piezas de una pantalla densa --- */
+.sl-diagrama, .sl-caso, .sl-cifras, .sl-anatomia { margin-top: 56px; margin-bottom: 56px; }
+.sl-vs-ligero { margin: 52px 0; }
+.sl-quote { margin: 48px 0; }
+
+/* --- Cifras en fila · para tres o más datos ------------------------------
+   Con tres cifras, apilarlas deja una columna alta y estrecha frente a un
+   texto corto. En fila arriba y el texto debajo, el bloque respira. ------ */
+.sl-cifras--fila { grid-template-columns: 1fr; gap: 28px; }
+.sl-cifras--fila .sl-cifras__datos {
+  flex-direction: row;
+  gap: 40px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-calido) 30%, transparent);
+}
+.sl-cifras--fila .sl-cifra { flex: 1; }
+@media (max-width: 720px) {
+  .sl-cifras--fila .sl-cifras__datos { flex-direction: column; gap: 22px; }
+}
+
+/* --- Aclaración · texto que el DI repite de un bloque cercano ------------
+   No se recorta (es literal), pero baja de peso: se lee como nota, no como
+   una segunda afirmación. ------------------------------------------------ */
+.sl-aclaracion {
+  display: block;
+  margin-top: 8px;
+  font-size: .9rem;
+  line-height: 1.5;
+  color: var(--text-mut);
+}
+
+/* --- Foto a ancho completo, recortada a franja ---------------------------
+   Una foto vertical junto a un párrafo corto siempre descuadra. A ancho
+   completo y recortada a franja, acompaña sin competir con el texto. ----- */
+.sl-foto-ancha { margin: 40px 0; }
+.sl-foto-ancha img {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: var(--r-md);
+}
+.sl-foto-ancha figcaption {
+  margin-top: 14px;
+  font-size: .88rem;
+  color: var(--text-mut);
+  line-height: 1.55;
+}
+
+/* =========================================================
+   MOVIMIENTO
+   ---------------------------------------------------------
+   El brandbook contempla la rueda como "recurso dinámico en
+   motion". En un curso, el movimiento acompaña; no compite
+   con la lectura: nada se mueve donde hay texto que leer.
+   ========================================================= */
+
+/* La rueda de la portada gira una vuelta cada 90 s: se percibe viva,
+   no se percibe girando. */
+@keyframes sl-girar-portada { from { transform: rotate(-48deg); } to { transform: rotate(312deg); } }
+.sl-rueda-portada {
+  transform-box: view-box;
+  transform-origin: 260px 260px;
+  animation: sl-girar-portada 90s linear infinite;
+}
+
+/* El gradiente de la portada respira muy lento */
+@keyframes sl-respirar { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.sl-portada {
+  background-size: 150% 150%;
+  animation: sl-respirar 42s ease-in-out infinite;
+}
+
+/* La rueda del ciclo se dibuja al entrar en la pantalla, un cuarto tras
+   otro: el componente explica su propio orden. Solo una vez. */
+@keyframes sl-dibujar-cuarto { from { stroke-dasharray: 0 690; } to { stroke-dasharray: 190 690; } }
+.sl-ciclo__rueda g circle {
+  animation: sl-dibujar-cuarto .7s cubic-bezier(.4,0,.2,1) both;
+}
+.sl-ciclo__rueda g circle:nth-child(1) { animation-delay: .15s; }
+.sl-ciclo__rueda g circle:nth-child(2) { animation-delay: .33s; }
+.sl-ciclo__rueda g circle:nth-child(3) { animation-delay: .51s; }
+.sl-ciclo__rueda g circle:nth-child(4) { animation-delay: .69s; }
+
+/* La rueda del fondo de la banda, aún más lenta */
+@keyframes sl-girar { to { transform: rotate(360deg); } }
+.sl-respiro::before { animation: sl-girar 140s linear infinite; }
+
+/* --- Accesibilidad -------------------------------------------------------
+   Obligatorio: quien pide menos movimiento no ve ninguno. El motor no
+   contempla `prefers-reduced-motion` —su reveal se aplica siempre—, así que
+   aquí se neutraliza también. --------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .sl-rueda-portada,
+  .sl-portada,
+  .sl-ciclo__rueda g circle,
+  .sl-respiro::before {
+    animation: none !important;
+  }
+  .sl-ciclo__rueda g circle { stroke-dasharray: 190 690; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* =========================================================
+   MÓVIL
+   ---------------------------------------------------------
+   Regla: en una pantalla estrecha, una imagen o se ve a un
+   tamaño legible o no se ve. Nunca "a escala hormiga".
+   ========================================================= */
+
+/* --- Diagramas anchos: se deslizan, no se encogen ------------------------
+   Un diagrama pensado a 1160 px reducido a 430 deja textos de 5 px. En vez
+   de encogerlo hasta lo ilegible, se le fija un ancho mínimo legible y el
+   contenedor se desplaza en horizontal. --------------------------------- */
+@media (max-width: 860px) {
+  .sl-diagrama {
+    padding: 22px 0 22px 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  .sl-diagrama svg { min-width: 620px; }
+  .sl-diagrama figcaption {
+    position: sticky; left: 0;
+    padding-right: 20px;
+    max-width: 100%;
+  }
+  /* pista de que hay más a la derecha */
+  .sl-diagrama::after {
+    content: '';
+    position: sticky; left: 100%; top: 0;
+    display: block; width: 28px; height: 100%;
+    background: linear-gradient(to left, var(--bg-surface), transparent);
+    pointer-events: none;
+  }
+}
+
+/* --- Portada: la fotografía no desaparece, se reordena -------------------
+   El molde la ocultaba en móvil (heredado de otro curso). Aquí baja de
+   tamaño y se coloca sobre el texto: sigue siendo la primera impresión. -- */
+@media (max-width: 900px) {
+  .sl-portada { min-height: auto; padding: 40px 0 48px; }
+  .sl-portada__inner { grid-template-columns: 1fr; gap: 28px; }
+  .sl-portada__figura {
+    display: block !important;
+    order: -1;
+    max-width: min(78vw, 300px);
+    margin: 0 auto;
+  }
+  .sl-portada__logo img { height: 44px; }
+  .sl-portada__logo { margin-bottom: 22px; }
+  .sl-portada__quote { font-size: 1rem; max-width: none; }
+  .sl-portada__rueda { display: none; }   /* la del fondo sobra: ya está la del retrato */
+}
+
+/* --- Fotos y piezas: alturas y aire proporcionados a la pantalla --- */
+@media (max-width: 720px) {
+  .sl-foto-ancha img { max-height: 220px; }
+  .sl-ilustracion { margin: 28px 0; }
+  .sl-anatomia svg { max-width: 340px; margin: 0 auto; }
+  .sl-cifras, .sl-caso, .sl-diagrama, .sl-anatomia { margin-top: 40px; margin-bottom: 40px; }
+  .sl-respiro { margin: 48px calc(-1 * clamp(20px, 5vw, 64px)); }
+  .sl-escena__num { font-size: 2.6rem; }
+}
+
+/* =========================================================
+   AJUSTES DE LA REVISIÓN DE SCALA · 2026-08-31
+   ========================================================= */
+
+/* 1 · Contraste del botón "Siguiente" -------------------------------------
+   El motor pinta el rótulo con --c-acento sobre el fondo del sidebar. Con el
+   naranja de Waygroup contrastaba; con el violeta de Scala sobre navy queda
+   en 1,4:1 y la palabra SIGUIENTE desaparece. Pasa al amarillo (6,65:1). */
+.ova-screen-nav__btn--next small { color: var(--c-calido); }
+
+/* 2 · Jerarquía del menú ---------------------------------------------------
+   Los subtemas se indentan bajo su tema y bajan de peso, con un filo que los
+   agrupa visualmente. El nivel viene del config (`nivel: 2`). */
+.ova-sidebar__menu-item[data-nivel="2"] {
+  /* el filo cae exactamente donde el conector del tema (::after en left:30px,
+     centro del chip): margen 29px + borde 2px = línea centrada en 30px */
+  margin-left: 29px;
+  border-left: 2px solid rgba(255,255,255,.16);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+/* el tick conector del motor nace del chip; los sub-ítems no tienen chip
+   y les quedaba flotando debajo: fuera */
+.ova-sidebar__menu-item[data-nivel="2"]::after { display: none; }
+.ova-sidebar__menu-item[data-nivel="2"] .title { font-size: .92em; opacity: .82; }
+.ova-sidebar__menu-item[data-nivel="2"] .num { opacity: .6; transform: scale(.9); }
+[data-version="clara"] .ova-sidebar__menu-item[data-nivel="2"] { border-left-color: rgba(48,54,81,.16); }
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item[data-nivel="2"] { margin-left: 0; border-left: 0; }
+
+/* 3 · Menú sin iconos ------------------------------------------------------
+   Prometían contenido inexistente (un reproductor en una pantalla sin vídeo).
+   En el sidebar colapsado el número ocupa su lugar: si no, quedaría vacío. */
+.ova-sidebar__menu-item { grid-template-columns: 32px 1fr; }
+
+/* --- Marca de la izquierda: número para el contenido temático, icono para
+       las secciones estructurales (inicio, contenido, conclusión, evaluación,
+       referencias, glosario). Solo el contenido temático se numera. -------- */
+/* El icono vive en el MISMO chip que el número: mismo tamaño, mismo fondo,
+   mismos estados. Es lo que hace que el menú se lea uniforme. */
+/* El icono hereda el color del chip en TODOS los estados, igual que el
+   número. El motor lo atenuaba al 50% y lo pintaba de acento en activo
+   (reglas del diseño viejo, con el icono a la derecha): aquí ambas
+   producían violeta sobre violeta. */
+.ova-sidebar__menu-item .num--icono iconify-icon { font-size: 1.05rem; color: inherit; }
+.ova-sidebar__menu-item.is-active .num--icono iconify-icon { color: #fff; }
+/* Las pantallas de un grupo no llevan marca: el chip vacío se retira y el
+   título ocupa toda la fila (la sangría ya indica que pertenecen al grupo). */
+.ova-sidebar__menu-item[data-tipo="grupo"] { grid-template-columns: 1fr; }
+.ova-sidebar__menu-item[data-tipo="grupo"] .num--vacio { display: none; }
+
+/* La cabecera de grupo activa se atenúa menos cuando una de sus pantallas
+   está abierta, para que se lea de qué sección se cuelga la pantalla actual. */
+.ova-sidebar__menu-item.is-padre-activo { color: var(--sb-text); }
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item .num { display: grid !important; place-items: center; }
+
+/* 4 · Referencias alineadas a la izquierda ---------------------------------
+   Se retira la sangría francesa a petición del cliente (APA la pide, pero
+   manda su criterio de lectura en pantalla). */
+.sl-referencias p { padding-left: 0; text-indent: 0; }
+
+/* 5 · Evaluación · alineada a la izquierda como el resto del curso ---------
+   El motor centra el contenido de cada actividad; con bloques de ancho
+   limitado eso los descuadra hacia la derecha. */
+.sl-eval__cuerpo { text-align: left; max-width: 74ch; }
+.sl-eval__cuerpo h2 { margin: 0 0 14px; }
+.ova-quiz__question { font-size: 1.12rem; font-weight: 600; color: var(--text-head); margin: 0 0 18px; }
+/* La retroalimentación cambia de plano: el motor le da el mismo fondo beige
+   que a las opciones y se lee como una respuesta más. Aquí habla el curso,
+   no el estudiante: fondo teñido por el estado, etiqueta propia y más aire. */
+.ova-quiz__feedback {
+  text-align: left;
+  margin-top: 28px;
+  padding: 18px 22px 20px;
+  background: color-mix(in srgb, var(--success) 9%, var(--bg-surface));
+  border-left-width: 4px;
+}
+.ova-quiz__feedback::before {
+  content: 'Retroalimentación';
+  display: block;
+  font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 700; color: #1F7A4C;
+  margin-bottom: 10px;
+}
+.ova-quiz__feedback.is-wrong { background: color-mix(in srgb, var(--danger) 8%, var(--bg-surface)); }
+.ova-quiz__feedback.is-wrong::before { color: #B3303C; }
+
+/* La carita de marca: ojos violeta y el arco amarillo del logo como boca
+   (sonríe al acertar, se invierte al fallar). Mismo trazo que la rueda
+   (grosor 13/100, puntas redondas). Entra con un pop rotado, como si la
+   rueda girara hasta acomodarse. */
+.ova-quiz__feedback { position: relative; padding-right: 84px; }
+.ova-quiz__feedback::after {
+  content: '';
+  position: absolute;
+  top: 14px; right: 18px;
+  width: 46px; height: 46px;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='32' cy='36' r='8' fill='%23503B96'/><circle cx='68' cy='36' r='8' fill='%23503B96'/><path d='M26 60 Q50 86 74 60' fill='none' stroke='%23F8B716' stroke-width='13' stroke-linecap='round'/></svg>") center / contain no-repeat;
+  animation: slCaraPop .5s cubic-bezier(.34,1.56,.64,1);
+}
+.ova-quiz__feedback.is-wrong::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='32' cy='40' r='8' fill='%23503B96'/><circle cx='68' cy='40' r='8' fill='%23503B96'/><path d='M26 78 Q50 54 74 78' fill='none' stroke='%23F8B716' stroke-width='13' stroke-linecap='round'/></svg>");
+}
+@keyframes slCaraPop {
+  from { transform: scale(.3) rotate(-40deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .ova-quiz__feedback::after { animation: none; } }
+@media (max-width: 500px) {
+  .ova-quiz__feedback { padding-right: 64px; }
+  .ova-quiz__feedback::after { width: 36px; height: 36px; right: 14px; }
+}
+
+/* 6 · Temario · la estructura de la unidad antes de entrar --------------
+   Ajuste de Scala: el estudiante necesita ver el recorrido completo y no
+   caer directo en la introducción. */
+.sl-temario { display: flex; flex-direction: column; gap: 14px; margin: 36px 0; }
+.sl-bloque {
+  background: var(--bg-surface);
+  border: 1px solid var(--borde, var(--border-c));
+  border-left: 4px solid var(--tono, var(--c-acento));
+  border-radius: var(--r-md);
+  padding: 22px 26px;
+}
+.sl-bloque__tag {
+  display: block; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+  font-weight: 700; color: var(--tono, var(--c-acento)); margin-bottom: 12px;
+}
+.sl-bloque ol { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.sl-bloque li { display: flex; gap: 12px; align-items: baseline; font-size: .99rem; }
+.sl-bloque li .n {
+  font-size: .76rem; font-weight: 700; color: var(--text-mut);
+  min-width: 22px; font-variant-numeric: tabular-nums;
+}
+/* Los subtemas mantienen su número en la columna —si se desplaza, la lista
+   parece desalineada en vez de jerárquica— y sangran solo el texto, con un
+   guion que marca de qué tema dependen. */
+.sl-bloque li .t { display: inline-block; }
+.sl-bloque li.sub { font-size: .93rem; color: var(--text-mut); }
+.sl-bloque li.sub .t { position: relative; padding-left: 26px; }
+.sl-bloque li.sub .t::before {
+  content: ''; position: absolute; left: 4px; top: .62em;
+  width: 13px; height: 1px; background: currentColor; opacity: .4;
+}
+.sl-bloque li em { font-style: normal; color: var(--text-mut); font-size: .88rem; }
+
+.sl-descarga {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  background: var(--c-crema); border-radius: var(--r-md);
+  border-left: 5px solid var(--c-calido);
+  padding: 24px 28px; margin: 36px 0;
+}
+.sl-descarga__info { flex: 1; min-width: 220px; }
+.sl-descarga__info b { display: block; font-size: 1.05rem; color: var(--text-head); }
+.sl-descarga__info span { font-size: .9rem; color: var(--text-mut); }
+
+/* 7 · Temario · marca por icono en las secciones estructurales -------------- */
+.sl-bloque__tag { display: inline-flex; align-items: center; gap: 8px; }
+.sl-bloque__tag iconify-icon { font-size: 1.1rem; }
+.sl-bloque li .n--icono { color: var(--c-acento); }
+.sl-bloque li .n--icono iconify-icon { font-size: 1.05rem; }
+
+/* (el panel de cierre se descartó: los ítems van como los demás) */
+
+/* 9 · Índice navegable ----------------------------------------------------
+   El ajuste de Scala pedía que el estudiante tuviera control sobre su ruta:
+   un índice que solo enumera no lo da. Cada fila lleva a su pantalla.
+   Se descarta el patrón de un botón por fila —ocho botones violeta seguidos
+   anulan la regla de que el violeta marca la acción—: manda la fila entera,
+   con una flecha que aparece al acercarse. */
+.sl-bloque li { padding: 0; }
+.sl-fila {
+  display: flex; align-items: baseline; gap: 12px;
+  padding: 7px 10px 7px 8px;
+  margin-left: -8px;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background .16s ease, color .16s ease;
+}
+.sl-fila:hover, .sl-fila:focus-visible {
+  background: color-mix(in srgb, var(--c-acento) 7%, transparent);
+  color: var(--text-head);
+}
+.sl-fila:focus-visible { outline: 2px solid var(--c-acento); outline-offset: 2px; }
+.sl-fila__ir {
+  margin-left: auto;
+  color: var(--c-acento);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .16s ease, transform .16s ease;
+}
+.sl-fila:hover .sl-fila__ir,
+.sl-fila:focus-visible .sl-fila__ir { opacity: 1; transform: translateX(0); }
+@media (hover: none) { .sl-fila__ir { opacity: .45; transform: none; } }
+
+/* El título de bloque de un tema es enlace a la pantalla del tema */
+a.sl-bloque__tag--link { text-decoration: none; color: var(--c-acento); }
+a.sl-bloque__tag--link:hover .sl-fila__ir,
+a.sl-bloque__tag--link:focus-visible .sl-fila__ir { opacity: 1; transform: translateX(0); }
+a.sl-bloque__tag--link .sl-fila__ir { margin-left: 6px; }
+a.sl-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outline-offset: 2px; border-radius: 4px; }
+
+/* 10 · Sección interna de un tema ------------------------------------------
+   Los subtemas viven dentro de la página de su tema, con numeración propia
+   (1.1, 2.1…). El encabezado marca el corte sin pretender ser otra pantalla. */
+.sl-seccion {
+  margin: 84px 0 36px;
+  padding-top: 44px;
+  border-top: 1px solid var(--border-c);
+}
+/* La viñeta de sección: el filo amarillo de marca, el mismo gesto que la
+   apertura y la descarga. Sustituye a la numeración interna (1.1, 2.1…):
+   todas las secciones —introducción y temas— se marcan igual. */
+.sl-seccion__titulo {
+  position: relative;
+  padding-left: 22px;
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  color: var(--text-head);
+}
+.sl-seccion__titulo::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .14em; bottom: .14em;
+  width: 5px;
+  background: var(--c-calido);
+  border-radius: 3px;
+}
+.sl-seccion__lead {
+  padding-left: 22px;
+}
+.sl-seccion__lead {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.14rem;
+  color: color-mix(in srgb, var(--text-pri) 88%, transparent);
+  max-width: 68ch;
+}
+
+/* 11 · Sub-ítems de sección en el menú -------------------------------------
+   Abren la página del tema y bajan hasta la sección. Sin marca propia:
+   la sangría y el filo ya dicen de qué cuelgan. En el sidebar colapsado
+   se ocultan (no tienen chip que mostrar). */
+.ova-sidebar__menu-item[data-tipo="seccion"] { grid-template-columns: 1fr; }
+.ova-sidebar__menu-item[data-tipo="seccion"] .num { display: none; }   /* Scala no numera las secciones en el menú (piloto aprobado) */
+[data-sidebar-collapsed="true"] .ova-sidebar__menu-item[data-tipo="seccion"] { display: none !important; }
+
+/* Las secciones ancladas no quedan pegadas al borde (ni bajo el topbar sticky) */
+.sl-seccion { scroll-margin-top: calc(var(--topbar-h) + 18px); }
+
+/* 12 · Evaluación · bienvenida con jerarquía --------------------------------
+   Un solo título (el de la pantalla). El head del quiz se eliminó: el progreso,
+   el contador y los botones viven juntos en una sola franja inferior, y el tema
+   pasó adentro de la tarjeta de cada pregunta (ajuste del cliente: el head
+   partía la pregunta en dos y la etiqueta "Actividad" competía con el tema). */
+.ova-evalquiz__nav {
+  /* En el flujo y en la misma columna que la tarjeta (74ch, como .sl-eval__cuerpo):
+     fijarla al centro del viewport la descuadraba respecto a la pregunta. */
+  position: static;
+  transform: none;
+  width: 100%;
+  max-width: 74ch;
+  margin: 20px 0 0;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 10px 10px 20px;
+}
+.ova-evalquiz__nav .ova-evalquiz__progress-bar {
+  flex: 1;
+  height: 6px;
+  margin-bottom: 0;
+  min-width: 80px;
+}
+.ova-evalquiz__nav .ova-evalquiz__counter {
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.ova-evalquiz__btn--prev { padding: 12px 14px; }
+@media (max-width: 720px) {
+  .ova-evalquiz__nav { gap: 12px; padding-left: 14px; }
+  .ova-evalquiz__nav .ova-evalquiz__progress-bar { min-width: 48px; }
+  .ova-evalquiz__nav .ova-evalquiz__btn { flex: 0 0 auto; }
+}
+
+/* El tema como eyebrow dentro de la tarjeta, y el caso pegado a su pregunta:
+   todo lo que hay que leer para responder queda en un solo bloque. */
+.sl-eval__tema {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--c-acento);
+  margin: 0 0 16px;
+}
+.sl-eval__contexto { margin: 0 0 18px; max-width: 66ch; }
+
+.sl-eval__lead {
+  font-size: 1.18rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin: 6px 0 34px;
+}
+.sl-eval__datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 640px;
+  margin-bottom: 38px;
+}
+.sl-eval__dato {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-c);
+  border-top: 3px solid var(--c-calido);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.sl-eval__dato .v {
+  font-size: 1.9rem; font-weight: 650; line-height: 1;
+  color: var(--c-acento);
+}
+.sl-eval__dato .v iconify-icon { font-size: 1.7rem; }
+.sl-eval__dato .l { font-size: .86rem; color: var(--text-mut); line-height: 1.4; }
+.sl-eval__ayuda { margin: 14px 0 0; font-size: .88rem; color: var(--text-mut); }
+@media (max-width: 720px) { .sl-eval__datos { grid-template-columns: 1fr; } }
+
+/* 13 · Glosario · diccionario editorial --------------------------------------
+   La inicial fantasma en serif itálica marca el ritmo alfabético (solo aparece
+   cuando cambia la letra, como en un diccionario); el guiño amarillo de marca
+   la subraya. El chip dice de qué parte de la unidad viene el término. */
+.sl-glosario { margin: 8px 0 0; max-width: 74ch; }
+.sl-glosario__entrada {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 0 20px;
+  padding: 26px 0;
+  border-top: 1px solid var(--border-c);
+}
+.sl-glosario__entrada:first-child { border-top: none; padding-top: 10px; }
+/* Las entradas que continúan una letra se pegan a la anterior: la línea
+   divisoria completa solo separa letras. */
+.sl-glosario__entrada--cont { border-top-color: transparent; padding-top: 0; margin-top: -6px; }
+.sl-glosario__letra {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 2.7rem;
+  line-height: 1;
+  text-align: right;
+  color: color-mix(in srgb, var(--c-acento) 32%, transparent);
+  position: relative;
+}
+.sl-glosario__entrada:not(.sl-glosario__entrada--cont) .sl-glosario__letra::after {
+  content: '';
+  position: absolute;
+  right: 2px; top: calc(1em + 8px);
+  width: 26px; height: 4px;
+  border-radius: 999px;
+  background: var(--c-calido);
+}
+.sl-glosario dt {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 650;
+  color: var(--text-head);
+}
+.sl-glosario dd { margin: 10px 0 0; max-width: 62ch; }
+@media (max-width: 600px) {
+  .sl-glosario__entrada { grid-template-columns: 44px 1fr; gap: 0 14px; }
+  .sl-glosario__letra { font-size: 1.9rem; }
+  .sl-glosario__entrada:not(.sl-glosario__entrada--cont) .sl-glosario__letra::after { width: 18px; }
+}
+
+/* 14 · Términos del glosario en el texto -------------------------------------
+   Primera aparición por pantalla, subrayado punteado (la convención de
+   "definición" — el subrayado continuo violeta significaría "navega") y
+   tooltip con la definición al pasar el mouse o enfocar (tab / tap).
+   Nunca dentro de la evaluación: sería una pista. */
+.sl-termino {
+  text-decoration: underline dotted;
+  text-decoration-color: color-mix(in srgb, var(--c-acento) 55%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  cursor: help;
+  position: relative;
+}
+.sl-termino:hover,
+.sl-termino:focus-visible { text-decoration-color: var(--c-acento); outline: none; }
+.sl-termino::after {
+  content: attr(data-def);
+  position: absolute;
+  left: 0; bottom: calc(100% + 10px);
+  width: max-content;
+  max-width: min(38ch, 70vw);
+  background: var(--c-deep);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: .88rem; line-height: 1.5;
+  font-weight: 400; font-style: normal;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  opacity: 0; visibility: hidden; transform: translateY(4px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  pointer-events: none;
+  z-index: 60;
+}
+.sl-termino::before {
+  content: '';
+  position: absolute;
+  left: 14px; bottom: calc(100% + 4px);
+  border: 6px solid transparent;
+  border-top-color: var(--c-deep);
+  opacity: 0; visibility: hidden;
+  transition: opacity .18s ease, visibility .18s;
+  z-index: 60;
+}
+.sl-termino:hover::after,  .sl-termino:focus-visible::after,
+.sl-termino:hover::before, .sl-termino:focus-visible::before {
+  opacity: 1; visibility: visible; transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-termino::after { transition: none; transform: none; }
+  .sl-termino::before { transition: none; }
+}
+/* Los contenedores con overflow:hidden recortan el tooltip (pasó en la
+   infografía de la introducción). Si albergan un término, se abren: su
+   overflow es defensivo, nada se desborda en el estado normal. */
+.ova-infografia__paso:has(.sl-termino) { overflow: visible; }
+
+/* --- Pódcast de la unidad · la barra de progreso se puede tocar ---------- */
+[data-sl-audio] .ova-audio__progress { cursor: pointer; height: 6px; }
+[data-sl-audio] .ova-audio__play:focus-visible { outline: 2px solid var(--c-calido); outline-offset: 3px; }

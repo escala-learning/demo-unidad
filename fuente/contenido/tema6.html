@@ -1,0 +1,570 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Catálogo · <span class="sl-suave">estructura del</span> <span class="sl-italic">contenido</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal del Word -->
+        <p class="ova-screen__lead">
+          Reconocer los componentes para lo que tiene partes, orden o comparación, y saber
+          con qué rótulo se piden en el Word.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · única tarjeta violeta de la pantalla -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Ante una lista, un proceso o un contraste del documento, eliges el componente
+            que lo muestra completo sin inventar rótulos: <strong>el número lo pone el
+            componente; el título y la descripción, el Word</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · la propuso el agente ilustrador (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-con-partes.svg" alt="A la izquierda, una hoja del Word con un bloque rotulado Recorrido que trae tres partes seguidas, cada una encabezada por la palabra Paso 1, Paso 2 y Paso 3 y con su título y su descripción. A la derecha, las mismas tres partes separadas y en fila, en orden: cada una lleva un número en un círculo violeta y, dentro, exactamente el mismo título y la misma descripción; la palabra Paso ya no aparece." />
+      </figure>
+
+      <p data-reveal>
+        Doce componentes para lo que tiene partes, orden o comparación. El rótulo del Word
+        elige el componente; el diagrama no lleva rótulo: lo propone el diagramador con lo
+        que el texto ya dice.
+      </p>
+
+      <!-- ════ Sección · Acordeón ════ -->
+      <section class="sl-seccion" id="acordeon" data-reveal>
+        <h2 class="sl-seccion__titulo">Acordeón</h2>
+        <p class="sl-seccion__lead">Paneles que se abren y cierran por título. Muestra un conjunto de ítems del mismo
+          nivel sin alargar la pantalla.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Acordeón: · Ítem N ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-acordeon">
+          <div class="ova-acordeon__item is-open">
+            <button class="ova-acordeon__head"><span><span class="num">01</span> ¿Qué vamos a decidir?</span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">La pregunta que la reunión debe responder, escrita en la agenda antes de convocar. Si no cabe en una línea, son dos reuniones.</div></div>
+          </div>
+          <div class="ova-acordeon__item">
+            <button class="ova-acordeon__head"><span><span class="num">02</span> ¿Quién decide?</span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">Una persona con nombre. El grupo opina y aporta, pero alguien responde por la decisión y su seguimiento.</div></div>
+          </div>
+          <div class="ova-acordeon__item">
+            <button class="ova-acordeon__head"><span><span class="num">03</span> ¿Qué pasa si no decidimos hoy?</span><iconify-icon class="ova-acordeon__chev" icon="mdi:chevron-down"></iconify-icon></button>
+            <div class="ova-acordeon__body"><div class="ova-acordeon__body-inner">El costo de posponer, dicho en voz alta. Muchas reuniones se destraban cuando el grupo escucha qué se pierde por esperar.</div></div>
+          </div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Acordeón</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Acordeón: Las tres preguntas de una agenda</b>
+<b>Ítem 1 · ¿Qué vamos a decidir?</b> La pregunta que la reunión debe responder […]
+<b>Ítem 2 · ¿Quién decide?</b> […]
+<b>Ítem 3 · ¿Qué pasa si no decidimos hoy?</b> […]
+<span class="gris">Título del acordeón; por ítem, título de hasta 8 palabras y descripción de hasta 80. Imagen opcional.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 3 a 8 conceptos, preguntas o definiciones del mismo nivel. Con 2, una pareja de bloques; con más de 8, tabla o glosario. Nunca para esconder lo que hay que leer sí o sí.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Carrusel ════ -->
+      <section class="sl-seccion" id="carrusel" data-reveal>
+        <h2 class="sl-seccion__titulo">Carrusel</h2>
+        <p class="sl-seccion__lead">Tarjetas que se recorren de a una, con icono o imagen, título y texto.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Carrusel: · Tarjeta N ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-carrusel">
+          <div class="ova-carrusel__track-wrap"><div class="ova-carrusel__track">
+            <div class="ova-carrusel__slide"><iconify-icon icon="mdi:view-carousel-outline" style="font-size:2.4rem; color:var(--c-acento);"></iconify-icon><h4 style="margin-top:12px;">Una tarjeta a la vez</h4><p style="color:var(--text-mut); font-size:.9rem;">El estudiante ve una y decide cuándo pasar a la siguiente; las demás esperan.</p></div>
+            <div class="ova-carrusel__slide"><iconify-icon icon="mdi:numeric-4-box-outline" style="font-size:2.4rem; color:var(--c-acento);"></iconify-icon><h4 style="margin-top:12px;">Cuatro o más</h4><p style="color:var(--text-mut); font-size:.9rem;">Con tres o menos, una grilla las muestra todas juntas y nadie tiene que hacer clic.</p></div>
+            <div class="ova-carrusel__slide"><iconify-icon icon="mdi:shape-outline" style="font-size:2.4rem; color:var(--c-acento);"></iconify-icon><h4 style="margin-top:12px;">Ítems del mismo tipo</h4><p style="color:var(--text-mut); font-size:.9rem;">Ejemplos, escenarios, roles: cada tarjeta pesa lo mismo que las otras.</p></div>
+            <div class="ova-carrusel__slide"><iconify-icon icon="mdi:sync-off" style="font-size:2.4rem; color:var(--c-acento);"></iconify-icon><h4 style="margin-top:12px;">Nunca un ciclo</h4><p style="color:var(--text-mut); font-size:.9rem;">Un ciclo se entiende viéndolo completo; escondido de a uno pierde el sentido.</p></div>
+          </div></div>
+          <div class="ova-carrusel__nav"><div class="ova-carrusel__dots"></div><div class="ova-carrusel__arrows"><button class="ova-carrusel__arrow" data-ova-carrusel-prev><iconify-icon icon="mdi:arrow-left"></iconify-icon></button><button class="ova-carrusel__arrow" data-ova-carrusel-next><iconify-icon icon="mdi:arrow-right"></iconify-icon></button></div></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-carrusel"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-carrusel"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Carrusel</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Carrusel: Cuatro roles en la sala</b>
+<b>Tarjeta 1 · Quien convoca:</b> Escribe la pregunta y elige a quién invitar […]
+<b>Tarjeta 2 · Quien decide:</b> […]
+<b>Tarjeta 3 · Quien ejecuta:</b> […]
+<b>Tarjeta 4 · Quien escribe:</b> […]
+<span class="gris">De 4 a 8 tarjetas: título de hasta 8 palabras, texto de hasta 60 palabras e imagen opcional.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Cuatro o más ítems homogéneos: ejemplos, escenarios, roles. Con tres o menos, una grilla. Nunca para un ciclo.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Pestañas ════ -->
+      <section class="sl-seccion" id="pestanas" data-reveal>
+        <h2 class="sl-seccion__titulo">Pestañas</h2>
+        <p class="sl-seccion__lead">Varias vistas del mismo tema en un solo panel, alternadas por su etiqueta.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Pestañas: · Pestaña N ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-tabs">
+          <div class="ova-tabs__nav">
+            <button class="ova-tabs__btn is-active"><iconify-icon icon="mdi:bullhorn-outline"></iconify-icon> Informar</button>
+            <button class="ova-tabs__btn"><iconify-icon icon="mdi:gavel"></iconify-icon> Decidir</button>
+            <button class="ova-tabs__btn"><iconify-icon icon="mdi:lightbulb-outline"></iconify-icon> Crear</button>
+          </div>
+          <div class="ova-tabs__panels">
+            <div class="ova-tabs__panel is-active"><h4>Reunión para informar</h4><p>Una persona habla, las demás escuchan. Casi siempre puede reemplazarse por un documento y quince minutos de preguntas.</p></div>
+            <div class="ova-tabs__panel"><h4>Reunión para decidir</h4><p>Hay una pregunta escrita, un dueño de la decisión y una fecha. Termina cuando la pregunta tiene respuesta.</p></div>
+            <div class="ova-tabs__panel"><h4>Reunión para crear</h4><p>Se generan opciones sin juzgarlas. Termina con una lista, no con una decisión; decidir es otra reunión.</p></div>
+          </div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pestañas</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Pestañas: Tres tipos de reunión</b>
+<b>Pestaña 1 · Informar:</b> […]
+<b>Pestaña 2 · Decidir:</b> […]
+<b>Pestaña 3 · Crear:</b> […]
+<span class="gris">Por pestaña, etiqueta de hasta 4 palabras y contenido de hasta 140. Imagen opcional.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 2 a 4 vistas paralelas: tipos, niveles, casos. Si las vistas son secuenciales, va un recorrido de pasos.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Recorrido de pasos ════ -->
+      <section class="sl-seccion" id="recorrido" data-reveal>
+        <h2 class="sl-seccion__titulo">Recorrido <span class="sl-suave">de</span> <span class="sl-italic">pasos</span></h2>
+        <p class="sl-seccion__lead">Un proceso paso a paso, con número, título y descripción. Dos formas: escenas grandes o columna compacta.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Recorrido: · Paso N ·</span>
+        <p class="dm-ejemplo">Ejemplo vivo · escenas</p>
+        <div class="sl-escenas">
+          <div class="sl-escena">
+            <div class="sl-escena__marca"><span class="sl-escena__num">01</span><span class="sl-escena__icono"><iconify-icon icon="mdi:calendar-edit-outline"></iconify-icon></span></div>
+            <div><h3 class="sl-escena__titulo">Antes: la convocatoria lleva la pregunta</h3><p class="sl-escena__texto">La invitación no dice «reunión de seguimiento»: dice qué se va a decidir y quién decide. Quien no tenga nada que aportar a esa pregunta puede no asistir, <strong>y eso también se dice</strong>.</p></div>
+          </div>
+          <div class="sl-escena">
+            <div class="sl-escena__marca"><span class="sl-escena__num">02</span><span class="sl-escena__icono"><iconify-icon icon="mdi:account-group-outline"></iconify-icon></span></div>
+            <div><h3 class="sl-escena__titulo">Durante: opciones primero, juicio después</h3><p class="sl-escena__texto">Los primeros veinte minutos son para poner opciones sobre la mesa sin discutirlas. Luego se descartan las que no cumplen el criterio y se decide entre las que quedan.</p></div>
+          </div>
+          <div class="sl-escena">
+            <div class="sl-escena__marca"><span class="sl-escena__num">03</span><span class="sl-escena__icono"><iconify-icon icon="mdi:send-check-outline"></iconify-icon></span></div>
+            <div><h3 class="sl-escena__titulo">Después: una línea por decisión</h3><p class="sl-escena__texto">Antes de que alguien salga de la sala, el dueño de la decisión lee en voz alta qué se decidió, quién lo hace y para cuándo. Esa línea es el acta.</p></div>
+          </div>
+        </div>
+
+        <p class="dm-ejemplo">Ejemplo vivo · columna compacta</p>
+        <div class="ova-stepper">
+          <div class="ova-step"><div class="ova-step__num"><span>01</span></div><div class="ova-step__card"><h3>Leer</h3><p>El dueño de la decisión lee en voz alta qué se decidió, con las palabras exactas que irán en el acta.</p></div></div>
+          <div class="ova-step"><div class="ova-step__num"><span>02</span></div><div class="ova-step__card"><h3>Asignar</h3><p>Cada decisión tiene una persona responsable y una fecha. Sin las dos cosas, no está cerrada.</p></div></div>
+          <div class="ova-step"><div class="ova-step__num"><span>03</span></div><div class="ova-step__card"><h3>Enviar</h3><p>El acta sale antes de una hora, a todos los convocados, con las tres líneas: decisión, responsable, fecha.</p></div></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Recorrido de pasos</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Recorrido: Una hora que decide</b>
+<b>Paso 1 · Antes: la convocatoria lleva la pregunta</b> La invitación no dice […]
+<b>Paso 2 · Durante: opciones primero, juicio después</b> […]
+<b>Paso 3 · Después: una línea por decisión</b> […]
+<span class="gris">Título del recorrido; por paso, título de hasta 8 palabras y texto de hasta 80. Si hay un caso concreto, descrito en una o dos frases.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 3 a 6 pasos. Escenas cuando el proceso es el protagonista y hay un caso detrás; columna compacta cuando es un protocolo de apoyo. Si el caso admite lectura visual, lo precede una ilustración. El número lo pone el componente. Si el Word rotula cada paso con «Paso 1», «Paso 2», ese rótulo sirve para leer el documento, no para la pantalla: en el curso van el título y la descripción, completos.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Pasos con detalle ════ -->
+      <section class="sl-seccion" id="pasos-detalle" data-reveal>
+        <h2 class="sl-seccion__titulo">Pasos <span class="sl-suave">con</span> <span class="sl-italic">detalle</span></h2>
+        <p class="sl-seccion__lead">Recorrido horizontal: se toca cada paso y aparece su detalle.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Pasos con detalle: · Paso N · Etiqueta · Título:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-timeline-h" data-ova-timeline>
+          <script type="application/json" data-ova-steps>[
+            {"tag":"Diagnóstico","icon":"mdi:magnify","title":"Nombrar el problema","desc":"Escribir en una frase qué está pasando y desde cuándo. Si el grupo no coincide en la frase, la reunión de decisión es prematura.","tip":"Una frase, sin causas ni culpables todavía."},
+            {"tag":"Criterio","icon":"mdi:target","title":"Fijar qué sería una buena decisión","desc":"Antes de ver opciones, acordar contra qué se van a juzgar: costo, tiempo, riesgo, personas afectadas."},
+            {"tag":"Opciones","icon":"mdi:lightbulb-on-outline","title":"Poner tres caminos sobre la mesa","desc":"Nunca uno solo. Con una sola opción la reunión no decide: aprueba o rechaza.","tip":"La tercera opción suele ser «no hacer nada», y conviene escribirla."},
+            {"tag":"Decisión","icon":"mdi:gavel","title":"Elegir y escribir la línea","desc":"Qué se decidió, quién lo hace, para cuándo. Leída en voz alta antes de salir."}
+          ]</script>
+          <div class="ova-timeline-h__track">
+            <button class="ova-step-card is-active" data-step="0"><span class="ova-step-card__num">01</span><span class="ova-step-card__label">Diagnóstico</span></button>
+            <button class="ova-step-card" data-step="1"><span class="ova-step-card__num">02</span><span class="ova-step-card__label">Criterio</span></button>
+            <button class="ova-step-card" data-step="2"><span class="ova-step-card__num">03</span><span class="ova-step-card__label">Opciones</span></button>
+            <button class="ova-step-card" data-step="3"><span class="ova-step-card__num">04</span><span class="ova-step-card__label">Decisión</span></button>
+          </div>
+          <div class="ova-step-detail" data-ova-detail></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-4"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pasos con detalle</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Pasos con detalle: Preparar una decisión difícil</b>
+<b>Paso 1 · Diagnóstico · Nombrar el problema:</b> Escribir en una frase qué está pasando […] <b>Consejo:</b> Una frase, sin causas ni culpables todavía.
+<b>Paso 2 · Criterio · Fijar qué sería una buena decisión:</b> […]
+<span class="gris">Por paso: etiqueta corta, título, descripción de hasta 80 palabras y un consejo opcional.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 4 a 8 pasos con detalle. Con 3 o menos, un recorrido de pasos simple: el detalle escondido tras un clic solo vale la pena cuando hay mucho que esconder.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Ciclo ════ -->
+      <section class="sl-seccion" id="ciclo" data-reveal>
+        <h2 class="sl-seccion__titulo">Ciclo</h2>
+        <p class="sl-seccion__lead">La rueda de marca como diagrama: un cuarto por paso y los pasos al lado, todos visibles.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Ciclo: · Paso N ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="sl-ciclo">
+          <svg class="sl-ciclo__rueda" viewBox="0 0 420 420" role="img" aria-label="Ciclo de cuatro pasos: convocar, decidir, ejecutar y revisar.">
+            <g transform="rotate(-90 210 210)" fill="none" stroke-width="30" stroke-linecap="butt">
+              <circle cx="210" cy="210" r="140" stroke="#8A79C9" stroke-dasharray="190 690" stroke-dashoffset="0"/>
+              <circle cx="210" cy="210" r="140" stroke="#6350AB" stroke-dasharray="190 690" stroke-dashoffset="-220"/>
+              <circle cx="210" cy="210" r="140" stroke="#503B96" stroke-dasharray="190 690" stroke-dashoffset="-440"/>
+              <circle cx="210" cy="210" r="140" stroke="#F8B716" stroke-dasharray="190 690" stroke-dashoffset="-660"/>
+            </g>
+            <g>
+              <circle cx="309" cy="111" r="27" fill="#FFFFFF"/><text x="309" y="118" text-anchor="middle" font-size="18" font-weight="600" fill="#8A79C9">01</text>
+              <circle cx="309" cy="309" r="27" fill="#FFFFFF"/><text x="309" y="316" text-anchor="middle" font-size="18" font-weight="600" fill="#6350AB">02</text>
+              <circle cx="111" cy="309" r="27" fill="#FFFFFF"/><text x="111" y="316" text-anchor="middle" font-size="18" font-weight="600" fill="#503B96">03</text>
+              <circle cx="111" cy="111" r="27" fill="#FFFFFF"/><text x="111" y="118" text-anchor="middle" font-size="18" font-weight="600" fill="#B07E00">04</text>
+            </g>
+            <text x="210" y="205" text-anchor="middle" font-size="17" font-weight="600" fill="#303651" opacity=".72">4 pasos</text>
+            <text x="210" y="228" text-anchor="middle" font-size="14" fill="#303651" opacity=".45">cada reunión</text>
+          </svg>
+          <div class="sl-ciclo__pasos">
+            <div class="sl-paso" style="--tinte:#8A79C9;"><div class="sl-paso__num">PASO 01</div><h3 class="sl-paso__titulo"><iconify-icon icon="mdi:calendar-edit-outline"></iconify-icon>Convocar</h3><p class="sl-paso__desc">Con la pregunta escrita y el dueño de la decisión nombrado.</p></div>
+            <div class="sl-paso" style="--tinte:#6350AB;"><div class="sl-paso__num">PASO 02</div><h3 class="sl-paso__titulo"><iconify-icon icon="mdi:gavel"></iconify-icon>Decidir</h3><p class="sl-paso__desc">Opciones primero, criterio después, una línea por decisión.</p></div>
+            <div class="sl-paso" style="--tinte:#503B96;"><div class="sl-paso__num">PASO 03</div><h3 class="sl-paso__titulo"><iconify-icon icon="mdi:run-fast"></iconify-icon>Ejecutar</h3><p class="sl-paso__desc">Cada línea del acta tiene un responsable y una fecha.</p></div>
+            <div class="sl-paso" style="--tinte:#B07E00;"><div class="sl-paso__num">PASO 04</div><h3 class="sl-paso__titulo"><iconify-icon icon="mdi:refresh"></iconify-icon>Revisar</h3><p class="sl-paso__desc">La siguiente reunión empieza por lo que se decidió en la anterior.</p></div>
+          </div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-5"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ciclo</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Ciclo: La reunión que aprende</b>
+<b>Paso 1 · Convocar:</b> Con la pregunta escrita y el dueño de la decisión nombrado.
+<b>Paso 2 · Decidir:</b> […]  <b>Paso 3 · Ejecutar:</b> […]  <b>Paso 4 · Revisar:</b> […]
+<span class="gris">Nombre del ciclo; de 3 a 5 pasos con título de hasta 6 palabras y texto de hasta 60.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Cuando el contenido es un ciclo que se repite. Nunca en carrusel: el punto de un ciclo es verlo completo.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Línea de tiempo ════ -->
+      <section class="sl-seccion" id="linea-de-tiempo" data-reveal>
+        <h2 class="sl-seccion__titulo">Línea <span class="sl-suave">de</span> <span class="sl-italic">tiempo</span></h2>
+        <p class="sl-seccion__lead">Eventos en orden cronológico con su marca temporal.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Línea de tiempo: · Fecha ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-timeline">
+          <div class="ova-timeline__item"><div class="ova-timeline__marker">1950</div><div class="ova-timeline__card"><h4>La sala de juntas</h4><p>Decidir era reunirse. Quien no estaba en la sala no existía para la decisión.</p></div></div>
+          <div class="ova-timeline__item"><div class="ova-timeline__marker">1990</div><div class="ova-timeline__card"><h4>El correo electrónico</h4><p>Las decisiones empezaron a tomarse en hilos de veinte respuestas. Nadie sabía cuándo se había decidido.</p></div></div>
+          <div class="ova-timeline__item"><div class="ova-timeline__marker">2020</div><div class="ova-timeline__card"><h4>La videollamada</h4><p>La sala cabe en una pantalla y la reunión se convoca en un clic. Por eso hay más reuniones, no mejores.</p></div></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-6"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-6"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Línea de tiempo</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Línea de tiempo: De la sala a la pantalla</b>
+<b>1950 · La sala de juntas:</b> Decidir era reunirse […]
+<b>1990 · El correo electrónico:</b> […]
+<b>2020 · La videollamada:</b> […]
+<span class="gris">Por evento: fecha o periodo, título y descripción de hasta 60 palabras. Imagen opcional.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Historia o evolución de algo. Los pasos de un proceso no van aquí: eso es un recorrido.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Infografía de lista ════ -->
+      <section class="sl-seccion" id="infografia" data-reveal>
+        <h2 class="sl-seccion__titulo">Infografía <span class="sl-suave">de</span> <span class="sl-italic">lista</span></h2>
+        <p class="sl-seccion__lead">Una lista corta como pieza visual: icono, número, rótulo y una línea por ítem.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Infografía: · N ·</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-infografia">
+          <div class="ova-infografia__paso"><div class="ova-infografia__num">01</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:help-circle-outline"></iconify-icon></div><div><h3 class="ova-infografia__label">Sin pregunta</h3><p class="ova-infografia__desc">Nadie puede decir en una línea qué se va a decidir.</p></div></div>
+          <div class="ova-infografia__paso" style="--tinte:var(--c-info);"><div class="ova-infografia__num">02</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:account-question-outline"></iconify-icon></div><div><h3 class="ova-infografia__label">Sin dueño</h3><p class="ova-infografia__desc">Todos opinan y nadie responde por el resultado.</p></div></div>
+          <div class="ova-infografia__paso" style="--tinte:var(--c-calido);"><div class="ova-infografia__num">03</div><div class="ova-infografia__icono"><iconify-icon icon="mdi:file-document-remove-outline"></iconify-icon></div><div><h3 class="ova-infografia__label">Sin acta</h3><p class="ova-infografia__desc">Cada quien sale con una versión distinta de lo acordado.</p></div></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-7"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-7"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Infografía de lista</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Infografía: Tres señales de una mala reunión</b>
+<b>1 · Sin pregunta:</b> Nadie puede decir en una línea qué se va a decidir.
+<b>2 · Sin dueño:</b> […]
+<b>3 · Sin acta:</b> […]
+<span class="gris">Por ítem, rótulo de hasta 6 palabras y una línea de apoyo de hasta 20.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 3 a 6 ítems que merecen impacto visual: niveles, jerarquías, categorías. Con párrafos largos, acordeón; con 7 o más, tabla.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Comparativo ════ -->
+      <section class="sl-seccion" id="comparativo" data-reveal>
+        <h2 class="sl-seccion__titulo">Comparativo</h2>
+        <p class="sl-seccion__lead">Dos caminos frente a frente. Con tarjetas, ligero o a dos vías con un caso.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Comparativo: · Error frecuente / Criterio de aceptación · Aplique / No aplique</span>
+        <p class="dm-ejemplo">Ejemplo vivo · con tarjetas</p>
+        <div class="ova-vs">
+          <div class="ova-vs__card">
+            <span class="ova-vs__card-tag" style="background:color-mix(in srgb, var(--danger) 14%, transparent); color:var(--danger);">✗ Error frecuente</span>
+            <p style="margin-top:14px;">Convocar a todo el equipo «por si acaso». Cada persona que no puede cambiar la decisión le resta tiempo a la reunión y le suma opiniones que no pesan.</p>
+          </div>
+          <div class="ova-vs__divider">VS</div>
+          <div class="ova-vs__card ova-vs__card--alt">
+            <span class="ova-vs__card-tag" style="background:color-mix(in srgb, var(--success) 14%, transparent); color:var(--success);">✓ Criterio de aceptación</span>
+            <p style="margin-top:14px;">Solo asiste quien puede cambiar la decisión o tiene que ejecutarla. A los demás se les envía el acta.</p>
+          </div>
+        </div>
+
+        <p class="dm-ejemplo">Ejemplo vivo · ligero</p>
+        <div class="sl-vs-ligero">
+          <div class="sl-vs-ligero__col sl-vs-ligero__col--si"><span class="sl-vs-ligero__signo">✓</span><span class="sl-vs-ligero__tag">Aplique</span><p>Escribir la pregunta de la reunión en la convocatoria, con el nombre de quien decide.</p></div>
+          <div class="sl-vs-ligero__col sl-vs-ligero__col--no"><span class="sl-vs-ligero__signo">✕</span><span class="sl-vs-ligero__tag">No aplique</span><p>Titular la reunión «seguimiento» o «alineación»: no dicen qué se va a decidir.</p></div>
+        </div>
+
+        <p class="dm-ejemplo">Ejemplo vivo · caso a dos vías</p>
+        <div class="sl-caso">
+          <div class="sl-caso__via sl-caso__via--error">
+            <span class="sl-caso__tag">✕ Error típico</span>
+            <svg class="sl-caso__ilustracion" viewBox="0 0 420 200" role="img" aria-label="Una sala llena y un reloj: se convoca a todos y se discute hasta que se acaba el tiempo.">
+              <rect width="420" height="200" rx="14" fill="#F7F6F8"/>
+              <g fill="#CFC8E4"><circle cx="70" cy="80" r="22"/><circle cx="130" cy="80" r="22"/><circle cx="190" cy="80" r="22"/><circle cx="250" cy="80" r="22"/><circle cx="100" cy="140" r="22"/><circle cx="160" cy="140" r="22"/><circle cx="220" cy="140" r="22"/></g>
+              <circle cx="340" cy="100" r="46" fill="none" stroke="#C1444F" stroke-width="6" opacity=".6"/><path d="M340 70 v30 h22" fill="none" stroke="#C1444F" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+            </svg>
+            <p class="sl-caso__texto">Convocar a los nueve del equipo y discutir hasta que se acabe la hora. <strong>La reunión termina porque termina, no porque se decidió.</strong></p>
+            <div class="sl-caso__ruta"><span class="sl-caso__paso">Convocar a todos</span><span class="sl-caso__flecha">→</span><span class="sl-caso__paso">Discutir</span><span class="sl-caso__flecha">→</span><span class="sl-caso__paso sl-caso__paso--tarde">Decidir, si alcanza</span></div>
+          </div>
+          <div class="sl-caso__via sl-caso__via--ok">
+            <span class="sl-caso__tag">✓ Camino correcto</span>
+            <svg class="sl-caso__ilustracion" viewBox="0 0 420 200" role="img" aria-label="Una pregunta escrita arriba, tres personas y una línea de decisión al final.">
+              <rect width="420" height="200" rx="14" fill="#FBF8F3"/>
+              <rect x="30" y="30" width="360" height="34" rx="8" fill="#FFFFFF" stroke="#F8B716" stroke-width="3"/><text x="210" y="53" text-anchor="middle" font-size="15" font-weight="600" fill="#303651">¿Renovamos el contrato o no?</text>
+              <g fill="#8A79C9"><circle cx="120" cy="120" r="22"/><circle cx="210" cy="120" r="22"/><circle cx="300" cy="120" r="22"/></g>
+              <line x1="40" y1="172" x2="380" y2="172" stroke="#F8B716" stroke-width="4" stroke-linecap="round"/><text x="210" y="192" text-anchor="middle" font-size="12" fill="#8A8FA0">una línea: decisión · responsable · fecha</text>
+            </svg>
+            <p class="sl-caso__texto">Escribir la pregunta, convocar a las tres personas que pueden responderla y salir con una línea. <strong>La reunión termina cuando la pregunta tiene respuesta.</strong></p>
+            <div class="sl-caso__ruta"><span class="sl-caso__paso sl-caso__paso--clave">Escribir la pregunta</span><span class="sl-caso__flecha">→</span><span class="sl-caso__paso">Convocar a quien decide</span><span class="sl-caso__flecha">→</span><span class="sl-caso__paso">Decidir</span></div>
+          </div>
+          <p class="sl-caso__pie">Las dos vías usan los mismos elementos: personas, tiempo y una pregunta. Lo único que cambia es cuándo aparece la pregunta.</p>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-8"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-8"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Comparativo</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Comparativo</b>
+<b>Error frecuente:</b> Convocar a todo el equipo «por si acaso» […]
+<b>Criterio de aceptación:</b> Solo asiste quien puede cambiar la decisión […]
+<span class="gris">Título de cada lado; texto de cada lado de hasta 80 palabras, o una lista de 3 a 5 puntos. Si hay un caso, descrito en una o dos frases: la ilustración de cada vía la dibuja el ilustrador con ese caso.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Dos conceptos o caminos opuestos. Con tres o más opciones, tabla. El tercer comparativo de una misma pantalla va ligero: tres con caja y sombra son un muro. Los rótulos de cada lado son los del Word; el signo lo pone el componente.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Tabla ════ -->
+      <section class="sl-seccion" id="tabla" data-reveal>
+        <h2 class="sl-seccion__titulo">Tabla</h2>
+        <p class="sl-seccion__lead">Datos estructurados con encabezados y filas.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Tabla:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <div class="ova-tabla"><table><thead><tr><th>Tipo</th><th>Termina cuando</th><th>Quién asiste</th></tr></thead><tbody>
+          <tr><td>Informar</td><td>Se entregó la información y se resolvieron las preguntas</td><td>Todos los afectados</td></tr>
+          <tr><td>Decidir</td><td>La pregunta tiene respuesta escrita</td><td>Quien decide y quien ejecuta</td></tr>
+          <tr><td>Crear</td><td>Hay una lista de opciones sin juzgar</td><td>Quien tenga ideas sobre el problema</td></tr>
+        </tbody></table></div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-9"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-9"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Tabla</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word · tabla real</p>
+            <div class="dm-word"><b>Tabla: Tipos de reunión</b>
+<span class="celda">Tipo | Termina cuando | Quién asiste
+Informar | Se entregó la información […] | Todos los afectados
+Decidir | La pregunta tiene respuesta escrita | Quien decide y quien ejecuta</span><span class="gris">Encabezados y filas, celdas de hasta 25 palabras. Leyenda, si aplica.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Tres o más ítems comparados contra dos o más criterios. Una tabla con rótulo («Idea clave», «Dato curioso») no es una tabla: es la marca de otro componente.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Ventana de detalle ════ -->
+      <section class="sl-seccion" id="ventana-detalle" data-reveal>
+        <h2 class="sl-seccion__titulo">Ventana <span class="sl-suave">de</span> <span class="sl-italic">detalle</span></h2>
+        <p class="sl-seccion__lead">Un botón abre una ventana con información que no cabe en línea.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Ventana: · Botón: · Contenido:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo</p>
+        <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-caso-gerente"><iconify-icon icon="mdi:arrow-u-left-top"></iconify-icon> Volviendo al caso del gerente…</button>
+        <div class="ova-modal" id="dm-caso-gerente"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Volviendo al caso del gerente</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body"><p>El gerente convocó a doce personas para «alinear el trimestre». Con lo visto en este catálogo, la convocatoria habría dicho: «Decidimos si renovamos el contrato con el proveedor A. Decide María. Asisten quienes tienen datos del proveedor». Cuatro personas, cuarenta minutos, una línea de acta.</p></div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-10"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-10"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ventana de detalle</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Ventana: Volviendo al caso del gerente</b>
+<b>Botón:</b> Volviendo al caso del gerente…
+<b>Contenido:</b> El gerente convocó a doce personas […]
+<span class="gris">Texto del botón, título de la ventana y contenido de hasta 150 palabras.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Información opcional que interrumpiría la lectura si estuviera en línea. No para contenido obligatorio: lo que está en una ventana puede no abrirse nunca.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Sección · Diagrama y proporción ════ -->
+      <section class="sl-seccion" id="diagrama-y-proporcion" data-reveal>
+        <h2 class="sl-seccion__titulo">Diagrama <span class="sl-suave">y</span> <span class="sl-italic">proporción</span></h2>
+        <p class="sl-seccion__lead">El diagrama muestra relaciones o secuencias; la proporción dibuja una cifra.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo dm-rotulo--prod">la propone el diagramador</span>
+        <p class="dm-ejemplo">Ejemplo vivo · proporción</p>
+        <div class="sl-cifras">
+          <div class="sl-cifras__datos">
+            <div class="sl-cifra">
+              <svg class="sl-proporcion" viewBox="0 0 200 60" role="img" aria-label="Diez reuniones; tres terminan con una decisión escrita.">
+                <circle cx="16" cy="18" r="12" fill="#F8B716"/><circle cx="47" cy="18" r="12" fill="#F8B716"/><circle cx="78" cy="18" r="12" fill="#F8B716"/><circle cx="109" cy="18" r="12" fill="#CFC8E4"/><circle cx="140" cy="18" r="12" fill="#CFC8E4"/>
+                <circle cx="16" cy="49" r="12" fill="#CFC8E4"/><circle cx="47" cy="49" r="12" fill="#CFC8E4"/><circle cx="78" cy="49" r="12" fill="#CFC8E4"/><circle cx="109" cy="49" r="12" fill="#CFC8E4"/><circle cx="140" cy="49" r="12" fill="#CFC8E4"/>
+              </svg>
+              <span class="sl-cifra__valor">3 de 10</span>
+              <span class="sl-cifra__label">reuniones terminan con una decisión escrita</span>
+            </div>
+          </div>
+          <div class="sl-cifras__texto">
+            <span class="sl-cifras__tag">Dato ilustrativo</span>
+            <p>Diez puntos, tres en amarillo: la cifra se entiende antes de leerla. <strong>La proporción acompaña al número, no lo sustituye.</strong></p>
+          </div>
+        </div>
+
+        <p class="dm-ejemplo">Ejemplo vivo · diagrama</p>
+        <figure class="sl-diagrama">
+          <svg viewBox="0 0 1160 220" role="img" aria-label="Dos secuencias con los mismos tres elementos: en la primera la pregunta llega al final; en la segunda, al principio.">
+            <g font-size="17" font-weight="600" fill="#303651">
+              <rect x="60" y="40" width="200" height="54" rx="12" fill="#F7F6F8"/><text x="160" y="73" text-anchor="middle">Convocar</text>
+              <rect x="330" y="40" width="200" height="54" rx="12" fill="#F7F6F8"/><text x="430" y="73" text-anchor="middle">Discutir</text>
+              <rect x="600" y="40" width="200" height="54" rx="12" fill="#FBE9EB"/><text x="700" y="73" text-anchor="middle" fill="#B3303C">¿Qué decidimos?</text>
+              <rect x="60" y="140" width="200" height="54" rx="12" fill="#FFF6DA"/><text x="160" y="173" text-anchor="middle">¿Qué decidimos?</text>
+              <rect x="330" y="140" width="200" height="54" rx="12" fill="#F7F6F8"/><text x="430" y="173" text-anchor="middle">Convocar</text>
+              <rect x="600" y="140" width="200" height="54" rx="12" fill="#E6F4EC"/><text x="700" y="173" text-anchor="middle" fill="#1F7A4C">Decidir</text>
+            </g>
+            <g stroke="#8A8FA0" stroke-width="3" fill="none"><path d="M262 67 h64"/><path d="M532 67 h64"/><path d="M262 167 h64"/><path d="M532 167 h64"/></g>
+            <text x="900" y="73" font-size="15" fill="#8A8FA0">la pregunta llega tarde</text>
+            <text x="900" y="173" font-size="15" fill="#8A8FA0">la pregunta abre la reunión</text>
+          </svg>
+          <figcaption>Los mismos tres elementos; solo cambia cuándo aparece la pregunta. Eso es lo que el diagrama tiene que mostrar.</figcaption>
+        </figure>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t6-12"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t6-12"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Diagrama y proporción</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word">Solo 3 de cada 10 reuniones terminan con una decisión escrita. […] En la primera secuencia la pregunta llega al final, cuando ya se discutió; en la segunda, abre la reunión.
+<span class="gris">Nada que marcar: la relación o secuencia descrita en el texto y, para la proporción, la cifra y el total.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Cada dos o tres bloques de texto conviene una pieza que rompa la lectura y explique. Un diagrama y un comparativo que cuentan lo mismo son una sola pieza. Un diagrama que explica lo que el texto no dice es contenido nuevo, y no se dibuja. La proporción se dibuja porque el documento da la cifra; si solo dijera «pocas reuniones», no habría nada que dibujar. Y cuando el documento describe algo por partes (una ficha, un formulario), el diagramador puede dibujar el objeto con el texto al lado: no es un componente que se pida en el Word.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- Respiro de cierre · el remate del párrafo de entrada, sacado a primer plano -->
+      <div class="sl-respiro" data-reveal>
+        <p>Lo que tiene partes se muestra completo. <strong>El número lo pone el componente; el título y la descripción, el Word.</strong></p>
+      </div>

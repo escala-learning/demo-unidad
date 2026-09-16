@@ -1,0 +1,300 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Introducción</div>
+        <h1 class="ova-screen__title">Una unidad <span class="sl-suave">es un Word convertido en</span> <span class="sl-italic">pantallas</span></h1>
+        <p class="ova-screen__lead">
+          Este curso no enseña un tema: enseña cómo está hecha una unidad Scala. Cada
+          pantalla que sigue usa los componentes que una unidad real usaría en ese mismo
+          sitio, y el texto de cada bloque explica para qué sirve ese bloque, cuándo va y
+          qué tiene que traer el Word para que exista.
+        </p>
+      </header>
+
+      <!-- Bloque de apertura · patrón fijo de la línea Scala (INSTITUCION.md §3 7.1):
+           sin etiqueta encima, resalta por escala y aire, con un solo remate en itálica -->
+      <div class="sl-apertura" data-reveal>
+        <p>
+          Esto es un bloque de apertura, y toda introducción Scala empieza con uno: crema,
+          texto grande, filo amarillo a la izquierda y ninguna etiqueta encima. No destaca
+          por color sino por escala.
+          <span class="sl-italic">Si lo lees primero y ya sabes de qué va la unidad,
+          el bloque hizo su trabajo.</span>
+        </p>
+      </div>
+
+      <!-- Ilustración de apertura · el Word convertido en pantallas: los mismos bloques,
+           en el mismo orden, vueltos componentes; y arriba, lo único que no viene del Word
+           (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-word-a-pantallas.svg"
+             alt="A la izquierda, la hoja del Word con un párrafo que lleva una frase en negrilla, una tabla rotulada Idea clave y una tabla DISEÑO GRÁFICO. A la derecha, la unidad en tres pantallas apiladas: el mismo párrafo con la misma negrilla, la tabla vuelta tarjeta con el rótulo Idea clave y el bloque de diseño gráfico vuelto figura, cada uno a la altura de su bloque en el documento. Arriba, la pantalla lleva una fila más, su título, que en el documento no existe: es la única marcada y lleva un visto de aprobación." />
+      </figure>
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="sl-seccion" id="que-vas-a-lograr" data-reveal>
+        <h2 class="sl-seccion__titulo">Qué vas a lograr <span class="sl-suave">al terminar este</span> <span class="sl-italic">demo</span></h2>
+        <p class="sl-seccion__lead">Reconocer cada pieza de una unidad Scala por su forma, saber en qué momento
+          se usa y qué tiene que traer el documento de diseño instruccional para que esa
+          pieza pueda existir.</p>
+      </section>
+
+      <!-- Público objetivo · en una unidad real este dato es literal del DI.
+           Es el único ova-callout de la pantalla: la tarjeta violeta se reserva. -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:account-group-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Público objetivo</span>
+          <p style="margin:8px 0 0;">
+            Diseñadores instruccionales que van a escribir su primera unidad Scala, y
+            equipos del cliente que van a revisarla o aprobarla. No hace falta saber
+            maquetar ni leer código: todo lo que se pide aquí se pide en un Word.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin:48px 0 20px;" data-reveal>¿Qué vas a aprender?</h3>
+
+      <div class="ova-infografia" data-reveal>
+        <div class="ova-infografia__paso">
+          <div class="ova-infografia__num">01</div>
+          <div class="ova-infografia__icono"><iconify-icon icon="mdi:text-box-search-outline"></iconify-icon></div>
+          <div>
+            <h3 class="ova-infografia__label">A leer un tema</h3>
+            <p class="ova-infografia__desc">
+              Qué significa cada bloque que aparece dentro, en qué orden aparecen y cuáles
+              se reservan para <strong>lo que hay que retener</strong>.
+            </p>
+          </div>
+        </div>
+        <div class="ova-infografia__paso" style="--tinte:var(--c-info);">
+          <div class="ova-infografia__num">02</div>
+          <div class="ova-infografia__icono"><iconify-icon icon="mdi:shape-outline"></iconify-icon></div>
+          <div>
+            <h3 class="ova-infografia__label">A pedir una pieza gráfica</h3>
+            <p class="ova-infografia__desc">
+              Cuándo un contenido se entiende mejor dibujado, quién la propone y
+              <strong>cómo se marca en el Word para que llegue</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="sl-seccion" id="como-se-organiza" data-reveal>
+        <h2 class="sl-seccion__titulo">Cómo se organiza <span class="sl-suave">una</span> <span class="sl-italic">unidad</span></h2>
+        <p class="sl-seccion__lead">Tres reglas explican el menú que tienes a la izquierda, y las tres se ven en
+          esta misma pantalla mientras las lees.</p>
+      </section>
+
+      <p data-reveal>
+        La primera es que la estructura no cambia: el menú de una unidad es siempre el
+        mismo, y es deliberadamente aburrido. Gracias a eso,
+        <strong>quien terminó una unidad sabe moverse en la siguiente sin volver a
+        aprender nada</strong>.
+      </p>
+
+      <!-- El menú, dibujado · la regla "número para el contenido, icono para la
+           estructura" (INSTITUCION.md §4.15) se entiende antes de leerla -->
+      <figure class="sl-diagrama" data-reveal>
+        <svg viewBox="0 0 1160 470" role="img"
+             aria-label="El menú de una unidad: Inicio, Contenido, Introducción, Conclusión, Evaluación, Glosario y Referencias llevan un icono; solo los dos temas llevan número, 1 y 2.">
+          <!-- el sidebar -->
+          <rect x="24" y="24" width="470" height="422" rx="22" fill="#303651"/>
+
+          <!-- filas · chip + etiqueta -->
+          <g font-size="17" fill="#FFFFFF">
+            <g opacity=".92">
+              <rect x="56" y="54" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <path d="M64 70 l7 -7 7 7 M66 69 v7 h10 v-7" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="102" y="75">Inicio</text>
+            </g>
+            <g opacity=".92">
+              <rect x="56" y="98" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <path d="M64 108 l7 -3 7 3 7 -3 v14 l-7 3 -7 -3 -7 3 z M71 105 v14 M78 108 v14" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>
+              <text x="102" y="119">Contenido de la unidad</text>
+            </g>
+            <g opacity=".92">
+              <rect x="56" y="142" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <path d="M71 152 v12" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+              <circle cx="71" cy="147" r="1.6" fill="#FFFFFF"/>
+              <text x="102" y="163">Introducción</text>
+            </g>
+
+            <!-- los dos temas: chip con número -->
+            <g>
+              <rect x="56" y="186" width="30" height="30" rx="15" fill="#503B96"/>
+              <text x="71" y="207" text-anchor="middle" font-size="15" font-weight="600" fill="#FFFFFF">1</text>
+              <text x="102" y="207">Cómo se lee un tema</text>
+            </g>
+            <g>
+              <rect x="56" y="230" width="30" height="30" rx="15" fill="#503B96"/>
+              <text x="71" y="251" text-anchor="middle" font-size="15" font-weight="600" fill="#FFFFFF">2</text>
+              <text x="102" y="251">Cómo se explica con piezas gráficas</text>
+            </g>
+
+            <g opacity=".92">
+              <rect x="56" y="274" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <path d="M66 282 v18 M66 282 h11 l-2.5 5 2.5 5 h-11" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="102" y="295">Conclusión</text>
+            </g>
+            <g opacity=".92">
+              <rect x="56" y="318" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <rect x="65" y="326" width="13" height="16" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="1.7"/>
+              <path d="M68 334 l3 3 5 -6" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="102" y="339">Evaluación de la unidad</text>
+            </g>
+            <g opacity=".92">
+              <rect x="56" y="362" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <rect x="63" y="370" width="16" height="13" rx="2.5" fill="none" stroke="#FFFFFF" stroke-width="1.6"/>
+              <path d="M66.5 375 h9 M66.5 379 h6" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+              <text x="102" y="383">Glosario</text>
+            </g>
+            <g opacity=".92">
+              <rect x="56" y="406" width="30" height="30" rx="15" fill="#FFFFFF" fill-opacity=".14"/>
+              <path d="M66 414 h11 v16 l-5.5 -5 -5.5 5 z" fill="none" stroke="#FFFFFF" stroke-width="1.7" stroke-linejoin="round"/>
+              <text x="102" y="427">Referencias</text>
+            </g>
+          </g>
+
+          <!-- llamada 1 · los dos temas son lo único numerado -->
+          <rect x="44" y="180" width="424" height="86" rx="16" fill="none" stroke="#F8B716" stroke-width="2.5"/>
+          <path d="M468 223 H560" fill="none" stroke="#F8B716" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="560" cy="223" r="5" fill="#F8B716"/>
+          <text x="584" y="212" font-size="19" font-weight="600" fill="#303651">Número = contenido temático</text>
+          <text x="584" y="240" font-size="17" fill="#8A8FA0">Ocupa una posición dentro del recorrido.</text>
+          <text x="584" y="264" font-size="17" fill="#8A8FA0">Insertar un tema renumera los que siguen.</text>
+
+          <!-- llamada 2 · lo estructural va por icono: los dos grupos, arriba y abajo -->
+          <g fill="none" stroke="#CFC8E4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="44" y="44" width="424" height="130" rx="16" stroke-dasharray="6 7"/>
+            <rect x="44" y="270" width="424" height="174" rx="16" stroke-dasharray="6 7"/>
+            <path d="M468 109 H552"/>
+            <path d="M552 109 V208"/>
+            <path d="M552 238 V357 H468"/>
+          </g>
+          <circle cx="560" cy="109" r="5" fill="#CFC8E4"/>
+          <text x="584" y="103" font-size="19" font-weight="600" fill="#303651">Icono = sección de toda unidad</text>
+          <text x="584" y="131" font-size="17" fill="#8A8FA0">No ocupa posición: no se numera.</text>
+          <text x="584" y="155" font-size="17" fill="#8A8FA0">El icono es siempre el mismo, unidad tras unidad.</text>
+        </svg>
+        <figcaption>
+          El icono y el número comparten chip —mismo tamaño, mismo fondo— para que el menú
+          se lea uniforme. Lo único que cambia es qué va dentro.
+        </figcaption>
+      </figure>
+
+      <p data-reveal>
+        La segunda regla vive dentro de cada pantalla. Un tema largo se parte en
+        <strong>secciones</strong>, y cada una abre con un encabezado propio: línea de
+        corte, viñeta amarilla y título. No llevan 1.1 ni 2.1, porque numerarlas obligaría
+        a renumerar todo cada vez que se inserta una.
+      </p>
+
+      <div class="ova-grid-2" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Qué tiene que traer el Word</span>
+          <p>
+            Los títulos de sección salen de los encabezados del documento. Si en el Word
+            hay un H2 <em>Las piezas que ordenan</em>, en el curso hay una sección con ese
+            título. <strong>El documento decide dónde se corta el tema</strong>.
+          </p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Y qué hace el menú con eso</span>
+          <p>
+            Una sección puede subir al menú como sub-ítem. Al tocarla, abre la pantalla del
+            tema y baja hasta ella. <strong>Es el mismo enlace en las dos versiones que se
+            entregan</strong>: la de una sola página y la de una página por pantalla.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección de la introducción ════ -->
+      <section class="sl-seccion" id="quien-hace-que" data-reveal>
+        <h2 class="sl-seccion__titulo">Quién hace qué</h2>
+        <p class="sl-seccion__lead">Cuatro manos tocan una unidad antes de que la vea un estudiante, y cada una
+          entrega algo distinto: el diseño instruccional, el diseño gráfico, el Arquitecto
+          OVA con sus agentes y Scala. Saber cuál es la tuya ahorra la mitad de las
+          conversaciones.</p>
+      </section>
+
+      <!-- Escenas · un recorrido de cuatro pasos, con número protagonista y conector
+           punteado. Se usa en vez del stepper cuando el proceso merece protagonismo. -->
+      <div class="sl-escenas" data-reveal>
+
+        <div class="sl-escena">
+          <div class="sl-escena__marca">
+            <span class="sl-escena__num">01</span>
+            <span class="sl-escena__icono"><iconify-icon icon="mdi:file-document-edit-outline"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="sl-escena__titulo">Diseño instruccional escribe el Word</h3>
+            <p class="sl-escena__texto">
+              El texto del curso, completo y definitivo. Dentro marca sus bloques como
+              tablas con rótulo —Idea clave, Dato curioso, Para reflexionar, Criterio de
+              aceptación— y señala con un bloque <em>DISEÑO GRÁFICO</em> dónde irá cada
+              figura. <strong>Lo que no está en el Word no debería aparecer en la
+              pantalla</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="sl-escena">
+          <div class="sl-escena__marca">
+            <span class="sl-escena__num">02</span>
+            <span class="sl-escena__icono"><iconify-icon icon="mdi:palette-outline"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="sl-escena__titulo">Diseño gráfico entrega las figuras</h3>
+            <p class="sl-escena__texto">
+              Las ilustraciones numeradas y la portada en capas. El número es lo que
+              conecta cada archivo con su sitio en el documento, así que
+              <strong>una figura corregida vuelve con el mismo número</strong> y no hay que
+              rehacer el mapa.
+            </p>
+          </div>
+        </div>
+
+        <div class="sl-escena">
+          <div class="sl-escena__marca">
+            <span class="sl-escena__num">03</span>
+            <span class="sl-escena__icono"><iconify-icon icon="mdi:cube-outline"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="sl-escena__titulo">El Arquitecto OVA maqueta, con agentes de IA</h3>
+            <p class="sl-escena__texto">
+              Elige el componente para cada bloque y conserva las palabras y los pesos del
+              documento: lo que va en negrilla en el Word va en negrilla en el curso. Lo
+              asisten tres agentes: el <strong>ilustrador</strong> propone la ilustración de
+              cada tema con lo que el documento afirma, el <strong>diagramador</strong> revisa
+              la composición y el de <strong>fidelidad</strong> comprueba, frase por frase,
+              que no falte nada del Word.
+            </p>
+          </div>
+        </div>
+
+        <div class="sl-escena">
+          <div class="sl-escena__marca">
+            <span class="sl-escena__num">04</span>
+            <span class="sl-escena__icono"><iconify-icon icon="mdi:check-decagram-outline"></iconify-icon></span>
+          </div>
+          <div>
+            <h3 class="sl-escena__titulo">Scala valida la capa editorial</h3>
+            <p class="sl-escena__texto">
+              <span class="sl-termino" tabindex="0" data-def="Todo lo que aparece en el curso y no viene del documento de diseño instruccional: títulos de pantalla, pies de figura, ilustraciones, bloques de audio. Se lista aparte para que el cliente lo apruebe.">Capa editorial</span>
+              es el nombre de todo lo que no salió del Word: los títulos de pantalla, los
+              pies de figura, las ilustraciones, el pódcast. Se entrega en una lista aparte
+              y <strong>es lo único que se te pide aprobar</strong>; el resto ya lo
+              escribiste tú.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <blockquote class="sl-quote" data-reveal>
+        Por eso una unidad se revisa en dos pasadas: primero que el texto del Word esté
+        completo y literal, y después que todo lo añadido tenga sentido.
+        <span class="sl-italic">La segunda pasada es la tuya.</span>
+      </blockquote>

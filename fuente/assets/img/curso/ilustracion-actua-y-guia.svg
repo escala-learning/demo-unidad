@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="Una pantalla Scala vista de frente. Arriba, el eyebrow con su filete amarillo y el título; debajo, el texto y un único botón violeta, sobre el que descansa el cursor. Al pie de la pantalla, la banda navy con su frase. Lo único que se pulsa es el botón violeta; el amarillo solo marca por dónde empieza la lectura.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 3 (apertura)
+       Concepto (texto de la pantalla): «Mira esta misma pantalla: el único botón es
+       violeta, el eyebrow de arriba lleva su filete amarillo, la viñeta de cada sección
+       es amarilla, y la banda del final es navy. El amarillo señala dónde mirar; nunca es
+       algo que se pueda pulsar.»
+       Una sola pantalla, como se ve: el cursor está sobre el botón violeta (actúa); el
+       filete amarillo del eyebrow no lo toca nadie (guía); la banda navy cierra (estructura).
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: el filete del eyebrow. -->
+  <defs>
+    <linearGradient id="ilu-actuayguia-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-actuayguia-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <!-- La pantalla recorta lo que lleva dentro (la banda del final y la rueda insinuada) -->
+    <clipPath id="ilu-actuayguia-recorte">
+      <rect x="220" y="36" width="760" height="368" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-actuayguia-fondo)"/>
+
+  <!-- ══ La pantalla ══ -->
+  <g filter="url(#ilu-actuayguia-sombra)">
+    <rect x="220" y="36" width="760" height="368" rx="16" fill="#FFFFFF"/>
+  </g>
+
+  <g clip-path="url(#ilu-actuayguia-recorte)">
+    <!-- Eyebrow: el filete amarillo (lo único amarillo de la pieza) y su texto -->
+    <rect x="268" y="82" width="44" height="6" rx="3" fill="#F8B716"/>
+    <rect x="324" y="81" width="72" height="8" rx="4" fill="#303651" opacity=".5"/>
+
+    <!-- Título: lo que carga el sentido en 600, lo que acompaña en 300 -->
+    <rect x="268" y="104" width="250" height="20" rx="10" fill="#303651" opacity=".85"/>
+    <rect x="528" y="106" width="180" height="16" rx="8"  fill="#303651" opacity=".32"/>
+
+    <!-- Lead -->
+    <g fill="#303651" opacity=".26">
+      <rect x="268" y="142" width="520" height="9" rx="4.5"/>
+      <rect x="268" y="158" width="430" height="9" rx="4.5"/>
+    </g>
+
+    <!-- Párrafo -->
+    <g fill="#303651" opacity=".26">
+      <rect x="268" y="192" width="560" height="9" rx="4.5"/>
+      <rect x="268" y="208" width="548" height="9" rx="4.5"/>
+      <rect x="268" y="224" width="380" height="9" rx="4.5"/>
+    </g>
+
+    <!-- El único botón: violeta -->
+    <rect x="268" y="252" width="172" height="44" rx="22" fill="#503B96"/>
+    <rect x="292" y="270" width="90" height="8" rx="4" fill="#FFFFFF" opacity=".9"/>
+    <path d="M404 270 l6 6 6 -6" fill="none" stroke="#FFFFFF" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+
+    <!-- El párrafo sigue -->
+    <g fill="#303651" opacity=".26">
+      <rect x="268" y="316" width="560" height="9" rx="4.5"/>
+      <rect x="268" y="332" width="320" height="9" rx="4.5"/>
+    </g>
+
+    <!-- La banda del final: navy, con la rueda apenas insinuada al fondo -->
+    <rect x="220" y="356" width="760" height="48" fill="#303651"/>
+    <circle cx="930" cy="392" r="46" fill="none" stroke="#FFFFFF" stroke-width="12"
+            stroke-dasharray="66 6" opacity=".07"/>
+    <rect x="268" y="376" width="230" height="9"  rx="4.5" fill="#FFFFFF" opacity=".5"/>
+    <rect x="508" y="375" width="120" height="11" rx="5.5" fill="#FFFFFF" opacity=".92"/>
+  </g>
+
+  <!-- El cursor: lo que se pulsa es el botón violeta, y nada más -->
+  <g transform="translate(354 262) scale(1.55)">
+    <path d="M0 0 L0 17 L4.5 13 L7.5 20 L10.5 18.6 L7.5 11.5 L13 11.5 Z"
+          fill="#303651" stroke="#FFFFFF" stroke-width="1.4" stroke-linejoin="round"/>
+  </g>
+</svg>

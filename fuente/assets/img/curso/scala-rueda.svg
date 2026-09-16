@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Rueda Scala Learning">
+  <!-- Reconstrucción del recurso "rueda" (brandbook p. 15): cuatro cuartos
+       separados, tres violeta y uno amarillo. Reemplazar por el SVG oficial
+       cuando el cliente lo entregue. -->
+  <g fill="none" stroke-width="13" transform="rotate(6 50 50)">
+    <circle cx="50" cy="50" r="40" stroke="#503B96" stroke-dasharray="50.8 12" />
+    <circle cx="50" cy="50" r="40" stroke="#F8B716" stroke-dasharray="50.8 200.5" />
+  </g>
+</svg>

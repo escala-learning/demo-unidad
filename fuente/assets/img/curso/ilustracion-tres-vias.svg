@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img"
+     aria-label="Tres fragmentos del mismo Word, uno al lado del otro. En el primero, la palabra Acordeón seguida de dos puntos en una línea propia, y debajo sus tres ítems numerados. En el segundo, una tabla cuya primera fila dice Idea clave, con el texto debajo. En el tercero, un párrafo que no trae nada; alguien lo enmarcó desde fuera con una línea amarilla punteada que sobresale de la hoja, y el marco lleva un visto.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 4 (apertura)
+       Concepto (texto de la pantalla): «cada bloque dice qué componente es, y lo dice de
+       una de tres maneras» · «Un bloque cae en un componente porque el Word lo nombra,
+       porque su rótulo lo dice, o porque producción lo elige y lo declara.»
+       Tres trozos del mismo documento, uno por vía. Nada de pantallas ni de conversión:
+       eso ya lo dibuja la apertura de la introducción. Aquí solo se ve la marca en el Word.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: el marco de la vía 3, lo que
+       producción declara y el equipo instruccional aprueba. -->
+  <defs>
+    <linearGradient id="ilu-tresvias-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-tresvias-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <!-- Un ítem del acordeón: número, título y una línea de texto -->
+    <g id="ilu-tresvias-item">
+      <rect x="24" y="1"  width="120" height="9" rx="4.5" fill="#303651" opacity=".6"/>
+      <rect x="24" y="16" width="212" height="7" rx="3.5" fill="#303651" opacity=".22"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="420" rx="18" fill="url(#ilu-tresvias-fondo)"/>
+
+  <!-- ══ Vía 1 · el Word lo nombra: el nombre del componente en una línea propia ══ -->
+  <g filter="url(#ilu-tresvias-sombra)">
+    <rect x="90" y="60" width="320" height="300" rx="16" fill="#FFFFFF"/>
+  </g>
+  <!-- lo que venía antes en el documento -->
+  <g fill="#303651" opacity=".16">
+    <rect x="118" y="88"  width="240" height="8" rx="4"/>
+    <rect x="118" y="104" width="180" height="8" rx="4"/>
+  </g>
+  <text x="118" y="146" font-family="DM Sans, system-ui, sans-serif" font-size="19"
+        font-weight="600" fill="#503B96">Acordeón:</text>
+  <rect x="118" y="160" width="164" height="9" rx="4.5" fill="#303651" opacity=".6"/>
+  <!-- sus tres ítems, ya numerados -->
+  <g font-family="DM Sans, system-ui, sans-serif" font-size="15" font-weight="600" fill="#303651">
+    <text x="118" y="196">1.</text>
+    <text x="118" y="232">2.</text>
+    <text x="118" y="268">3.</text>
+  </g>
+  <use href="#ilu-tresvias-item" x="118" y="186"/>
+  <use href="#ilu-tresvias-item" x="118" y="222"/>
+  <use href="#ilu-tresvias-item" x="118" y="258"/>
+  <!-- lo que sigue -->
+  <rect x="118" y="312" width="220" height="8" rx="4" fill="#303651" opacity=".16"/>
+
+  <!-- ══ Vía 2 · el rótulo lo dice: una tabla titulada Idea clave ══ -->
+  <g filter="url(#ilu-tresvias-sombra)">
+    <rect x="440" y="60" width="320" height="300" rx="16" fill="#FFFFFF"/>
+  </g>
+  <g fill="#303651" opacity=".16">
+    <rect x="468" y="88"  width="240" height="8" rx="4"/>
+    <rect x="468" y="104" width="200" height="8" rx="4"/>
+  </g>
+  <rect x="468" y="130" width="264" height="112" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M468 158 V138 a8 8 0 0 1 8 -8 H724 a8 8 0 0 1 8 8 V158 Z" fill="#E7E1F3"/>
+  <text x="484" y="149" font-family="DM Sans, system-ui, sans-serif" font-size="17"
+        font-weight="600" fill="#503B96">Idea clave</text>
+  <g fill="#303651" opacity=".26">
+    <rect x="484" y="172" width="220" height="8" rx="4"/>
+    <rect x="484" y="188" width="196" height="8" rx="4"/>
+    <rect x="484" y="204" width="232" height="8" rx="4"/>
+    <rect x="484" y="220" width="140" height="8" rx="4"/>
+  </g>
+  <g fill="#303651" opacity=".16">
+    <rect x="468" y="270" width="240" height="8" rx="4"/>
+    <rect x="468" y="286" width="212" height="8" rx="4"/>
+    <rect x="468" y="302" width="160" height="8" rx="4"/>
+  </g>
+
+  <!-- ══ Vía 3 · no trae nada: producción lo elige y lo declara ══ -->
+  <g filter="url(#ilu-tresvias-sombra)">
+    <rect x="790" y="60" width="320" height="300" rx="16" fill="#FFFFFF"/>
+  </g>
+  <g fill="#303651" opacity=".16">
+    <rect x="818" y="88"  width="240" height="8" rx="4"/>
+    <rect x="818" y="104" width="196" height="8" rx="4"/>
+  </g>
+  <!-- el párrafo, sin nombre ni rótulo -->
+  <g fill="#303651" opacity=".34">
+    <rect x="818" y="146" width="264" height="8" rx="4"/>
+    <rect x="818" y="162" width="250" height="8" rx="4"/>
+    <rect x="818" y="178" width="264" height="8" rx="4"/>
+    <rect x="818" y="194" width="232" height="8" rx="4"/>
+    <rect x="818" y="210" width="150" height="8" rx="4"/>
+  </g>
+  <g fill="#303651" opacity=".16">
+    <rect x="818" y="254" width="240" height="8" rx="4"/>
+    <rect x="818" y="270" width="216" height="8" rx="4"/>
+    <rect x="818" y="286" width="184" height="8" rx="4"/>
+    <rect x="818" y="302" width="120" height="8" rx="4"/>
+  </g>
+  <!-- La declaración: el marco viene de fuera de la hoja y lleva el visto de quien lo aprueba -->
+  <rect x="776" y="128" width="348" height="104" rx="12" fill="none"
+        stroke="#F8B716" stroke-width="3.5" stroke-dasharray="9 7" stroke-linecap="round"/>
+  <circle cx="1124" cy="128" r="15" fill="#F8B716"/>
+  <path d="M1117 128 l5.5 6 10.5 -12.5" fill="none" stroke="#303651" stroke-width="3.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

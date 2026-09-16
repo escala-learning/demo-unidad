@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img"
+     aria-label="La hoja de un documento con un párrafo marcado en amarillo. De ese párrafo sale una línea que se reparte en tres bloques distintos: uno numerado que encabeza una secuencia, una tarjeta violeta destacada y un comparativo de dos columnas con un visto y una equis. El texto dentro de los tres es exactamente el mismo.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 1 (apertura)
+       Concepto: "cada bloque tiene una forma que le dice al estudiante cómo leerlo:
+       los hay que ordenan una secuencia, los que destacan lo que conviene retener y
+       los que ponen dos cosas una frente a otra" · "Un bloque nunca cambia lo que
+       dice el texto. Cambia cómo se lee."
+       El mismo párrafo (mismo <use>, mismas medidas) aparece en los tres bloques;
+       solo cambia el envase. Guion en insumos/ILUSTRACIONES.md.
+       Único amarillo: el párrafo marcado en la hoja del documento. -->
+  <defs>
+    <linearGradient id="ilu-tresformas-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-tresformas-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <!-- EL TEXTO. Uno solo: se reutiliza idéntico en la hoja y en los tres bloques.
+         Toma el color de quien lo usa (currentColor), porque lo único que cambia
+         de un bloque a otro es el envase. -->
+    <g id="ilu-tresformas-parrafo">
+      <rect            width="130" height="9" rx="4.5" fill="currentColor" opacity=".82"/>
+      <rect y="18"     width="112" height="9" rx="4.5" fill="currentColor" opacity=".42"/>
+      <rect y="36"     width="78"  height="9" rx="4.5" fill="currentColor" opacity=".42"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="420" rx="18" fill="url(#ilu-tresformas-fondo)"/>
+
+  <!-- ══ La hoja del documento ══ -->
+  <g filter="url(#ilu-tresformas-sombra)">
+    <rect x="58" y="56" width="234" height="308" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="84" y="86"  width="104" height="11" rx="5.5" fill="#303651" opacity=".85"/>
+  <rect x="84" y="114" width="182" height="8"  rx="4"   fill="#303651" opacity=".20"/>
+  <rect x="84" y="130" width="150" height="8"  rx="4"   fill="#303651" opacity=".20"/>
+
+  <!-- El párrafo marcado: lo que va a viajar a los tres bloques -->
+  <rect x="78" y="158" width="178" height="76" rx="8" fill="#F8B716" opacity=".16"/>
+  <rect x="78" y="158" width="7"   height="76" rx="3.5" fill="#F8B716"/>
+  <use href="#ilu-tresformas-parrafo" x="98" y="174" color="#303651"/>
+
+  <rect x="84" y="258" width="182" height="8" rx="4" fill="#303651" opacity=".18"/>
+  <rect x="84" y="276" width="160" height="8" rx="4" fill="#303651" opacity=".18"/>
+  <rect x="84" y="294" width="176" height="8" rx="4" fill="#303651" opacity=".18"/>
+  <rect x="84" y="312" width="120" height="8" rx="4" fill="#303651" opacity=".18"/>
+
+  <!-- ══ El mismo texto se reparte en tres formas ══ -->
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" opacity=".5">
+    <path d="M296 196 C 344 196, 356 104, 410 104 H 890" stroke-dasharray="7 7"/>
+    <path d="M446 104 V 132" stroke-dasharray="7 7"/>
+    <path d="M662 104 V 132" stroke-dasharray="7 7"/>
+    <path d="M890 104 V 132" stroke-dasharray="7 7"/>
+  </g>
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round"
+     stroke-linejoin="round" opacity=".7">
+    <path d="M438 120 l8 12 8 -12"/>
+    <path d="M654 120 l8 12 8 -12"/>
+    <path d="M882 120 l8 12 8 -12"/>
+  </g>
+
+  <!-- ══ Forma 1 · el bloque que ordena: encabeza una secuencia ══ -->
+  <g filter="url(#ilu-tresformas-sombra)">
+    <rect x="356" y="140" width="180" height="148" rx="14" fill="#FFFFFF"/>
+  </g>
+  <circle cx="380" cy="178" r="17" fill="#503B96"/>
+  <text x="380" y="184" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif"
+        font-size="15" font-weight="600" fill="#FFFFFF">1</text>
+  <use href="#ilu-tresformas-parrafo" x="381" y="212" color="#303651"/>
+  <!-- los pasos que siguen -->
+  <g opacity=".55">
+    <rect x="356" y="302" width="180" height="30" rx="11" fill="#FFFFFF"/>
+    <circle cx="380" cy="317" r="12" fill="#503B96"/>
+    <text x="380" y="322" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif"
+          font-size="12" font-weight="600" fill="#FFFFFF">2</text>
+    <rect x="402" y="313" width="96" height="8" rx="4" fill="#303651" opacity=".3"/>
+  </g>
+  <g opacity=".38">
+    <rect x="356" y="340" width="180" height="24" rx="9" fill="#FFFFFF"/>
+    <circle cx="380" cy="352" r="9" fill="#503B96"/>
+    <text x="380" y="356" text-anchor="middle" font-family="DM Sans, system-ui, sans-serif"
+          font-size="10" font-weight="600" fill="#FFFFFF">3</text>
+    <rect x="399" y="349" width="84" height="7" rx="3.5" fill="#303651" opacity=".3"/>
+  </g>
+
+  <!-- ══ Forma 2 · el bloque que destaca: tarjeta violeta con su etiqueta ══ -->
+  <g filter="url(#ilu-tresformas-sombra)">
+    <rect x="572" y="140" width="180" height="148" rx="14" fill="#503B96"/>
+  </g>
+  <rect x="597" y="174" width="68" height="17" rx="8.5" fill="#FFFFFF" opacity=".30"/>
+  <use href="#ilu-tresformas-parrafo" x="597" y="212" color="#FFFFFF"/>
+
+  <!-- ══ Forma 3 · el bloque que contrasta: dos cosas una frente a otra ══ -->
+  <g filter="url(#ilu-tresformas-sombra)">
+    <rect x="808" y="140" width="165" height="148" rx="14" fill="#FFFFFF"/>
+    <rect x="987" y="140" width="165" height="148" rx="14" fill="#FFFFFF"/>
+  </g>
+  <circle cx="832" cy="176" r="15" fill="#503B96"/>
+  <path d="M825 176 l5 5 10 -11" fill="none" stroke="#FFFFFF" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <use href="#ilu-tresformas-parrafo" x="826" y="212" color="#303651"/>
+  <circle cx="1011" cy="176" r="15" fill="#303651" opacity=".42"/>
+  <path d="M1005 170 l12 12 M1017 170 l-12 12" fill="none" stroke="#FFFFFF" stroke-width="3.2"
+        stroke-linecap="round"/>
+  <use href="#ilu-tresformas-parrafo" x="1005" y="212" color="#303651" opacity=".55"/>
+</svg>

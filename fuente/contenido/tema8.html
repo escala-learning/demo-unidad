@@ -1,0 +1,263 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Catálogo · <span class="sl-italic">actividad</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal del Word -->
+        <p class="ova-screen__lead">
+          Lo que el estudiante hace: cinco actividades, con lo que cada una necesita del Word
+          y el momento en que conviene usarla.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · única tarjeta violeta de la pantalla junto con la Idea
+           clave de la familia; ninguna ficha lleva tarjeta -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Escribe una pregunta, un apareamiento o una lista de comprobación con el formato
+            que el Word necesita para que la actividad exista sin preguntas de vuelta.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · la propuso el agente ilustrador (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-lo-que-hace.svg" alt="A la izquierda, una hoja del Word con un bloque rotulado Pregunta 1 · Tema 2: el enunciado, tres opciones con la correcta marcada y, debajo, dos textos encabezados por Acierto y Error. A la derecha, la escena del estudiante: tres opciones y la marca de un toque sobre una de ellas; de ese toque salen dos globos de respuesta del mismo tamaño, uno con un visto y otro con una equis, y los dos llevan la misma cantidad de texto explicando por qué." />
+      </figure>
+
+      <p data-reveal>
+        Cinco actividades. Ninguna genera nota: son de práctica, y la retroalimentación
+        explica por qué, acierte o no el estudiante.
+      </p>
+
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:message-reply-text-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Idea clave</span>
+          <p style="margin:8px 0 0;">
+            De práctica y con retroalimentación que explica: la de acierto dice por qué esa
+            opción funciona; la de error orienta qué revisar y en qué tema.
+          </p>
+        </div>
+      </div>
+
+      <!-- ════ Pregunta de selección ════ -->
+      <section class="sl-seccion" id="pregunta" data-reveal>
+        <h2 class="sl-seccion__titulo">Pregunta <span class="sl-suave">de</span> <span class="sl-italic">selección</span></h2>
+        <p class="sl-seccion__lead">Enunciado, opciones y retroalimentación al responder.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Pregunta N · Tema N</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo · responde para ver la retroalimentación</p>
+        <div class="ova-quiz">
+          <p class="sl-eval__contexto">Un documento trae una pregunta con cuatro opciones, la correcta marcada, y una sola retroalimentación que dice «¡Muy bien!».</p>
+          <h3 class="ova-quiz__question">¿Qué le falta a esa pregunta para poderse maquetar?</h3>
+          <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="false"><strong>A.</strong> Más opciones, para que sea más difícil.</button>
+            <button class="ova-quiz__opt" data-correct="true"><strong>B.</strong> Una retroalimentación de acierto y una de error que expliquen por qué.</button>
+            <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Un rótulo «Actividad» encima, para distinguirla del texto.</button>
+          </div>
+          <div class="ova-quiz__feedback"
+               data-correct="La retroalimentación no celebra: la etiqueta y el color ya dicen el resultado. La de acierto explica por qué esa opción funciona; la de error orienta qué revisar y en qué tema. Cuatro opciones es el tope, y el rótulo lo pone el componente."
+               data-wrong="Piensa en qué recibe el estudiante después de responder. «¡Muy bien!» no le dice nada a quien acertó y menos a quien falló. Lo que falta son dos textos: por qué la correcta lo es, y qué revisar si se eligió otra."></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t8-1"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t8-1"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Pregunta de selección</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Pregunta 1 · Tema 2</b>
+<b>Contexto:</b> Un gerente convoca a doce personas para «alinear el trimestre».
+<b>Enunciado:</b> ¿Qué le falta a la convocatoria?
+<b>A.</b> Más asistentes   <b>B.</b> Una pregunta que decidir <b>(correcta)</b>   <b>C.</b> Más tiempo
+<b>Acierto:</b> Sin una pregunta escrita, la reunión no tiene cómo terminar […]
+<b>Error:</b> Piensa en qué hace que una reunión termine bien […]
+<span class="gris">Contexto de hasta 60 palabras (opcional); enunciado de hasta 35; 3 o 4 opciones de hasta 20, con la correcta marcada; retroalimentación de acierto y de error, hasta 80 palabras cada una.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Una pregunta con una sola respuesta correcta. Dentro de un tema, una pausa activa después de un bloque denso; en la evaluación, las preguntas del banco. Nunca con términos con definición dentro: sería una pista.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Relacionar términos ════ -->
+      <section class="sl-seccion" id="relacionar" data-reveal>
+        <h2 class="sl-seccion__titulo">Relacionar <span class="sl-italic">términos</span></h2>
+        <p class="sl-seccion__lead">Dos columnas: se toca un concepto y después su definición.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Relacionar:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo · toca un concepto y después su definición</p>
+        <div class="ova-empar">
+          <div class="ova-empar__col">
+            <button class="ova-empar__item" data-ova-match="A">Retroalimentación</button>
+            <button class="ova-empar__item" data-ova-match="B">Banco de preguntas</button>
+            <button class="ova-empar__item" data-ova-match="C">Pausa activa</button>
+          </div>
+          <div class="ova-empar__col">
+            <button class="ova-empar__item" data-ova-match="C">Una pregunta dentro del tema, después de un bloque denso.</button>
+            <button class="ova-empar__item" data-ova-match="A">El texto que explica por qué, acierte o no el estudiante.</button>
+            <button class="ova-empar__item" data-ova-match="B">Las preguntas de la evaluación, con el tema que cubre cada una.</button>
+          </div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t8-2"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t8-2"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Relacionar términos</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Relacionar</b>
+Retroalimentación — El texto que explica por qué, acierte o no el estudiante.
+Banco de preguntas — Las preguntas de la evaluación, con el tema que cubre cada una.
+Pausa activa — Una pregunta dentro del tema, después de un bloque denso.
+<span class="gris">Los pares: término de hasta 5 palabras y definición de hasta 25. Las definiciones se muestran desordenadas al maquetar; el Word las trae en orden.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>De 3 a 6 pares concepto y definición. Suele cerrar la evaluación con los términos de la unidad.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Ordenar y clasificar ════ -->
+      <section class="sl-seccion" id="ordenar-y-clasificar" data-reveal>
+        <h2 class="sl-seccion__titulo">Ordenar <span class="sl-suave">y</span> <span class="sl-italic">clasificar</span></h2>
+        <p class="sl-seccion__lead">Dos actividades de manipulación: poner pasos en orden, o llevar elementos a
+          su categoría.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Ordenar: · Clasificar:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo · ordenar: arrastra y verifica</p>
+        <ul class="ova-orden">
+          <li class="ova-orden__item" data-ova-order="3"><span class="ova-orden__num">1</span> Se pasa el diagramador por la pantalla.</li>
+          <li class="ova-orden__item" data-ova-order="1"><span class="ova-orden__num">2</span> Se maqueta cada bloque con el texto literal.</li>
+          <li class="ova-orden__item" data-ova-order="4"><span class="ova-orden__num">3</span> Se audita la fidelidad al Word.</li>
+          <li class="ova-orden__item" data-ova-order="2"><span class="ova-orden__num">4</span> El ilustrador propone la apertura del tema.</li>
+        </ul>
+        <button class="ova-btn ova-btn--primary" data-ova-orden-check style="margin-top:14px;"><iconify-icon icon="mdi:check-bold"></iconify-icon> Verificar orden</button>
+
+        <p class="dm-ejemplo">Ejemplo vivo · clasificar: arrastra cada elemento a su zona</p>
+        <div class="ova-dnd">
+          <div class="ova-dnd__bank">
+            <div class="ova-dnd__bank-title">Banco</div>
+            <div class="ova-dnd__item" data-ova-correct="word">El texto de una tarjeta con icono</div>
+            <div class="ova-dnd__item" data-ova-correct="editorial">El título de una pantalla</div>
+            <div class="ova-dnd__item" data-ova-correct="word">La leyenda de una figura</div>
+            <div class="ova-dnd__item" data-ova-correct="editorial">La ilustración de apertura</div>
+          </div>
+          <div class="ova-dnd__zones">
+            <div class="ova-dnd__zone" data-ova-target="word"><h4><iconify-icon icon="mdi:file-word-outline" style="color:var(--c-acento);"></iconify-icon> Viene del Word</h4><div class="ova-dnd__items"></div></div>
+            <div class="ova-dnd__zone" data-ova-target="editorial"><h4><iconify-icon icon="mdi:pencil-plus-outline" style="color:var(--c-info);"></iconify-icon> Capa editorial</h4><div class="ova-dnd__items"></div></div>
+          </div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t8-3"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t8-3"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Ordenar y clasificar</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Ordenar: Cerrar una reunión</b>
+1. Leer la decisión en voz alta · 2. Nombrar al responsable · 3. Fijar la fecha · 4. Enviar el acta
+
+<b>Clasificar: ¿Reunión o correo?</b>
+<b>Necesita reunión:</b> Elegir entre dos proveedores · Resolver un conflicto entre áreas
+<b>Basta un correo:</b> Informar la fecha de cierre · Compartir el informe mensual
+<span class="gris">Ordenar: de 4 a 6 pasos, escritos en su orden correcto. Clasificar: las categorías y cada elemento con la suya. El desorden lo pone el componente.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Ordenar: un procedimiento con un solo orden válido. Clasificar: de 6 a 9 elementos que se reparten en 2 o 3 categorías claras. El arrastre se verifica en un teléfono real, no solo con el ratón.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Lista de verificación ════ -->
+      <section class="sl-seccion" id="lista-de-verificacion" data-reveal>
+        <h2 class="sl-seccion__titulo">Lista <span class="sl-suave">de</span> <span class="sl-italic">verificación</span></h2>
+        <p class="sl-seccion__lead">Ítems que el estudiante marca como hechos. Autoevaluación, sin nota.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Lista de verificación:</span>
+
+        <p class="dm-ejemplo">Ejemplo vivo · marca lo que ya hiciste</p>
+        <div class="ova-checklist">
+          <div class="ova-checklist__head"><h3 style="margin:0; font-size:1.1rem;">Antes de entregar el Word</h3><div class="ova-checklist__count"><strong>0</strong> / 4</div></div>
+          <ul class="ova-checklist__list">
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Cada bloque destacado lleva su rótulo en la tabla.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Cada figura tiene su bloque DISEÑO GRÁFICO en el sitio exacto.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">Las negrillas están donde el curso debe destacar.</span></li>
+            <li class="ova-checklist__item"><span class="ova-checklist__box"><iconify-icon icon="mdi:check"></iconify-icon></span><span class="ova-checklist__text">El banco de preguntas dice qué tema cubre cada una.</span></li>
+          </ul>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t8-4"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t8-4"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Lista de verificación</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Lista de verificación: Antes de convocar</b>
+□ La pregunta cabe en una línea · □ Hay un dueño de la decisión · □ Solo asiste quien puede cambiarla · □ Hay fecha para el acta
+<span class="gris">De 4 a 10 ítems de hasta 15 palabras.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Un protocolo o una lista de comprobación que el estudiante se llevará a su trabajo. Sin nota: el contador solo le dice cuánto lleva.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <!-- ════ Evaluación de la unidad ════ -->
+      <section class="sl-seccion" id="evaluacion-unidad" data-reveal>
+        <h2 class="sl-seccion__titulo">Evaluación <span class="sl-suave">de la</span> <span class="sl-italic">unidad</span></h2>
+        <p class="sl-seccion__lead">Las preguntas del banco, una por tarjeta, con progreso y contador. Tiene su propia pantalla.</p>
+      </section>
+      <div class="dm-ficha" data-reveal>
+        <span class="dm-rotulo">Banco de preguntas · Pregunta N · Tema N</span>
+        <p class="dm-ejemplo">Ejemplo vivo · una pregunta con la forma de la evaluación</p>
+        <div class="ova-quiz">
+          <span class="sl-eval__tema">Tema 8 — Catálogo · Actividad</span>
+          <p class="sl-eval__contexto">El banco llega con nueve preguntas y ninguna dice a qué tema pertenece. Todas tienen sus opciones y sus dos retroalimentaciones.</p>
+          <h3 class="ova-quiz__question">¿Qué se le pide de vuelta al diseño instruccional antes de maquetar la evaluación?</h3>
+          <div class="ova-quiz__opts">
+            <button class="ova-quiz__opt" data-correct="true"><strong>A.</strong> Qué tema cubre cada pregunta: el eyebrow de la tarjeta sale de ahí.</button>
+            <button class="ova-quiz__opt" data-correct="false"><strong>B.</strong> Reducir el banco a cinco, porque nueve son muchas.</button>
+            <button class="ova-quiz__opt" data-correct="false"><strong>C.</strong> Nada: producción asigna los temas leyendo cada pregunta.</button>
+          </div>
+          <div class="ova-quiz__feedback"
+               data-correct="El tema de cada pregunta no se inventa al maquetar: es del Word, y va como eyebrow dentro de la tarjeta. Nueve preguntas están dentro del rango de 5 a 12, así que no hay nada que recortar."
+               data-wrong="Lo que falta es un dato del Word, no una decisión de producción. Asignar temas leyendo las preguntas sería escribir contenido que nadie validó; y el banco, con nueve, está dentro del rango."></div>
+        </div>
+
+        <div class="dm-acciones">
+          <button class="ova-btn ova-btn--outline" data-ova-modal-open="dm-modal-t8-5"><iconify-icon icon="mdi:file-word-outline"></iconify-icon> Cómo va en el Word y cuándo usarlo</button>
+        </div>
+        <div class="ova-modal" id="dm-modal-t8-5"><div class="ova-modal__dialog">
+          <div class="ova-modal__head"><h3>Evaluación de la unidad</h3><button class="ova-modal__close" data-ova-modal-close><iconify-icon icon="mdi:close"></iconify-icon></button></div>
+          <div class="ova-modal__body">
+            <p class="dm-modal__cab">Así se recibe en el Word</p>
+            <div class="dm-word"><b>Banco de preguntas</b>
+<b>Pregunta 1 · Tema 1</b> · contexto, enunciado, opciones con la correcta marcada, acierto y error
+<b>Pregunta 2 · Tema 1</b> · […]
+<b>Pregunta 3 · Tema 2</b> · […]
+<b>Relacionar</b> (opcional) · de 3 a 6 pares con los términos de la unidad
+<span class="gris">De 5 a 12 preguntas con el formato de «Pregunta de selección», cada una con el tema que cubre. En la Unidad 2 el banco llegó como documento aparte, y eso también sirve.</span></div>
+            <p class="dm-modal__cab" style="margin-top:22px;">Cuándo usarlo</p>
+            <p>Una por unidad, cubriendo todos los temas. De práctica, con retroalimentación en cada respuesta, aciertes o no. Cierra con «Evaluación completada» y la opción de repetir. Cada pregunta es un bloque único: tema, caso, enunciado y opciones se leen juntos. Se llama «Pregunta N de M», no «Actividad». La retroalimentación cambia de plano, con fondo teñido y la carita de marca, y al final aparece «Evaluación completada» con la opción de repetir. Esta es una pregunta suelta con la forma de la evaluación; la evaluación real de este demo vive en su propia pantalla.</p>
+          </div>
+          <div class="ova-modal__foot"><button class="ova-btn ova-btn--outline" data-ova-modal-close>Cerrar</button></div>
+        </div></div>
+      </div>
+
+      <div class="sl-respiro" data-reveal>
+        <p>La retroalimentación no celebra: <strong>explica por qué, acierte o no el estudiante</strong>.</p>
+      </div>

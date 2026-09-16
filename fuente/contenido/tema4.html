@@ -1,0 +1,252 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Cómo se marca <span class="sl-suave">el</span> <span class="sl-italic">Word</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal del Word -->
+        <p class="ova-screen__lead">
+          Escribir el documento de una unidad de modo que cada bloque caiga en su
+          componente sin que nadie tenga que adivinar.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · primera de las tres tarjetas violeta de la pantalla -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Marca un bloque del Word por cualquiera de las tres vías, pide una figura en su
+            caja y conserva las negrillas como parte del contenido.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · la propuso el agente ilustrador (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-tres-vias.svg" alt="Tres fragmentos del mismo Word, uno al lado del otro. En el primero, la palabra Acordeón seguida de dos puntos en una línea propia, y debajo sus tres ítems numerados. En el segundo, una tabla cuya primera fila dice Idea clave, con el texto debajo. En el tercero, un párrafo que no trae nada; alguien lo enmarcó desde fuera con una línea amarilla punteada que sobresale de la hoja, y el marco lleva un visto." />
+      </figure>
+
+      <p data-reveal>
+        El Word no lleva un formato especial ni una herramienta aparte. Lo único que cambia
+        es que <strong>cada bloque dice qué componente es</strong>, y lo dice de una de tres
+        maneras. Eso es lo que el Arquitecto OVA lee para maquetar: el rótulo elige el
+        componente, y el texto que sigue entra literal.
+      </p>
+
+
+      <!-- ════ Sección {{NUM}}.1 ════ -->
+      <section class="sl-seccion" id="tres-vias" data-reveal>
+        <h2 class="sl-seccion__titulo">Las tres <span class="sl-italic">vías</span></h2>
+        <p class="sl-seccion__lead">Un bloque cae en un componente porque el Word lo nombra, porque su rótulo
+          lo dice, o porque producción lo elige y lo declara. En ese orden de prioridad.</p>
+      </section>
+
+      <!-- Diagrama · una decisión, no una escena. Es la pieza del diagramador. -->
+      <figure class="sl-diagrama" data-reveal>
+        <svg viewBox="0 0 1160 300" role="img"
+             aria-label="Decisión: un bloque del Word que trae nombre o rótulo va al componente que ese rótulo dice; si no trae ninguno, producción lo elige del catálogo y lo declara como capa editorial.">
+          <rect x="24" y="118" width="196" height="64" rx="16" fill="#FFFFFF" stroke="#E7E0D8" stroke-width="2"/>
+          <text x="122" y="145" text-anchor="middle" font-size="18" font-weight="600" fill="#303651">Un bloque</text>
+          <text x="122" y="168" text-anchor="middle" font-size="18" font-weight="600" fill="#303651">del Word</text>
+          <path d="M220 150 H302" fill="none" stroke="#CFC8E4" stroke-width="2.5" stroke-linecap="round"/>
+          <rect x="302" y="102" width="256" height="96" rx="18" fill="#EFECF7"/>
+          <text x="430" y="140" text-anchor="middle" font-size="19" font-weight="600" fill="#503B96">¿Lo nombra</text>
+          <text x="430" y="166" text-anchor="middle" font-size="19" font-weight="600" fill="#503B96">o lo rotula?</text>
+          <path d="M558 132 H640 V64 H720" fill="none" stroke="#CFC8E4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="600" y="120" font-size="16" font-weight="600" fill="#8A8FA0">sí</text>
+          <rect x="720" y="28" width="416" height="72" rx="16" fill="#FFFFFF" stroke="#E7E0D8" stroke-width="2"/>
+          <text x="748" y="58" font-size="18" font-weight="600" fill="#303651">Va al componente que dice</text>
+          <text x="748" y="82" font-size="16" fill="#8A8FA0">«Acordeón:», «Idea clave», «Dato curioso» · vías 1 y 2</text>
+          <path d="M558 168 H640 V236 H720" fill="none" stroke="#F8B716" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="600" y="196" font-size="16" font-weight="600" fill="#8A6100">no</text>
+          <rect x="720" y="200" width="416" height="72" rx="16" fill="#FFFFFF" stroke="#F8B716" stroke-width="2.5"/>
+          <text x="748" y="230" font-size="18" font-weight="600" fill="#303651">Se elige del catálogo y se declara</text>
+          <text x="748" y="254" font-size="16" fill="#8A8FA0">capa editorial que el equipo instruccional valida · vía 3</text>
+        </svg>
+        <figcaption>
+          La rama de abajo es la única donde alguien decide por el documento. Por eso todo
+          lo que sale de ahí se lista, y el equipo instruccional lo aprueba antes de publicar.
+        </figcaption>
+      </figure>
+
+      <div class="ova-grid-2" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Vía 1 · el Word lo nombra</span>
+          <p>
+            El nombre del componente en una línea propia, seguido de sus campos:
+            <em>Acordeón:</em>, <em>Pestañas:</em>, <em>Recorrido de pasos:</em>,
+            <em>Comparativo:</em>. <strong>Es lo que da la plantilla</strong>, bloque por bloque.
+          </p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Vía 2 · el rótulo lo dice</span>
+          <p>
+            Una tabla titulada <em>Idea clave</em> va a tarjeta con icono; <em>Dato curioso</em>,
+            a nota lateral; <em>Dato curioso en cifras</em>, a cifra destacada;
+            <em>Para reflexionar</em>, a tarjeta con borde amarillo.
+          </p>
+        </div>
+      </div>
+
+      <p data-reveal>
+        Y la vía 3: cuando el bloque no trae nada, el Arquitecto OVA escoge del catálogo
+        según qué es el contenido, y la elección queda en la capa editorial. Un párrafo
+        largo con una frase de remate puede terminar en una banner destacado; nadie la
+        pidió, y por eso se declara.
+      </p>
+
+
+      <!-- ════ Sección {{NUM}}.2 ════ -->
+      <section class="sl-seccion" id="la-plantilla" data-reveal>
+        <h2 class="sl-seccion__titulo">La plantilla: <span class="sl-suave">un bloque por</span> <span class="sl-italic">componente</span></h2>
+        <p class="sl-seccion__lead">Un Word con la estructura de la unidad y, después, un bloque por cada
+          componente del catálogo. Se copia el bloque, se rellena y se borra la guía gris.</p>
+      </section>
+
+      <p data-reveal>
+        Así se ve. Los títulos en violeta son los nombres de componente que producción lee;
+        los rótulos en dorado son los campos; lo gris es la guía, con los topes de palabras
+        para que la pieza se lea bien en pantalla.
+      </p>
+
+      <div class="dm-paginas" data-reveal>
+        <figure class="dm-pagina">
+          <img src="assets/img/curso/word-plantilla-01.webp"
+               alt="Primera página de la plantilla de diseño instruccional de Scala: el título en violeta, dos párrafos de convención en cursiva y la sección Estructura de la unidad con los bloques Portada, Objetivo, Introducción, Tema N y Conclusión, cada uno con sus campos en dorado y la guía en gris." />
+          <figcaption>Página 1: la estructura de la unidad, del bloque de portada al de referencias.</figcaption>
+        </figure>
+        <figure class="dm-pagina">
+          <img src="assets/img/curso/word-plantilla-02.webp"
+               alt="Página de la plantilla con la familia Estructura del contenido: los bloques Acordeón, Pestañas, Recorrido de pasos, Pasos y Ciclo, cada uno con su línea Cuándo en cursiva y sus ítems o pasos numerados con el tope de palabras." />
+          <figcaption>Familia B: cada componente con su «Cuándo» y sus campos. Los ítems ya vienen numerados; el título de cada uno lo escribe el instruccional.</figcaption>
+        </figure>
+      </div>
+
+      <p style="margin-top:36px;" data-reveal>
+        Y así se ve un documento real escrito con ella: la Unidad 3 de un curso de gestión,
+        «El acta que decide». Fíjate en cómo el bloque <em>Acordeón:</em> trae su título y
+        sus tres ítems, y en cómo la <em>Pregunta de selección</em> marca la opción correcta
+        y trae las dos retroalimentaciones.
+      </p>
+
+      <div class="dm-paginas" data-reveal>
+        <figure class="dm-pagina">
+          <img src="assets/img/curso/word-ejemplo-01.webp"
+               alt="Primera página del ejemplo: título DI · Gestión · Unidad 3 · El acta que decide, una nota en cursiva sobre cómo leer el documento, y los bloques Portada, Objetivo de la unidad e Introducción con sus campos rellenos: título, subtítulo, frase de portada, fotografía, objetivo, apertura y frase clave." />
+          <figcaption>Página 1 del ejemplo: los mismos bloques de la plantilla, ya rellenos y sin la guía gris.</figcaption>
+        </figure>
+        <figure class="dm-pagina">
+          <img src="assets/img/curso/word-ejemplo-02.webp"
+               alt="Página del ejemplo con el Tema 2: la entrada, la sección 2.1 con un párrafo y la Figura 3 pedida con Qué muestra y Pie de figura, y la sección 2.2 con el bloque Acordeón: Las tres preguntas antes de cerrar, sus tres ítems, y una Pregunta de selección con enunciado, tres opciones, la correcta marcada y las dos retroalimentaciones." />
+          <figcaption>Tema 2 del ejemplo: un acordeón y una pregunta, marcados por la vía 1. El texto de cada campo entra literal en el curso.</figcaption>
+        </figure>
+      </div>
+
+      <div class="sl-descarga" style="margin-top:36px;" data-reveal>
+        <div class="sl-descarga__info"><b>Plantilla de diseño instruccional</b><span>Un Word con un bloque por componente, listo para copiar en el documento de la unidad.</span></div>
+        <a class="ova-btn ova-btn--primary" href="assets/descargas/plantilla-di-scala.docx" download>Descargar <iconify-icon icon="mdi:download"></iconify-icon></a>
+      </div>
+      <div class="sl-descarga" data-reveal>
+        <div class="sl-descarga__info"><b>Ejemplo completo · Unidad 3 «El acta que decide»</b><span>Un documento escrito con la plantilla, de la portada a la evaluación, para ver cómo queda marcado de verdad.</span></div>
+        <a class="ova-btn ova-btn--outline" href="assets/descargas/ejemplo-di-scala.docx" download>Descargar <iconify-icon icon="mdi:file-word-outline"></iconify-icon></a>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.3 ════ -->
+      <section class="sl-seccion" id="diseno-grafico" data-reveal>
+        <h2 class="sl-seccion__titulo">La figura se pide <span class="sl-suave">en su</span> <span class="sl-italic">caja</span></h2>
+        <p class="sl-seccion__lead">Lo que describe una figura para que diseño gráfico la dibuje no es contenido
+          del curso. Va en una tabla de una sola celda, con un rótulo fijo en la primera línea.</p>
+      </section>
+
+      <p data-reveal>
+        El sistema usa esa caja para ubicar la figura y no la maqueta. Solo una línea de
+        adentro llega al curso: la <em>Leyenda</em>, que aparece literal bajo la imagen. Si
+        no hay leyenda, se borra esa línea y la figura va sin pie.
+      </p>
+
+      <figure class="dm-pagina" style="max-width:720px;" data-reveal>
+        <img src="assets/img/curso/word-plantilla-03.webp"
+             alt="Página de la plantilla con las instrucciones para el diseñador gráfico: un párrafo de explicación y la tabla de una celda con tres líneas: DISEÑO GRÁFICO · Figura N en negrilla, Leyenda: Figura N. seguido del pie, y entre corchetes qué debe dibujar el diseñador." />
+        <figcaption>La caja tal como viene en la plantilla. El número N es el mismo con el que el diseñador entrega el archivo, y el que conserva si la figura se corrige.</figcaption>
+      </figure>
+
+      <p style="margin-top:32px;" data-reveal>Rellena, en el sitio exacto donde va la figura, queda así:</p>
+
+      <details class="dm-word" open data-reveal><summary class="dm-word__cab">Así se recibe en el Word · en el lugar de la figura</summary><div class="dm-word__cuerpo"><span class="celda"><b>DISEÑO GRÁFICO · Figura 2</b>
+Leyenda: Figura 2. Verbo, nombre y fecha: si falta una, la línea vuelve a la reunión.
+Una sola línea de acta dividida en tres partes marcadas con corchetes: el verbo, el nombre de la persona y la fecha. Debajo, la misma línea sin la fecha, tachada.</span><span class="gris">Nota de diseño gráfico: la fecha va en el mismo color que el verbo, no destacada.</span></div></details>
+
+      <div class="ova-grid-2" style="margin-top:24px;" data-reveal>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Lo que llega al curso</span>
+          <p>La figura, con el nombre <em>figura-02-…</em>, y su leyenda literal precedida de «Figura 2.» en negrilla. La descripción se vuelve el texto alternativo para quien no ve la imagen.</p>
+        </div>
+        <div class="sl-nota">
+          <span class="sl-nota__tag">Lo que no llega</span>
+          <p>La descripción como texto de pantalla y la nota de diseño gráfico. Son una conversación con el diseñador. El verificador las excluye y las lista; si alguien las maqueta, lo delata.</p>
+        </div>
+      </div>
+
+      <!-- Importante · segunda tarjeta violeta de la pantalla -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Importante</span>
+          <p style="margin:8px 0 0;">
+            Un bloque <em>DISEÑO GRÁFICO</em> ubica una figura: no se maqueta ni se ilustra.
+            Donde el diseñador ya entregó una pieza, nadie dibuja otra que cuente lo mismo.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.4 ════ -->
+      <section class="sl-seccion" id="negrillas" data-reveal>
+        <h2 class="sl-seccion__titulo">Las negrillas <span class="sl-suave">son</span> <span class="sl-italic">contenido</span></h2>
+        <p class="sl-seccion__lead">Un tramo en negrilla en el Word sale en negrilla en el curso, sin excepción.
+          Perder una es perder contenido, y el verificador detiene la entrega.</p>
+      </section>
+
+      <p data-reveal>
+        La regla es corta y no se negocia porque la negrilla es una decisión del
+        instruccional sobre qué carga el sentido. Este párrafo llega así en el Word:
+      </p>
+
+      <details class="dm-word" open data-reveal><summary class="dm-word__cab">Así se recibe en el Word</summary><div class="dm-word__cuerpo">Si una línea del acta no cambia nada para nadie, no es una decisión: es una nota. Las notas se guardan aparte; <b>el acta solo lleva decisiones</b>.</div></details>
+
+      <p style="margin-top:24px;" data-reveal>Y así aparece en el curso, con el mismo tramo en peso fuerte:</p>
+
+      <p data-reveal>
+        Si una línea del acta no cambia nada para nadie, no es una decisión: es una nota.
+        Las notas se guardan aparte; <strong>el acta solo lleva decisiones</strong>.
+      </p>
+
+      <div class="sl-vs-ligero" style="margin-top:32px;" data-reveal>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--si">
+          <span class="sl-vs-ligero__signo">✓</span>
+          <span class="sl-vs-ligero__tag">Aplique</span>
+          <p>Marcar en el Word la única idea que carga el sentido de cada frase. En un párrafo que enumera, una por elemento.</p>
+        </div>
+        <div class="sl-vs-ligero__col sl-vs-ligero__col--no">
+          <span class="sl-vs-ligero__signo">✕</span>
+          <span class="sl-vs-ligero__tag">No aplique</span>
+          <p>Dos negrillas en la misma frase: ninguna destaca. Ni chips o rótulos que el Word no traiga: «Paso 1», «Condición 2» los pone el componente, no el documento.</p>
+        </div>
+      </div>
+
+      <!-- Para reflexionar · tercera y última tarjeta violeta de la pantalla -->
+      <div class="ova-callout ova-callout--reflexion" style="margin-top:44px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:comment-question-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Para reflexionar</span>
+          <p style="margin:8px 0 0;">
+            Abre el último documento que escribiste. ¿Cuántos de sus bloques podría ubicar
+            alguien que no te conoce, solo con lo que dice el rótulo?
+          </p>
+        </div>
+      </div>
+
+      <!-- Respiro · el remate del tema, a primer plano. Una por pantalla. -->
+      <div class="sl-respiro" data-reveal>
+        <p>El Word decide qué dice el curso. <strong>Marcarlo bien es decidir también cómo se lee</strong>.</p>
+      </div>

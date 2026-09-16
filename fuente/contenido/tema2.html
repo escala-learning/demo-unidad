@@ -1,0 +1,432 @@
+      <header class="ova-screen__head" data-reveal>
+        <div class="ova-screen__eyebrow">Tema {{NUM}}</div>
+        <h1 class="ova-screen__title">Cómo se explica <span class="sl-suave">con piezas</span> <span class="sl-italic">gráficas</span></h1>
+        <!-- Lead · en una unidad real es el "Propósito del tema", literal del Word -->
+        <p class="ova-screen__lead">
+          Saber cuándo un contenido se entiende mejor dibujado, qué pieza le corresponde y
+          quién la propone.
+        </p>
+      </header>
+
+      <!-- Resultado / criterio · primera de las dos tarjetas violeta de la pantalla -->
+      <div class="ova-callout" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:flag-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Resultado / criterio</span>
+          <p style="margin:8px 0 0;">
+            Elige la pieza gráfica que le corresponde a un bloque del documento y distingue
+            la que propone el diagramador de la que dibuja el ilustrador.
+          </p>
+        </div>
+      </div>
+
+      <!-- Ilustración de apertura · la misma pantalla con y sin piezas gráficas: una
+           columna de puras tarjetas se lee plana (guion en insumos/ILUSTRACIONES.md) -->
+      <figure class="sl-ilustracion" data-reveal>
+        <img src="assets/img/curso/ilustracion-pantalla-plana.svg"
+             alt="Dos pantallas iguales, lado a lado. La de la izquierda está hecha solo de tarjetas con icono, todas del mismo tamaño y una detrás de otra. La de la derecha lleva los bloques como texto y, cada dos o tres, una pieza gráfica marcada en amarillo que rompe la columna." />
+      </figure>
+
+      <p data-reveal>
+        Una pantalla de puras tarjetas se lee plana por muchos destacados que tenga. Cada
+        dos o tres bloques conviene una pieza que rompa la lectura y, sobre todo, que
+        explique. Quién la propone depende de qué haga: si <strong>ordena lo que el
+        documento ya dice</strong>, es trabajo del diagramador; si hay que encontrar una
+        metáfora para que se entienda antes de leer, es del ilustrador.
+      </p>
+
+
+      <!-- ════ Sección {{NUM}}.1 ════ -->
+      <section class="sl-seccion" id="rueda-y-ficha" data-reveal>
+        <h2 class="sl-seccion__titulo">Lo que se dibuja entero: <span class="sl-suave">la rueda y la</span> <span class="sl-italic">ficha</span></h2>
+        <p class="sl-seccion__lead">Dos piezas para contenidos que ya vienen completos en el Word: un ciclo y un
+          objeto con partes. Las propone el diagramador, porque ninguna inventa nada.</p>
+      </section>
+
+      <p data-reveal>
+        La primera es la <strong>rueda</strong>. Cuando el documento describe un ciclo, la
+        rueda de marca ya lo dice todo: sistema, proceso y movimiento continuo. Los pasos
+        van al lado en tarjetas, todos visibles a la vez, porque un carrusel escondería
+        tres de cada cuatro y el sentido de un ciclo es verlo completo. Este es el ciclo
+        por el que pasa cada pantalla de una unidad:
+      </p>
+
+      <!-- Ciclo · SVG inline (no <img>) para que herede la tipografía de la página.
+           Un cuarto por paso y el último en amarillo: la rueda canónica de marca. -->
+      <div class="sl-ciclo" data-reveal>
+
+        <svg class="sl-ciclo__rueda" viewBox="0 0 420 420" role="img"
+             aria-label="Ciclo de cuatro pasos por el que pasa cada pantalla: maquetar, ilustrar, diagramar y auditar.">
+          <g transform="rotate(-90 210 210)" fill="none" stroke-width="30" stroke-linecap="butt">
+            <circle cx="210" cy="210" r="140" stroke="#503B96" stroke-dasharray="190 690" stroke-dashoffset="0"/>
+            <circle cx="210" cy="210" r="140" stroke="#503B96" stroke-dasharray="190 690" stroke-dashoffset="-220"/>
+            <circle cx="210" cy="210" r="140" stroke="#503B96" stroke-dasharray="190 690" stroke-dashoffset="-440"/>
+            <circle cx="210" cy="210" r="140" stroke="#F8B716" stroke-dasharray="190 690" stroke-dashoffset="-660"/>
+          </g>
+
+          <g>
+            <circle cx="309" cy="111" r="27" fill="#FFFFFF"/>
+            <text x="309" y="118" text-anchor="middle" font-size="18" font-weight="600" fill="#503B96">01</text>
+            <circle cx="309" cy="309" r="27" fill="#FFFFFF"/>
+            <text x="309" y="316" text-anchor="middle" font-size="18" font-weight="600" fill="#503B96">02</text>
+            <circle cx="111" cy="309" r="27" fill="#FFFFFF"/>
+            <text x="111" y="316" text-anchor="middle" font-size="18" font-weight="600" fill="#503B96">03</text>
+            <circle cx="111" cy="111" r="27" fill="#FFFFFF"/>
+            <text x="111" y="118" text-anchor="middle" font-size="18" font-weight="600" fill="#B07E00">04</text>
+          </g>
+
+          <text x="210" y="205" text-anchor="middle" font-size="17" font-weight="600" fill="#303651" opacity=".72">Una pantalla</text>
+          <text x="210" y="228" text-anchor="middle" font-size="14" fill="#303651" opacity=".45">pasa por los cuatro</text>
+        </svg>
+
+        <div class="sl-ciclo__pasos">
+          <div class="sl-paso" style="--tinte:#503B96;">
+            <div class="sl-paso__num">PASO 01</div>
+            <h3 class="sl-paso__titulo"><iconify-icon icon="mdi:view-dashboard-outline"></iconify-icon>Maquetar</h3>
+            <p class="sl-paso__desc">Cada bloque del Word recibe su componente, con las palabras y las negrillas del documento.</p>
+          </div>
+          <div class="sl-paso" style="--tinte:#503B96;">
+            <div class="sl-paso__num">PASO 02</div>
+            <h3 class="sl-paso__titulo"><iconify-icon icon="mdi:draw-pen"></iconify-icon>Ilustrar</h3>
+            <p class="sl-paso__desc">El concepto central se vuelve dibujo, con la escena concreta que cuenta el documento.</p>
+          </div>
+          <div class="sl-paso" style="--tinte:#503B96;">
+            <div class="sl-paso__num">PASO 03</div>
+            <h3 class="sl-paso__titulo"><iconify-icon icon="mdi:view-grid-outline"></iconify-icon>Diagramar</h3>
+            <p class="sl-paso__desc">Se revisa la composición: qué se repite, dónde falta una pieza y dónde falta aire.</p>
+          </div>
+          <div class="sl-paso" style="--tinte:#F8B716;">
+            <div class="sl-paso__num" style="color:#8A6100;">PASO 04</div>
+            <h3 class="sl-paso__titulo"><iconify-icon icon="mdi:clipboard-text-search-outline" style="color:#B07E00;"></iconify-icon>Auditar</h3>
+            <p class="sl-paso__desc">Se comprueba que el texto del Word esté completo y se lista lo añadido para validarlo.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <p style="margin-top:40px;" data-reveal>
+        La segunda es la <strong>anatomía</strong>: cuando el documento describe algo que
+        tiene partes, se dibuja el objeto y el texto lo acompaña al lado, sin caja. Aquí el
+        objeto es el bloque destacado del Word, que siempre trae los mismos tres campos.
+      </p>
+
+      <!-- Anatomía · el objeto dibujado y su explicación al lado, en vez de apilar
+           callouts. Los id del SVG van prefijados: en la SPA conviven todas las pantallas. -->
+      <div class="sl-anatomia" data-reveal>
+        <figure style="margin:0;">
+          <svg viewBox="0 0 460 392" role="img"
+               aria-label="Ficha de un bloque destacado del Word con tres campos: el rótulo, el texto y la fuente.">
+            <defs>
+              <clipPath id="clipFichaBloqueWord">
+                <rect x="14" y="18" width="432" height="356" rx="20"/>
+              </clipPath>
+            </defs>
+            <g clip-path="url(#clipFichaBloqueWord)">
+              <rect x="14" y="18" width="432" height="356" fill="#FFFFFF"/>
+              <rect x="14" y="18" width="432" height="12" fill="#F8B716"/>
+            </g>
+            <rect x="14" y="18" width="432" height="356" rx="20" fill="none" stroke="#E7E0D8" stroke-width="2"/>
+
+            <text x="44" y="72" font-size="14" font-weight="600" letter-spacing="2" fill="#503B96">BLOQUE DEL WORD</text>
+            <text x="44" y="97" font-size="15" fill="#8A8FA0">Una tabla de una celda, con tres campos</text>
+            <line x1="44" y1="124" x2="416" y2="124" stroke="#EFEAE3" stroke-width="2"/>
+
+            <circle cx="64" cy="168" r="18" fill="#EFECF7"/>
+            <path d="M56 162 h16 M56 168 h16 M56 174 h10" fill="none" stroke="#503B96" stroke-width="2.4" stroke-linecap="round"/>
+            <text x="98" y="163" font-size="17" font-weight="600" fill="#303651">El rótulo</text>
+            <text x="98" y="185" font-size="14" fill="#8A8FA0">decide el componente</text>
+
+            <circle cx="64" cy="248" r="18" fill="#F1F0F3"/>
+            <path d="M56 242 h16 M56 250 h16 M56 258 h9" fill="none" stroke="#8A8FA0" stroke-width="2.4" stroke-linecap="round"/>
+            <text x="98" y="243" font-size="17" font-weight="600" fill="#303651">El texto</text>
+            <text x="98" y="265" font-size="14" fill="#8A8FA0">va literal, con sus negrillas</text>
+            <rect x="98" y="276" width="286" height="8" rx="4" fill="#EFEAE3"/>
+
+            <circle cx="64" cy="328" r="18" fill="#FDF3DC"/>
+            <path d="M57 328 h14 M64 321 v14" fill="none" stroke="#B07E00" stroke-width="2.4" stroke-linecap="round"/>
+            <text x="98" y="323" font-size="17" font-weight="600" fill="#303651">La fuente, si la hay</text>
+            <text x="98" y="345" font-size="14" fill="#8A8FA0">baja al pie del bloque</text>
+          </svg>
+        </figure>
+
+        <div>
+          <p style="margin-top:0;">
+            Lo que decide el componente es el rótulo, y el mapa es corto:
+            <em>Idea clave</em> e <em>Importante</em> van a tarjeta violeta,
+            <em>Dato curioso</em> a bloque ligero, <em>Para reflexionar</em> a callout de
+            borde amarillo, y <em>Criterio de aceptación</em> a nota sin caja.
+          </p>
+          <div class="sl-nota">
+            <span class="sl-nota__tag">Quién la propone</span>
+            <p>
+              Si para entender la enumeración hubiera que inventar una escena,
+              <strong>la pieza dejaría de ser del diagramador y pasaría al ilustrador</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.2 ════ -->
+      <section class="sl-seccion" id="caso-y-diagrama" data-reveal>
+        <h2 class="sl-seccion__titulo">Lo que se dibuja comparando: <span class="sl-suave">el caso y el</span> <span class="sl-italic">diagrama</span></h2>
+        <p class="sl-seccion__lead">Cuando el documento contrapone dos caminos con un ejemplo concreto, o describe
+          una relación entre cosas, hay una pieza para cada uno.</p>
+      </section>
+
+      <p data-reveal>
+        El <strong>caso a dos vías</strong> se usa cuando el contraste tiene ejemplo: cada
+        lado lleva su propia ilustración, el texto del documento y la ruta que sigue. Este
+        compara las dos formas de ilustrar el mismo contenido.
+      </p>
+
+      <!-- Caso a dos vías · ilustración + texto + ruta en chips, en una sola pieza -->
+      <div class="sl-caso" data-reveal>
+
+        <div class="sl-caso__via sl-caso__via--error">
+          <span class="sl-caso__tag">✕ La ilustración de catálogo</span>
+          <svg class="sl-caso__ilustracion" viewBox="0 0 420 200" role="img"
+               aria-label="Una bombilla y un engranaje sobre una superficie gris: iconos genéricos que no dicen nada del contenido.">
+            <rect width="420" height="200" rx="14" fill="#F7F6F8"/>
+            <g fill="none" stroke="#CFC8E4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M150 74 a26 26 0 0 1 26 26 c0 12 -8 18 -10 26 h-32 c-2 -8 -10 -14 -10 -26 a26 26 0 0 1 26 -26 z"/>
+              <path d="M138 134 h24 M141 146 h18"/>
+              <circle cx="272" cy="106" r="24"/>
+              <path d="M272 70 v-12 M272 154 v-12 M308 106 h12 M224 106 h12 M297 81 l9 -9 M238 131 l9 -9 M297 131 l9 9 M238 81 l9 -9"/>
+            </g>
+            <text x="210" y="188" text-anchor="middle" font-size="15" fill="#8A8FA0">sirve para cualquier curso</text>
+          </svg>
+          <p class="sl-caso__texto">
+            Una bombilla, un engranaje, un cerebro. Encaja en cualquier pantalla de
+            cualquier curso, y por eso no explica nada de esta.
+          </p>
+          <div class="sl-caso__ruta">
+            <span class="sl-caso__paso sl-caso__paso--tarde">Decorativa</span>
+          </div>
+        </div>
+
+        <div class="sl-caso__via sl-caso__via--ok">
+          <span class="sl-caso__tag">✓ La escena que cuenta el documento</span>
+          <svg class="sl-caso__ilustracion" viewBox="0 0 420 200" role="img"
+               aria-label="Seis barras semanales de costo por cliente, dos de ellas marcadas como semanas de feriado, sobre la línea del promedio histórico.">
+            <rect width="420" height="200" rx="14" fill="#FBF8F3"/>
+            <line x1="46" y1="96" x2="378" y2="96" stroke="#CFC8E4" stroke-width="2" stroke-dasharray="6 6"/>
+            <g fill="#8A79C9">
+              <rect x="56" y="74" width="38" height="78" rx="6"/>
+              <rect x="112" y="84" width="38" height="68" rx="6"/>
+              <rect x="224" y="80" width="38" height="72" rx="6"/>
+              <rect x="280" y="66" width="38" height="86" rx="6"/>
+              <rect x="336" y="72" width="38" height="80" rx="6"/>
+            </g>
+            <rect x="168" y="52" width="38" height="100" rx="6" fill="#F8B716"/>
+            <text x="187" y="42" text-anchor="middle" font-size="14" font-weight="600" fill="#8A6100">feriado</text>
+            <text x="210" y="188" text-anchor="middle" font-size="15" fill="#8A8FA0">seis semanas, dos con feriado</text>
+          </svg>
+          <p class="sl-caso__texto">
+            Si el documento habla de una campaña de seis semanas y dos coinciden con un
+            feriado, se dibujan las seis semanas y el feriado.
+          </p>
+          <div class="sl-caso__ruta">
+            <span class="sl-caso__paso sl-caso__paso--clave">Concreta</span>
+            <span class="sl-caso__flecha">→</span>
+            <span class="sl-caso__paso">Se entiende antes de leer</span>
+          </div>
+        </div>
+
+        <p class="sl-caso__pie">
+          Las dos ocupan el mismo espacio en la pantalla y cuestan lo mismo.
+          <strong>Solo una ahorra un párrafo</strong>.
+        </p>
+      </div>
+
+      <p style="margin-top:36px;" data-reveal>
+        El <strong>diagrama</strong> es para relaciones y secuencias, no para escenas. Va
+        en SVG dentro de la página —no como imagen suelta— para que herede la tipografía, y
+        lo propone el diagramador. Este responde la pregunta que abre el tema:
+      </p>
+
+      <!-- Diagrama · una decisión, no una escena. Es la pieza del diagramador. -->
+      <figure class="sl-diagrama" data-reveal>
+        <svg viewBox="0 0 1160 300" role="img"
+             aria-label="Decisión: un bloque del Word que se entiende leyéndolo se compone tal cual y lo resuelve el diagramador; si hace falta ver algo para entenderlo, se dibuja la escena y lo resuelve el ilustrador.">
+          <!-- entrada -->
+          <rect x="24" y="118" width="196" height="64" rx="16" fill="#FFFFFF" stroke="#E7E0D8" stroke-width="2"/>
+          <text x="122" y="145" text-anchor="middle" font-size="18" font-weight="600" fill="#303651">Un bloque</text>
+          <text x="122" y="168" text-anchor="middle" font-size="18" font-weight="600" fill="#303651">del Word</text>
+
+          <path d="M220 150 H302" fill="none" stroke="#CFC8E4" stroke-width="2.5" stroke-linecap="round"/>
+
+          <!-- pregunta -->
+          <rect x="302" y="102" width="256" height="96" rx="18" fill="#EFECF7"/>
+          <text x="430" y="140" text-anchor="middle" font-size="19" font-weight="600" fill="#503B96">¿Se entiende</text>
+          <text x="430" y="166" text-anchor="middle" font-size="19" font-weight="600" fill="#503B96">leyéndolo?</text>
+
+          <!-- rama sí -->
+          <path d="M558 132 H640 V64 H720" fill="none" stroke="#CFC8E4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="600" y="120" font-size="16" font-weight="600" fill="#8A8FA0">sí</text>
+          <rect x="720" y="28" width="416" height="72" rx="16" fill="#FFFFFF" stroke="#E7E0D8" stroke-width="2"/>
+          <text x="748" y="58" font-size="18" font-weight="600" fill="#303651">Se compone tal cual</text>
+          <text x="748" y="82" font-size="16" fill="#8A8FA0">Rueda, ficha, comparativo, banda · diagramador</text>
+
+          <!-- rama no -->
+          <path d="M558 168 H640 V236 H720" fill="none" stroke="#F8B716" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="600" y="196" font-size="16" font-weight="600" fill="#8A6100">no</text>
+          <rect x="720" y="200" width="416" height="72" rx="16" fill="#FFFFFF" stroke="#F8B716" stroke-width="2.5"/>
+          <text x="748" y="230" font-size="18" font-weight="600" fill="#303651">Se dibuja la escena</text>
+          <text x="748" y="254" font-size="16" fill="#8A8FA0">Ilustración de apertura, caso a dos vías · ilustrador</text>
+        </svg>
+        <figcaption>
+          La rama de abajo es la del ilustrador, y es la única que añade algo que no estaba
+          escrito. Por eso su resultado se lista para que el cliente lo valide.
+        </figcaption>
+      </figure>
+
+
+      <!-- ════ Sección {{NUM}}.3 ════ -->
+      <section class="sl-seccion" id="la-figura" data-reveal>
+        <h2 class="sl-seccion__titulo">Lo que llega ya hecho: <span class="sl-suave">la</span> <span class="sl-italic">figura</span></h2>
+        <p class="sl-seccion__lead">Una figura no se produce aquí: llega del diseñador gráfico. Lo único que hay
+          que hacer bien es pedirla, y eso se hace en el Word.</p>
+      </section>
+
+      <p data-reveal>
+        Va sin caja y sin sombra, centrada en su lienzo, con el pie solo si el documento lo
+        declara. Esta es una figura de muestra:
+      </p>
+
+      <!-- Figura del diseñador · forma plana, y leyenda solo porque el Word la declara -->
+      <figure class="ova-figura ova-figura--plana" data-reveal>
+        <div class="ova-figura__hero">
+          <img src="assets/img/curso/figura-01-la-brujula.webp"
+               alt="Una brújula dorada abierta sobre una superficie violeta, iluminada desde arriba, con la aguja marcando el norte." />
+        </div>
+        <figcaption class="ova-figura__leyenda">
+          <b>Figura 1.</b> La guía de producción de la institución: es lo que se consulta
+          cuando una pieza admite dos soluciones.
+        </figcaption>
+      </figure>
+
+      <p data-reveal>
+        Para que exista, el documento tiene que traer un bloque <em>DISEÑO GRÁFICO</em> en
+        el sitio exacto donde va la figura. Ese bloque tiene cuatro filas y cada una viaja
+        a un lugar distinto del curso:
+      </p>
+
+      <div class="ova-tabla" style="overflow-x:auto;" data-reveal>
+      <table>
+        <thead>
+          <tr>
+            <th>Fila del bloque en el Word</th>
+            <th>A dónde va</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>DISEÑO GRÁFICO · Figura 1</strong></td>
+            <td>Ubica la figura. El número es el que usará el diseñador para nombrar el archivo, y el que conserva si la figura se corrige.</td>
+          </tr>
+          <tr>
+            <td><strong>Descripción:</strong> qué debe mostrar</td>
+            <td>Es el encargo para el diseñador y, ya en el curso, el texto alternativo de la imagen para quien no la ve.</td>
+          </tr>
+          <tr>
+            <td><strong>Leyenda:</strong> el pie, si lleva</td>
+            <td>Al pie de la figura, literal, precedido de «Figura 1.» en negrilla. Sin esta fila, la figura va sin pie.</td>
+          </tr>
+          <tr>
+            <td><strong>Nota de diseño gráfico:</strong> una indicación</td>
+            <td>Es una conversación con el diseñador. No se maqueta: no aparece en el curso.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <!-- Regla de oro · segunda y última tarjeta violeta de la pantalla -->
+      <div class="ova-callout" style="margin-top:32px;" data-reveal>
+        <div class="ova-callout__ico"><iconify-icon icon="mdi:alert-circle-outline"></iconify-icon></div>
+        <div>
+          <span class="ova-callout__tag">Importante</span>
+          <p style="margin:8px 0 0;">
+            Un bloque <em>DISEÑO GRÁFICO</em> ubica una figura: no se maqueta ni se
+            ilustra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Respiro · la segunda frase del callout de arriba, a primer plano. El rótulo se
+           queda con la parte que permanece en el callout (INSTITUCION.md §3 7.5). -->
+      <div class="sl-respiro" data-reveal>
+        <p>Donde el diseñador ya entregó una pieza, <strong>no se dibuja otra que cuente lo mismo</strong>.</p>
+      </div>
+
+
+      <!-- ════ Sección {{NUM}}.4 ════ -->
+      <section class="sl-seccion" id="el-video" data-reveal>
+        <h2 class="sl-seccion__titulo">Lo que viaja con el curso: <span class="sl-suave">el</span> <span class="sl-italic">video</span></h2>
+        <p class="sl-seccion__lead">Con el video pasa lo mismo que con la figura: llega de fuera y el documento
+          declara sus datos. La diferencia está en dónde vive el archivo.</p>
+      </section>
+
+      <p data-reveal>
+        El documento declara su título, su duración y su licencia, y el archivo
+        <strong>viaja dentro del curso</strong>, para que no dependa de una conexión a
+        YouTube que el aula puede tener bloqueada. Este es uno de muestra, tomado de la
+        Unidad 2.
+      </p>
+
+      <div class="ova-video" data-reveal>
+        <div class="ova-video__frame" style="position:relative; padding-top:56.25%; border-radius:var(--r-lg); overflow:hidden; background:#000;">
+          <video controls preload="metadata" playsinline
+                 poster="assets/video/medical-ai-decision-support-poster.jpg"
+                 title="Medical AI Decision support"
+                 style="position:absolute; inset:0; width:100%; height:100%;">
+            <source src="assets/video/medical-ai-decision-support.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="ova-kpis" style="margin-top:32px;" data-reveal>
+        <div class="ova-kpi">
+          <div class="ova-kpi__icon"><iconify-icon icon="mdi:movie-open-outline"></iconify-icon></div>
+          <div class="ova-kpi__value">2 min 01 s</div>
+          <div class="ova-kpi__label">Medical AI Decision support</div>
+          <div class="ova-kpi__hint">Msahique</div>
+        </div>
+        <div class="ova-kpi">
+          <div class="ova-kpi__icon"><iconify-icon icon="mdi:creative-commons"></iconify-icon></div>
+          <div class="ova-kpi__value">CC BY 4.0</div>
+          <div class="ova-kpi__label">Creative Commons Atribución 4.0 Internacional</div>
+          <div class="ova-kpi__hint">Permite compartir y adaptar con atribución</div>
+        </div>
+      </div>
+
+      <div class="sl-nota" style="margin-top:24px;" data-reveal>
+        <span class="sl-nota__tag">Licencia y referencia</span>
+        <p>
+          Msahique. (2024). <em>Medical AI Decision support</em> [Video]. Wikimedia
+          Commons.
+          <a href="https://commons.wikimedia.org/wiki/File:Medical_AI_Decision_support.webm" target="_blank" rel="noopener" style="word-break:break-all;">https://commons.wikimedia.org/wiki/File:Medical_AI_Decision_support.webm</a>
+        </p>
+      </div>
+
+      <p style="margin-top:36px;" data-reveal>
+        Con la figura y el video se cierra el inventario: cinco piezas propias que se
+        producen aquí y dos que llegan de fuera.
+      </p>
+
+      <!-- Respiro · el remate del párrafo de arriba, a primer plano. Una por sección. -->
+      <div class="sl-respiro" data-reveal>
+        <p>La decisión difícil nunca es cuál de las siete usar, <strong>sino si hace falta alguna</strong>.</p>
+      </div>
+
+<!-- ova:extras -->
+<style>
+  /* La figura de muestra es vertical (1152×1536) y a ancho de columna medía 1.300 px:
+     la pieza más alta de la pantalla y en clave oscura, que es lo que §1.6 pide evitar.
+     Centrada en su lienzo con un tope de ancho cumple lo que el texto promete y baja
+     a la mitad. El aire lo pide §4.5: las piezas grandes separan 56 px. */
+  .ova-figura--plana{ margin: 56px 0; }
+  .ova-figura--plana .ova-figura__hero img{ max-width: min(520px, 100%); }
+  .ova-video{ margin: 56px 0; }
+  .sl-ciclo{ margin-top: 56px; margin-bottom: 56px; }
+</style>

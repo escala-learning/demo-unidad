@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="A la izquierda, una hoja del Word con un bloque rotulado Pregunta 1 · Tema 2: el enunciado, tres opciones con la correcta marcada y, debajo, dos textos encabezados por Acierto y Error. A la derecha, la escena del estudiante: tres opciones y la marca de un toque sobre una de ellas; de ese toque salen dos globos de respuesta del mismo tamaño, uno con un visto y otro con una equis, y los dos llevan la misma cantidad de texto explicando por qué.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 8 (apertura)
+       Concepto (texto de la pantalla): «Ninguna actividad de una unidad Scala genera nota
+       en el aula: todas son de práctica, y en todas la retroalimentación explica por qué,
+       sin celebrar» · «la de acierto dice por qué esa opción funciona; la de error orienta
+       qué revisar y en qué tema» · «explica por qué, acierte o no el estudiante».
+       El Word trae acierto y error; el estudiante toca; los dos globos pesan lo mismo.
+       No hay nota, no hay confeti: solo texto que explica.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: la pestaña con el rótulo. -->
+  <defs>
+    <linearGradient id="ilu-loquehace-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-loquehace-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <!-- La explicación: las mismas líneas en el globo de acierto y en el de error -->
+    <g id="ilu-loquehace-explica" fill="#303651">
+      <rect        width="222" height="8" rx="4" opacity=".38"/>
+      <rect y="16" width="196" height="8" rx="4" opacity=".38"/>
+      <rect y="32" width="150" height="8" rx="4" opacity=".38"/>
+    </g>
+    <!-- Una opción para tocar -->
+    <g id="ilu-loquehace-opcion">
+      <rect width="280" height="46" rx="23" fill="#FFFFFF"/>
+      <circle cx="26" cy="23" r="7" fill="none" stroke="#503B96" stroke-width="2" opacity=".5"/>
+      <rect x="44" y="19" width="190" height="8" rx="4" fill="#303651" opacity=".35"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-loquehace-fondo)"/>
+
+  <!-- ══ La hoja del Word: lo que la actividad necesita ══ -->
+  <g filter="url(#ilu-loquehace-sombra)">
+    <rect x="70" y="40" width="400" height="360" rx="16" fill="#FFFFFF"/>
+  </g>
+  <rect x="98" y="66" width="140" height="11" rx="5.5" fill="#303651" opacity=".82"/>
+
+  <rect x="98" y="96" width="344" height="280" rx="8" fill="#FBF8F3" stroke="#CFC8E4" stroke-width="2"/>
+  <path d="M98 126 V104 a8 8 0 0 1 8 -8 H434 a8 8 0 0 1 8 8 V126 Z" fill="#F8B716"/>
+  <text x="114" y="117" font-family="DM Sans, system-ui, sans-serif" font-size="16"
+        font-weight="700" fill="#303651">Pregunta 1 · Tema 2</text>
+
+  <!-- enunciado -->
+  <rect x="114" y="144" width="300" height="9" rx="4.5" fill="#303651" opacity=".62"/>
+  <rect x="114" y="160" width="220" height="9" rx="4.5" fill="#303651" opacity=".62"/>
+
+  <!-- opciones, con la correcta marcada -->
+  <circle cx="120" cy="190" r="5" fill="none" stroke="#303651" stroke-width="2" opacity=".4"/>
+  <rect x="134" y="186" width="240" height="8" rx="4" fill="#303651" opacity=".35"/>
+  <circle cx="120" cy="212" r="5" fill="#503B96"/>
+  <rect x="134" y="208" width="210" height="8" rx="4" fill="#303651" opacity=".55"/>
+  <circle cx="120" cy="234" r="5" fill="none" stroke="#303651" stroke-width="2" opacity=".4"/>
+  <rect x="134" y="230" width="256" height="8" rx="4" fill="#303651" opacity=".35"/>
+
+  <!-- la retroalimentación viene del Word: acierto y error -->
+  <g font-family="DM Sans, system-ui, sans-serif" font-size="13" font-weight="700" fill="#303651" opacity=".78">
+    <text x="114" y="274">Acierto:</text>
+    <text x="114" y="322">Error:</text>
+  </g>
+  <rect x="180" y="266" width="246" height="8" rx="4" fill="#303651" opacity=".35"/>
+  <rect x="114" y="284" width="300" height="8" rx="4" fill="#303651" opacity=".35"/>
+  <rect x="164" y="314" width="262" height="8" rx="4" fill="#303651" opacity=".35"/>
+  <rect x="114" y="332" width="280" height="8" rx="4" fill="#303651" opacity=".35"/>
+
+  <!-- ══ La escena del estudiante: toca una opción ══ -->
+  <g filter="url(#ilu-loquehace-sombra)">
+    <use href="#ilu-loquehace-opcion" x="530" y="96"/>
+    <use href="#ilu-loquehace-opcion" x="530" y="158"/>
+    <use href="#ilu-loquehace-opcion" x="530" y="220"/>
+  </g>
+
+  <!-- el toque -->
+  <circle cx="776" cy="181" r="25" fill="none" stroke="#503B96" stroke-width="2" opacity=".15"/>
+  <circle cx="776" cy="181" r="17" fill="none" stroke="#503B96" stroke-width="2" opacity=".35"/>
+  <circle cx="776" cy="181" r="9"  fill="#503B96"/>
+  <!-- ...o la otra -->
+  <g opacity=".35">
+    <circle cx="776" cy="243" r="17" fill="none" stroke="#503B96" stroke-width="2" opacity=".35"/>
+    <circle cx="776" cy="243" r="9"  fill="#503B96"/>
+  </g>
+
+  <!-- de cada toque, una respuesta -->
+  <g fill="none" stroke="#503B96" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7" opacity=".5">
+    <path d="M806 181 C 832 181, 838 150, 862 150"/>
+    <path d="M806 243 C 832 243, 838 262, 862 262"/>
+  </g>
+
+  <!-- ══ La retroalimentación explica por qué, acierte o no: dos globos iguales ══ -->
+  <g filter="url(#ilu-loquehace-sombra)">
+    <path d="M894 70 H1150 a14 14 0 0 1 14 14 V182 a14 14 0 0 1 -14 14 H894 a14 14 0 0 1 -14 -14 V160 l-14 -10 14 -10 V84 a14 14 0 0 1 14 -14 Z" fill="#FFFFFF"/>
+    <path d="M894 236 H1150 a14 14 0 0 1 14 14 V348 a14 14 0 0 1 -14 14 H894 a14 14 0 0 1 -14 -14 V272 l-14 -10 14 -10 V250 a14 14 0 0 1 14 -14 Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- acierto: por qué esa opción funciona -->
+  <circle cx="912" cy="102" r="15" fill="#503B96"/>
+  <path d="M905 102 l5 5 10 -11" fill="none" stroke="#FFFFFF" stroke-width="3.2"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="938" y="97" width="150" height="9" rx="4.5" fill="#303651" opacity=".62"/>
+  <use href="#ilu-loquehace-explica" x="908" y="132"/>
+
+  <!-- error: qué revisar -->
+  <circle cx="912" cy="268" r="15" fill="#303651" opacity=".42"/>
+  <path d="M906 262 l12 12 M918 262 l-12 12" fill="none" stroke="#FFFFFF" stroke-width="3.2"
+        stroke-linecap="round"/>
+  <rect x="938" y="263" width="150" height="9" rx="4.5" fill="#303651" opacity=".62"/>
+  <use href="#ilu-loquehace-explica" x="908" y="298"/>
+</svg>
