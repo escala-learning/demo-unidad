@@ -80,8 +80,8 @@ module.exports = {
                    { titulo: 'Movimiento y móvil', ancla: 'movimiento-y-movil' } ] },
 
     { id: 'tema4',           titulo: 'Cómo se marca el Word',                   tipo: 'tema',
-      secciones: [ { titulo: 'Las tres vías', ancla: 'tres-vias' },
-                   { titulo: 'La plantilla: un bloque por componente', ancla: 'la-plantilla', nota: 'con la plantilla y el ejemplo para descargar' },
+      secciones: [ { titulo: 'Lo que va en caja no es contenido', ancla: 'las-cajas' },
+                   { titulo: 'La plantilla y su ejemplo', ancla: 'la-plantilla', nota: 'con la plantilla y el ejemplo para descargar' },
                    { titulo: 'La figura se pide en su caja', ancla: 'diseno-grafico' },
                    { titulo: 'Las negrillas son contenido', ancla: 'negrillas' } ] },
 

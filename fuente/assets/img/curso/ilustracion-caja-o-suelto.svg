@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"
+     aria-label="Una página del Word vista entera. El texto suelto —dos párrafos y una última línea, con una frase en negrilla— lleva al margen izquierdo un filo amarillo que lo acompaña y se interrumpe en cada caja. Entre esos párrafos hay tres cajas del ancho de la página, cada una con su color y su filo: la violeta contiene el dibujo de un componente, la ámbar el marco de una imagen y la gris un lápiz sobre unos garabatos de nota. Ninguna de las tres lleva el filo amarillo.">
+  <!-- Ilustración de marca · Scala Learning · Curso demo, tema 4 (apertura)
+       Concepto (texto de la pantalla): «el contenido del curso va suelto en la página y
+       sale literal; las instrucciones van dentro de una caja. Hay tres cajas, y cada una
+       tiene su color.»
+       Una sola página, en orden de lectura. El filo amarillo del margen acompaña solo al
+       texto suelto y se corta en cada caja: eso es lo que sale al curso. Las cajas se
+       dibujan con la misma forma que el bloque .dm-caja de la pantalla (filo de 4 px a la
+       izquierda, fondo teñido, esquinas derechas a 10) y con los colores de la plantilla
+       real: violeta #503B96/#EFECF7, ámbar #C08A00/#FDF4DE, gris #9A9EB0/#F3F3F5.
+       Sin rótulos: la pantalla dice que la confusión desaparece «al mirar el color», y las
+       etiquetas literales ya están en el bloque que va justo debajo.
+       Guion en insumos/ILUSTRACIONES.md. Único amarillo: el filo del texto suelto.
+       Reemplaza a ilustracion-tres-vias.svg (2026-09-20). -->
+  <defs>
+    <linearGradient id="ilu-cajas-fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#F1ECF7"/>
+      <stop offset="55%"  stop-color="#F4EFE7"/>
+      <stop offset="100%" stop-color="#FBF7EF"/>
+    </linearGradient>
+    <filter id="ilu-cajas-sombra" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#303651" flood-opacity="0.16"/>
+    </filter>
+    <!-- Lo que pide la caja violeta: un componente (filas que se despliegan) -->
+    <g id="ilu-cajas-glifo-componente" fill="#503B96">
+      <rect x="0" y="0"  width="104" height="15" rx="5" opacity=".75"/>
+      <path d="M86 5.5 l5 5 5 -5" fill="none" stroke="#FFFFFF" stroke-width="2.4"
+            stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+      <rect x="0" y="21" width="104" height="15" rx="5" opacity=".28"/>
+      <rect x="0" y="42" width="104" height="15" rx="5" opacity=".28"/>
+    </g>
+    <!-- Lo que pide la caja ámbar: una figura al diseñador gráfico -->
+    <g id="ilu-cajas-glifo-figura">
+      <rect x="1.5" y="1.5" width="101" height="53" rx="7" fill="none" stroke="#C08A00" stroke-width="3"/>
+      <circle cx="26" cy="20" r="6.5" fill="#C08A00" opacity=".65"/>
+      <path d="M12 47 L40 24 L59 39 L74 28 L92 47 Z" fill="#C08A00" opacity=".55"/>
+    </g>
+    <!-- Lo que es la caja gris: una nota escrita para producción -->
+    <g id="ilu-cajas-glifo-nota" fill="none" stroke="#7C8195" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M0 24 q7 -9 14 0 t14 0 t14 0 t14 0" stroke-width="3" opacity=".65"/>
+      <path d="M56 0 l9 9 -23 23 -12 3 3 -12 Z" stroke-width="3" opacity=".85"/>
+      <path d="M50 6 l9 9" stroke-width="3" opacity=".85"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="url(#ilu-cajas-fondo)"/>
+
+  <!-- ══════════ La página del Word ══════════ -->
+  <g filter="url(#ilu-cajas-sombra)">
+    <rect x="150" y="26" width="900" height="388" rx="16" fill="#FFFFFF"/>
+  </g>
+
+  <!-- ══ Texto suelto · el contenido, con su negrilla. Lleva el filo amarillo del margen ══ -->
+  <rect x="172" y="52" width="5" height="42" rx="2.5" fill="#F8B716"/>
+  <rect x="196" y="58" width="780" height="9"  rx="4.5" fill="#303651" opacity=".28"/>
+  <rect x="196" y="78" width="150" height="9"  rx="4.5" fill="#303651" opacity=".28"/>
+  <rect x="360" y="77" width="212" height="11" rx="5.5" fill="#303651" opacity=".85"/>
+  <rect x="586" y="78" width="218" height="9"  rx="4.5" fill="#303651" opacity=".28"/>
+
+  <!-- ══ Caja violeta · pide un componente ══ -->
+  <path d="M200 102 H994 a10 10 0 0 1 10 10 V164 a10 10 0 0 1 -10 10 H200 Z" fill="#EFECF7"/>
+  <rect x="196" y="102" width="4" height="72" fill="#503B96"/>
+  <use href="#ilu-cajas-glifo-componente" x="228" y="110"/>
+  <g fill="#503B96">
+    <rect x="376" y="115" width="300" height="10" rx="5" opacity=".6"/>
+    <rect x="376" y="137" width="520" height="8"  rx="4" opacity=".3"/>
+    <rect x="376" y="153" width="392" height="8"  rx="4" opacity=".3"/>
+  </g>
+
+  <!-- ══ Texto suelto ══ -->
+  <rect x="172" y="186" width="5" height="42" rx="2.5" fill="#F8B716"/>
+  <rect x="196" y="192" width="756" height="9" rx="4.5" fill="#303651" opacity=".28"/>
+  <rect x="196" y="212" width="520" height="9" rx="4.5" fill="#303651" opacity=".28"/>
+
+  <!-- ══ Caja ámbar · pide una figura al diseñador gráfico ══ -->
+  <path d="M200 240 H994 a10 10 0 0 1 10 10 V298 a10 10 0 0 1 -10 10 H200 Z" fill="#FDF4DE"/>
+  <rect x="196" y="240" width="4" height="68" fill="#C08A00"/>
+  <use href="#ilu-cajas-glifo-figura" x="228" y="246"/>
+  <g fill="#C08A00">
+    <rect x="376" y="253" width="246" height="10" rx="5" opacity=".6"/>
+    <rect x="376" y="275" width="486" height="8"  rx="4" opacity=".3"/>
+    <rect x="376" y="291" width="330" height="8"  rx="4" opacity=".3"/>
+  </g>
+
+  <!-- ══ Caja gris · nota para producción, no sale en el curso ══ -->
+  <path d="M200 322 H994 a10 10 0 0 1 10 10 V358 a10 10 0 0 1 -10 10 H200 Z" fill="#F3F3F5"/>
+  <rect x="196" y="322" width="4" height="46" fill="#9A9EB0"/>
+  <use href="#ilu-cajas-glifo-nota" x="228" y="328"/>
+  <g fill="#7C8195">
+    <rect x="376" y="333" width="180" height="8" rx="4" opacity=".45"/>
+    <rect x="376" y="351" width="286" height="8" rx="4" opacity=".28"/>
+  </g>
+
+  <!-- ══ Texto suelto · el contenido sigue ══ -->
+  <rect x="172" y="376" width="5" height="21" rx="2.5" fill="#F8B716"/>
+  <rect x="196" y="382" width="470" height="9" rx="4.5" fill="#303651" opacity=".28"/>
+</svg>

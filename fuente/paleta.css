@@ -120,6 +120,22 @@ html:root {
 .dm-ficha{ margin-bottom:56px; }
 .dm-ficha > p:first-of-type{ margin-top:0; }
 
+/* Las tres cajas del Word (tema 4): se ven como en el documento */
+.dm-cajas{ display:grid; gap:14px; margin:18px 0 0; }
+.dm-caja{ border-left:4px solid var(--c-acento); border-radius:0 10px 10px 0; padding:14px 16px; background:var(--surface-2); }
+.dm-caja__tag{ display:block; font-family:var(--font-mono, monospace); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:6px; }
+.dm-caja p{ margin:2px 0; font-size:.95rem; line-height:1.5; }
+.dm-caja b.dm-caja__rot{ display:block; margin-bottom:4px; }
+.dm-caja__sale{ display:block; margin-top:10px; padding-top:8px; border-top:1px solid rgba(48,54,81,.12); font-size:.86rem; color:var(--text-sec); }
+.dm-caja--comp{ border-color:#503B96; background:#EFECF7; }
+.dm-caja--comp .dm-caja__tag{ color:#503B96; }
+.dm-caja--fig{ border-color:#C08A00; background:#FDF4DE; }
+.dm-caja--fig .dm-caja__tag{ color:#8A6100; }
+.dm-caja--nota{ border-color:#9A9EB0; background:#F3F3F5; }
+.dm-caja--nota .dm-caja__tag{ color:#5C6280; }
+.dm-suelto{ border:1px dashed var(--border-c); border-radius:10px; padding:14px 16px; background:transparent; }
+.dm-suelto .dm-caja__tag{ color:var(--text-mut); }
+
 /* Pantallazos del Word (tema 4): una página con sombra, a ancho de columna */
 .dm-pagina{ margin:18px 0 0; }
 .dm-pagina img{ display:block; width:100%; height:auto; border:1px solid var(--border-c); border-radius:var(--r-md); box-shadow:0 8px 28px rgba(48,54,81,.10); }
