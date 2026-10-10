@@ -2,17 +2,19 @@
         <div class="ova-screen__eyebrow">Documentos de la línea</div>
         <h1 class="ova-screen__title">Referencias</h1>
         <p class="ova-screen__lead">
-          Este demo no cita literatura académica: sus fuentes son los documentos con los
-          que se produce una unidad Scala. En una unidad real, esta pantalla reproduce en
-          APA la sección Referencias del documento de diseño instruccional.
+          Las fuentes de este demo son los documentos con los que se produce una unidad
+          Scala. En una unidad real, esta pantalla reproduce en APA la sección Referencias
+          del Word: autor y año sin negrilla, el título de la obra en cursiva y sin enlaces.
         </p>
       </header>
 
+      <!-- Referencias en APA, como las de una unidad: autor y año sin negrilla, el título de la
+           obra en cursiva, sin enlaces ni sangría francesa (ajuste de Scala, 2026-10-02). -->
       <div class="sl-referencias" data-reveal>
-        <p><span class="sl-ref__firma">Scala Learning. (2026).</span> <em>Guía de producción de Scala Learning</em>. OVA Kit, <em>instituciones/scala-learning/INSTITUCION.md</em>. Identidad, estructura estándar, catálogo de componentes y principios de diagramación.</p>
-        <p><span class="sl-ref__firma">Scala Learning. (2026).</span> <em>Brandbook Scala Learning · Visual Identity System 2026</em>. Paleta, tipografía, forma, rueda, logo y dirección fotográfica.</p>
-        <p><span class="sl-ref__firma">Scala Learning. (2026).</span> <em>Producción y modelo RED</em>. OVA Kit, <em>instituciones/scala-learning/docs/PRODUCCION-Y-MODELO-RED.html</em>. Cómo se produce un recurso con asistencia de IA: la fábrica, los agentes, el verificador y las aprobaciones.</p>
-        <p><span class="sl-ref__firma">OVA Kit. (2026).</span> <em>Producción de cursos · procedimiento</em>. <em>docs/produccion-de-cursos.md</em>. En qué orden se hace cada cosa y qué se verifica en cada paso.</p>
+        <p>Scala Learning. (2026). <em>Guía de producción de Scala Learning</em>. OVA Kit. Identidad, estructura estándar, catálogo de componentes y principios de diagramación.</p>
+        <p>Scala Learning. (2026). <em>Brandbook Scala Learning: Visual Identity System 2026</em>. Paleta, tipografía, forma, rueda, logo y dirección fotográfica.</p>
+        <p>Scala Learning. (2026). <em>Producción y modelo RED</em>. OVA Kit. Cómo se produce un recurso con asistencia de IA: la fábrica, los agentes, el verificador y las aprobaciones.</p>
+        <p>Scala Learning. (2026). <em>Plantilla de unidad</em> [Documento de Word]. OVA Kit. La guía de marcación y el esqueleto de la unidad.</p>
       </div>
 
       <!-- Recursos de muestra usados en el demo · son prestados, no propios -->
@@ -23,7 +25,6 @@
           <p style="margin:8px 0 0;">
             Msahique. (2024). <em>Medical AI Decision support</em> [Video]. Wikimedia Commons.
             Licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).
-            <a class="sl-ref__url" href="https://commons.wikimedia.org/wiki/File:Medical_AI_Decision_support.webm" target="_blank" rel="noopener">https://commons.wikimedia.org/wiki/File:Medical_AI_Decision_support.webm</a>
           </p>
         </div>
       </div>
@@ -63,15 +64,4 @@
     margin-right:12px;
     vertical-align:.12em;
   }
-  /* El "asa" de la referencia: autores + año con peso, para escanear la lista */
-  .sl-ref__firma{ font-weight:650; color:var(--text-head); }
-  /* Las URL son enlaces de verdad; largas, así que pueden partirse */
-  .sl-ref__url{
-    color:var(--c-acento);
-    text-decoration:underline;
-    text-decoration-color:color-mix(in srgb, var(--c-acento) 40%, transparent);
-    text-underline-offset:3px;
-    overflow-wrap:anywhere;
-  }
-  .sl-ref__url:hover{ text-decoration-color:var(--c-acento); }
 </style>

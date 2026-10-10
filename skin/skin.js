@@ -123,3 +123,109 @@
     }
   });
 })();
+
+/* Capa Scala · globos de los puntos de interés
+   ------------------------------------------------------------------
+   El motor abre el globo de un `.ova-hotspot` siempre hacia abajo, centrado
+   en el punto, dentro de una imagen que recorta. Un punto cerca del borde
+   inferior o lateral dejaba el texto cortado (unidad-3-v2, tema 1, punto 6,
+   2026-10-09). Aquí, al abrirlo, se mide: si no cabe abajo y sí arriba, se
+   abre hacia arriba (.sl-hotspot--arriba), y si se sale por un costado de la
+   imagen o de la ventana, se corre lo justo (--sl-globo-dx). El CSS de la
+   capa (skin.css, «Puntos de interés») deja de recortar, así que sin este
+   script el globo igual se ve entero. Se abre al pasar el puntero o al tocar
+   el punto; un toque fuera lo cierra. */
+(() => {
+  'use strict';
+
+  const MARGEN = 8;   // aire mínimo hasta el borde de la imagen o de la ventana
+
+  function abrir(punto) {
+    const globo = punto.querySelector('.ova-hotspot__tooltip');
+    if (!globo) return;
+    punto.classList.add('is-open');
+    punto.classList.remove('sl-hotspot--arriba');
+    punto.style.removeProperty('--sl-globo-dx');
+    const caja = (punto.closest('.ova-hotspots__img') || punto.parentElement).getBoundingClientRect();
+    const p = punto.getBoundingClientRect();
+    const g = globo.getBoundingClientRect();
+    const alto = g.height + 14;
+    if (p.bottom + alto > caja.bottom && p.top - alto >= caja.top) punto.classList.add('sl-hotspot--arriba');
+    const izq = Math.max(caja.left, 0) + MARGEN;
+    const der = Math.min(caja.right, document.documentElement.clientWidth) - MARGEN;
+    let dx = 0;
+    if (g.width <= der - izq) {
+      if (g.left < izq) dx = izq - g.left;
+      else if (g.right > der) dx = der - g.right;
+    }
+    if (dx) punto.style.setProperty('--sl-globo-dx', `${Math.round(dx)}px`);
+  }
+  function cerrar(punto) {
+    punto.classList.remove('is-open', 'sl-hotspot--arriba');
+    punto.style.removeProperty('--sl-globo-dx');
+  }
+
+  document.addEventListener('pointerover', e => {
+    const punto = e.target.closest && e.target.closest('.ova-hotspot');
+    if (punto && !punto.contains(e.relatedTarget)) abrir(punto);
+  });
+  document.addEventListener('pointerout', e => {
+    const punto = e.target.closest && e.target.closest('.ova-hotspot');
+    if (punto && e.pointerType === 'mouse' && !punto.contains(e.relatedTarget)) cerrar(punto);
+  });
+  document.addEventListener('click', e => {
+    const punto = e.target.closest && e.target.closest('.ova-hotspot');
+    document.querySelectorAll('.ova-hotspot.is-open').forEach(otro => { if (otro !== punto) cerrar(otro); });
+    if (punto) abrir(punto);
+  });
+})();
+
+/* Capa Scala · indicio de interacción
+   ------------------------------------------------------------------
+   Cada vez que un componente interactivo aparece en pantalla (al bajar o
+   al subir), él y su llamado a la acción (.sl-cta justo antes) reciben
+   .sl-indicio, y la manito y el halo de skin.css se animan una vez. Al salir
+   del todo se les quita, así que al volver la animación arranca de nuevo
+   (decisión del 2026-10-09). No usa el .is-visible del motor: ese se pone una
+   sola vez y no se quita. Vigila también los componentes que la SPA pinta al
+   navegar. Con movimiento reducido, skin.css anula las animaciones. */
+(() => {
+  'use strict';
+  if (!('IntersectionObserver' in window)) return;
+
+  const INTERACTIVOS = '.ova-acordeon, .ova-carrusel, .ova-tabs, .ova-timeline-h, .ova-hotspots, ' +
+                       '.ova-video, .ova-audio, .ova-beforeafter, .sl-descarga';
+  const vigilados = new WeakSet();
+
+  const marcar = (comp, si) => {
+    comp.classList.toggle('sl-indicio', si);
+    const previo = comp.previousElementSibling;
+    if (previo && previo.classList.contains('sl-cta')) previo.classList.toggle('sl-indicio', si);
+  };
+
+  const observador = new IntersectionObserver(entradas => {
+    for (const e of entradas) {
+      if (e.intersectionRatio >= 0.25) marcar(e.target, true);
+      else if (!e.isIntersecting) marcar(e.target, false);
+    }
+  }, { threshold: [0, 0.25] });
+
+  const vigilar = raiz => {
+    if (!raiz.querySelectorAll) return;
+    const lista = raiz.matches && raiz.matches(INTERACTIVOS) ? [raiz] : [];
+    lista.push(...raiz.querySelectorAll(INTERACTIVOS));
+    for (const comp of lista) {
+      if (vigilados.has(comp)) continue;
+      vigilados.add(comp);
+      observador.observe(comp);
+    }
+  };
+
+  const iniciar = () => {
+    vigilar(document);
+    new MutationObserver(cambios => {
+      for (const c of cambios) c.addedNodes.forEach(n => n.nodeType === 1 && vigilar(n));
+    }).observe(document.body, { childList: true, subtree: true });
+  };
+  document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', iniciar) : iniciar();
+})();

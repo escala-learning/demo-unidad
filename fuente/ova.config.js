@@ -54,24 +54,11 @@ module.exports = {
     { id: 'temario',         titulo: 'Contenido de la unidad',                  tipo: 'especial', icon: 'mdi:map-outline' },
 
     { id: 'introduccion',    titulo: 'Introducción',                            tipo: 'especial', icon: 'mdi:information-variant',
-      secciones: [ { titulo: 'Una unidad es un Word convertido en pantallas' },
-                   { titulo: 'Qué vas a lograr', ancla: 'que-vas-a-lograr' },
+      secciones: [ { titulo: 'Qué va a lograr', ancla: 'que-va-a-lograr' },
                    { titulo: 'Cómo se organiza una unidad', ancla: 'como-se-organiza' },
                    { titulo: 'Quién hace qué', ancla: 'quien-hace-que' } ] },
 
-    { id: 'tema1',           titulo: 'Cómo se lee un tema',                     tipo: 'tema', numero: 1,
-      secciones: [ { titulo: 'Qué contiene siempre un tema', ancla: 'que-contiene' },
-                   { titulo: 'Las piezas que ordenan', ancla: 'piezas-ordenan' },
-                   { titulo: 'Las piezas que destacan', ancla: 'piezas-destacan' },
-                   { titulo: 'Las piezas que contrastan', ancla: 'piezas-contrastan' } ] },
-
-    { id: 'tema2',           titulo: 'Cómo se explica con piezas gráficas',     tipo: 'tema',
-      secciones: [ { titulo: 'Lo que se dibuja entero: la rueda y la ficha', ancla: 'rueda-y-ficha' },
-                   { titulo: 'Lo que se dibuja comparando: el caso y el diagrama', ancla: 'caso-y-diagrama' },
-                   { titulo: 'Lo que llega ya hecho: la figura', ancla: 'la-figura' },
-                   { titulo: 'Lo que viaja con el curso: el video', ancla: 'el-video', nota: 'incluye un video de muestra' } ] },
-
-    { id: 'tema3',           titulo: 'Pautas de diseño',                        tipo: 'tema',
+    { id: 'tema3',           titulo: 'Pautas de diseño',                        tipo: 'tema', numero: 1,
       secciones: [ { titulo: 'Color: el violeta actúa, el amarillo guía', ancla: 'color' },
                    { titulo: 'Tipografía: tres pesos y un remate', ancla: 'tipografia' },
                    { titulo: 'Forma y aire', ancla: 'forma-y-aire' },
@@ -80,10 +67,12 @@ module.exports = {
                    { titulo: 'Movimiento y móvil', ancla: 'movimiento-y-movil' } ] },
 
     { id: 'tema4',           titulo: 'Cómo se marca el Word',                   tipo: 'tema',
-      secciones: [ { titulo: 'Lo que va en caja no es contenido', ancla: 'las-cajas' },
-                   { titulo: 'La plantilla y su ejemplo', ancla: 'la-plantilla', nota: 'con la plantilla y el ejemplo para descargar' },
-                   { titulo: 'La figura se pide en su caja', ancla: 'diseno-grafico' },
-                   { titulo: 'Las negrillas son contenido', ancla: 'negrillas' } ] },
+      secciones: [ { titulo: 'Tres cosas en el Word', ancla: 'tres-cosas' },
+                   { titulo: 'Cómo se marca un componente', ancla: 'componente' },
+                   { titulo: 'Rótulos que el estudiante lee', ancla: 'rotulos' },
+                   { titulo: 'Imágenes, video y PDF', ancla: 'imagenes' },
+                   { titulo: 'Tablas, negrillas y referencias', ancla: 'tablas-negrillas' },
+                   { titulo: 'La plantilla', ancla: 'la-plantilla', nota: 'con la plantilla para descargar' } ] },
 
     { id: 'tema5',           titulo: 'Catálogo · Texto y énfasis',              tipo: 'tema',
       secciones: [ { titulo: 'Bloque de apertura', ancla: 'apertura' },
@@ -91,8 +80,7 @@ module.exports = {
                    { titulo: 'Nota lateral', ancla: 'dato-ligero' },
                    { titulo: 'Cifra destacada', ancla: 'cifra' },
                    { titulo: 'Cita', ancla: 'cita' },
-                   { titulo: 'Banner destacado', ancla: 'banda' },
-                   { titulo: 'Término con tooltip', ancla: 'termino' } ] },
+                   { titulo: 'Banner destacado', ancla: 'banda' } ] },
 
     { id: 'tema6',           titulo: 'Catálogo · Estructura del contenido',     tipo: 'tema',
       secciones: [ { titulo: 'Acordeón', ancla: 'acordeon' },
@@ -125,8 +113,7 @@ module.exports = {
                    { titulo: 'Evaluación de la unidad', ancla: 'evaluacion-unidad' } ] },
 
     { id: 'conclusion',      titulo: 'Conclusión',                              tipo: 'especial', icon: 'mdi:flag-outline', nota: 'incluye el pódcast de la unidad' },
-    { id: 'evaluacion',      titulo: 'Evaluación de la unidad',                 tipo: 'especial', icon: 'mdi:clipboard-check-outline', nota: '8 preguntas' },
-    { id: 'glosario',        titulo: 'Glosario',                                tipo: 'especial', icon: 'mdi:card-text-outline', nota: '15 términos' },   // set de INSTITUCION.md §2 7quater
+    { id: 'evaluacion',      titulo: 'Evaluación de la unidad',                 tipo: 'especial', icon: 'mdi:clipboard-check-outline', nota: '5 preguntas' },
     { id: 'referencias',     titulo: 'Referencias',                             tipo: 'especial', icon: 'mdi:bookmark-outline' },
   ],
 

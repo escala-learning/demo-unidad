@@ -1014,7 +1014,11 @@ code {
 .ova-acordeon__body-inner { padding: 0 24px 22px 72px; color: var(--text-pri); }
 .ova-acordeon__item.is-open .ova-acordeon__body { max-height: 600px; }
 
-/* TABS */
+/* TABS
+   Si los botones no caben en la fila, la fila se desliza en horizontal: antes
+   los que no cabían quedaban fuera de la caja e inalcanzables (6 pestañas a
+   390 px: 3 fuera, 2026-10-09). En ≤ 720 px cada botón conserva su ancho
+   natural en una línea y el que no cabe asoma cortado por el borde. */
 .ova-tabs { background: var(--bg-surface); border-radius: var(--r-lg); border: 1px solid var(--border-c); overflow: hidden; }
 .ova-tabs__nav {
   display: flex;
@@ -1022,7 +1026,11 @@ code {
   border-bottom: 1px solid var(--border-c);
   padding: 6px;
   gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-padding-inline: 6px;
 }
+.ova-tabs__nav::-webkit-scrollbar { display: none; }
 .ova-tabs__btn {
   flex: 1;
   padding: 10px 16px;
@@ -1036,6 +1044,17 @@ code {
   color: var(--text-mut);
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   transition: all .2s;
+}
+@media (max-width: 720px) {
+  .ova-tabs__nav { scroll-snap-type: x proximity; }
+  .ova-tabs__btn { flex: 0 0 auto; white-space: nowrap; scroll-snap-align: start; }
+}
+/* Mientras se arrastra la fila con el mouse (core.js · arrastrable): sin imán,
+   para que siga al puntero; al soltar vuelve. */
+.ova-tabs__nav.is-arrastrando {
+  scroll-snap-type: none;
+  cursor: grabbing;
+  user-select: none;
 }
 .ova-tabs__btn:hover { color: var(--text-head); }
 .ova-tabs__btn.is-active { background: var(--bg-surface); color: var(--c-acento); box-shadow: var(--shadow-sm); }

@@ -140,6 +140,15 @@ function generarTemario(menu) {
     if (actual) actual.items.push(m);
   }
 
+  // Un cierre con un solo ítem no necesita agrupador: el rótulo "Cierre de la
+  // unidad" prometería un tramo final que no existe. Ese ítem pasa a ser el bloque.
+  for (const b of bloques) {
+    if (b.titulo === 'Cierre de la unidad' && b.items.length === 1) {
+      const [it] = b.items;
+      b.titulo = it.titulo; b.icon = it.icon; b.href = it.file; b.items = [];
+    }
+  }
+
   return bloques.map(b => {
     const items = b.items.map(m => {
       const marca = m.num
@@ -157,11 +166,12 @@ function generarTemario(menu) {
     const cab = b.href
       ? `<a class="sl-bloque__tag sl-bloque__tag--link" href="${b.href}">${tag}<span class="sl-fila__ir" aria-hidden="true">→</span></a>`
       : `<span class="sl-bloque__tag">${tag}</span>`;
-    return `        <div class="sl-bloque">
-          ${cab}
+    const lista = b.items.length ? `
           <ol>
 ${items}
-          </ol>
+          </ol>` : '';
+    return `        <div class="sl-bloque">
+          ${cab}${lista}
         </div>`;
   }).join('\n');
 }

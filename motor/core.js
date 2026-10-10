@@ -406,14 +406,23 @@
     root.querySelectorAll('.ova-tabs').forEach(tabs => {
       const btns = tabs.querySelectorAll('.ova-tabs__btn');
       const panels = tabs.querySelectorAll('.ova-tabs__panel');
+      const nav = tabs.querySelector('.ova-tabs__nav');
       btns.forEach((btn, i) => {
         btn.addEventListener('click', () => {
           btns.forEach(b => b.classList.remove('is-active'));
           panels.forEach(p => p.classList.remove('is-active'));
           btn.classList.add('is-active');
           panels[i]?.classList.add('is-active');
+          // Fila que se desliza (no caben los botones): trae entero el botón
+          // elegido, sin mover la página en vertical.
+          if (nav && nav.scrollWidth > nav.clientWidth) {
+            const n = nav.getBoundingClientRect(), b = btn.getBoundingClientRect();
+            const dx = b.left < n.left ? b.left - n.left - 6 : b.right > n.right ? b.right - n.right + 6 : 0;
+            if (dx) nav.scrollBy({ left: dx, behavior: suave() });
+          }
         });
       });
+      if (nav) arrastrable(nav);
     });
   }
 
@@ -487,6 +496,46 @@
       prev?.addEventListener('click', () => go(idx - 1));
       next?.addEventListener('click', () => go(idx + 1));
     });
+  }
+
+  function suave() {
+    return matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  }
+  // Arrastrar con el mouse la fila de pestañas cuando no caben. El desplazamiento
+  // nativo responde al dedo, al trackpad, a Shift + rueda y al teclado, pero no a
+  // arrastrar con el mouse, que es lo primero que se intenta en un computador. Un
+  // arrastre de menos de 6 px sigue siendo un clic; uno más largo no activa la
+  // pestaña sobre la que se suelta.
+  function arrastrable(el) {
+    let id = null, x0 = 0, s0 = 0, movido = false;
+    el.addEventListener('pointerdown', e => {
+      if (e.pointerType !== 'mouse' || e.button !== 0 || el.scrollWidth <= el.clientWidth + 2) return;
+      id = e.pointerId; x0 = e.clientX; s0 = el.scrollLeft; movido = false;
+    });
+    el.addEventListener('pointermove', e => {
+      if (e.pointerId !== id) return;
+      const dx = e.clientX - x0;
+      if (!movido) {
+        if (Math.abs(dx) < 6) return;
+        movido = true;
+        el.setPointerCapture(id);
+        el.classList.add('is-arrastrando');
+      }
+      el.scrollLeft = s0 - dx;
+      window.getSelection()?.removeAllRanges();
+    });
+    const soltar = e => {
+      if (e.pointerId !== id) return;
+      id = null;
+      if (!movido) return;
+      el.classList.remove('is-arrastrando');
+      const tragar = ev => { ev.preventDefault(); ev.stopPropagation(); };
+      el.addEventListener('click', tragar, { capture: true, once: true });
+      setTimeout(() => el.removeEventListener('click', tragar, { capture: true }), 0);
+    };
+    el.addEventListener('pointerup', soltar);
+    el.addEventListener('pointercancel', soltar);
+    el.addEventListener('dragstart', e => { if (id !== null) e.preventDefault(); });
   }
 
   // Drag & Drop

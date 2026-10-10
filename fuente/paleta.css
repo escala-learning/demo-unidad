@@ -104,6 +104,11 @@ html:root {
 .dm-word__cuerpo{ white-space:pre-wrap; }
 .dm-word b{ font-weight:700; color:var(--text-pri); }
 .dm-word .gris{ color:var(--text-mut); }
+/* Convención del Word (2026-10-10): el nombre del componente va en rojo, como instrucción
+   para producción que no se ve en el curso; el rótulo de una tarjeta (Importante, Idea
+   clave…) va en el color del texto porque el estudiante sí lo lee. */
+.dm-word .rojo{ color:#D62828; font-weight:700; }
+.dm-word .rotulo{ color:var(--text-pri); font-weight:600; }
 .dm-word .celda{ display:block; margin:8px 0; padding:8px 10px; border:1px solid var(--border-c); border-radius:3px; }
 
 /* Separador "Ejemplo vivo" antes del componente real */

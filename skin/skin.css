@@ -367,7 +367,7 @@
   display: flex; align-items: center; gap: 9px;
 }
 .sl-paso__titulo iconify-icon { font-size: 1.3rem; color: var(--tinte); }
-.sl-paso__desc { margin: 0; font-size: .94rem; color: var(--text-mut); line-height: 1.55; }
+.sl-paso__desc { margin: 0; color: var(--text-mut); }   /* tamaño e interlínea: 4c · Cuerpo */
 
 @media (max-width: 1000px) {
   .sl-ciclo { grid-template-columns: 1fr; gap: 28px; }
@@ -563,15 +563,19 @@
    Una pantalla densa necesita un corte: una banda que rompe la columna, en
    navy, con una sola frase grande. No aporta información nueva —es la frase
    de remate del propio texto, sacada a primer plano— y sirve de pausa entre
-   dos bloques de contenido. Máximo uno por pantalla. --------------------- */
+   dos bloques de contenido. Producción propone una por sección; las que el
+   Word pide con «Banner destacado» van todas (INSTITUCION §4.4). ---------- */
 .sl-respiro {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  margin: 72px calc(-1 * clamp(20px, 5vw, 64px));
+  /* más ancha que la columna, pero 20 px antes del borde de la pantalla: unas
+     esquinas redondeadas pegadas al borde se ven recortadas */
+  margin: 72px calc(20px - clamp(20px, 5vw, 64px));
   padding: clamp(56px, 7vw, 84px) clamp(28px, 6vw, 88px);
   background: var(--c-deep);
   color: #FFFFFF;
+  border-radius: var(--r-md);   /* el radio de marca, como toda pieza Scala (2026-10-09) */
 }
 .sl-respiro::before {                      /* la rueda, apenas insinuada */
   content: '';
@@ -598,6 +602,49 @@
 .sl-respiro strong { font-weight: 600; color: var(--c-calido); }
 .ova-screen .sl-respiro .sl-italic,
 .sl-respiro .sl-italic { color: #FFFFFF; }
+/* Bandas seguidas: cuando el Word pide dos bandas cerca, dos franjas navy
+   iguales se leen como una sola repetida. La banda que llega a tres bloques o
+   menos de la anterior se invierte: fondo claro (lavanda al 12 %, #EAE7F2) y
+   texto navy, con la rueda al otro lado. Las bandas lejanas (una por sección,
+   como en los cursos aprobados) no cambian. Contraste medido: navy 9,7:1
+   sobre #EAE7F2; el fondo se despega de la página 1,14:1 (la crema, 1,07, no
+   se distingue). El amarillo como texto sobre claro da 1,5:1 (§1.5: prohibido),
+   así que el destacado va en navy 600 con un subrayado amarillo grueso, que es
+   elemento gráfico. Sin filo amarillo a la izquierda: sería el bloque de
+   apertura. En prueba desde el 2026-10-09 (antes: violeta profundo). Límite:
+   una tercera banda cerca de la clara también sale clara; no se ha dado. */
+:is(.sl-respiro + .sl-respiro,
+    .sl-respiro + * + .sl-respiro,
+    .sl-respiro + * + * + .sl-respiro,
+    .sl-respiro + * + * + * + .sl-respiro) {
+  background: color-mix(in srgb, var(--c-acento) 12%, #FFFFFF);
+  color: var(--c-deep);
+}
+:is(.sl-respiro + .sl-respiro,
+    .sl-respiro + * + .sl-respiro,
+    .sl-respiro + * + * + .sl-respiro,
+    .sl-respiro + * + * + * + .sl-respiro)::before { right: auto; left: -6%; opacity: .08; }
+.ova-screen :is(.sl-respiro + .sl-respiro,
+    .sl-respiro + * + .sl-respiro,
+    .sl-respiro + * + * + .sl-respiro,
+    .sl-respiro + * + * + * + .sl-respiro) strong {
+  color: var(--c-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--c-calido);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+.ova-screen :is(.sl-respiro + .sl-respiro,
+    .sl-respiro + * + .sl-respiro,
+    .sl-respiro + * + * + .sl-respiro,
+    .sl-respiro + * + * + * + .sl-respiro) .sl-italic { color: var(--c-deep); }
+
+/* --- Ventana de detalle con ilustración ------------------------------------
+   La ventana del motor mide 560 px: una ilustración de 1200 dentro quedaba a
+   menos de la mitad y sus rótulos en ~5 px. Si la ventana lleva una
+   ilustración, se ensancha (unidad-3-v2, «Volviendo al reto», 2026-10-09). */
+.ova-modal__dialog:has(.sl-ilustracion) { max-width: min(900px, 94vw); }
+.ova-modal__body .sl-ilustracion { margin: 0 0 20px; }
 
 /* --- Más aire entre las piezas de una pantalla densa --- */
 .sl-diagrama, .sl-caso, .sl-cifras, .sl-anatomia { margin-top: 56px; margin-bottom: 56px; }
@@ -696,7 +743,12 @@
   .sl-rueda-portada,
   .sl-portada,
   .sl-ciclo__rueda g circle,
-  .sl-respiro::before {
+  .sl-respiro::before,
+  .sl-cta__mano,
+  .sl-cta__mano::after,
+  .ova-hotspot__pulse,
+  .sl-indicio :is(.ova-acordeon__head, .ova-tabs__btn, .ova-step-card, [data-ova-carrusel-next],
+    .ova-audio__play, .ova-beforeafter__handle, .ova-btn) {
     animation: none !important;
   }
   .sl-ciclo__rueda g circle { stroke-dasharray: 190 690; }
@@ -761,7 +813,7 @@
   .sl-ilustracion { margin: 28px 0; }
   .sl-anatomia svg { max-width: 340px; margin: 0 auto; }
   .sl-cifras, .sl-caso, .sl-diagrama, .sl-anatomia { margin-top: 40px; margin-bottom: 40px; }
-  .sl-respiro { margin: 48px calc(-1 * clamp(20px, 5vw, 64px)); }
+  .sl-respiro { margin: 48px calc(20px - clamp(20px, 5vw, 64px)); }
   .sl-escena__num { font-size: 2.6rem; }
 }
 
@@ -1175,8 +1227,11 @@ a.sl-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outli
   padding: 12px 16px;
   border-radius: 10px;
   box-shadow: var(--shadow-md);
-  opacity: 0; visibility: hidden; transform: translateY(4px);
-  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  /* Oculto con display:none y no con opacity/visibility: escondido seguía
+     ocupando el área de scroll, y un término cerca del borde derecho hacía
+     que la página entera se desplazara en horizontal (unidad-2, tema 4,
+     2026-10-09). Sin fundido al aparecer: es inmediato. */
+  display: none;
   pointer-events: none;
   z-index: 60;
 }
@@ -1186,23 +1241,368 @@ a.sl-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outli
   left: 14px; bottom: calc(100% + 4px);
   border: 6px solid transparent;
   border-top-color: var(--c-deep);
-  opacity: 0; visibility: hidden;
-  transition: opacity .18s ease, visibility .18s;
+  display: none;
   z-index: 60;
 }
 .sl-termino:hover::after,  .sl-termino:focus-visible::after,
 .sl-termino:hover::before, .sl-termino:focus-visible::before {
-  opacity: 1; visibility: visible; transform: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .sl-termino::after { transition: none; transform: none; }
-  .sl-termino::before { transition: none; }
+  display: block;
 }
 /* Los contenedores con overflow:hidden recortan el tooltip (pasó en la
    infografía de la introducción). Si albergan un término, se abren: su
    overflow es defensivo, nada se desborda en el estado normal. */
 .ova-infografia__paso:has(.sl-termino) { overflow: visible; }
 
+/* --- Puntos de interés · el globo se ve entero -----------------------------
+   El motor recorta la imagen (overflow:hidden, para redondear sus esquinas) y
+   abre el globo siempre hacia abajo: el de un punto cerca del borde inferior
+   quedaba cortado (unidad-3-v2, tema 1, «Destrucción», 158 px fuera). Aquí la
+   caja deja de recortar, las esquinas las redondea la propia imagen, y el
+   globo cerrado no existe en el layout (display:none, no opacity: invisible
+   seguía ocupando el área de scroll; ver .sl-termino). skin.js lo abre hacia
+   donde cabe (.sl-hotspot--arriba) y lo corre si se sale por un costado
+   (--sl-globo-dx). medir-pantalla.js marca «globo-recortado» si vuelve a pasar. */
+.ova-hotspots__img { overflow: visible; }
+.ova-hotspots__img > img { border-radius: inherit; }
+.ova-hotspot__tooltip {
+  display: none;
+  transform: translateX(calc(-50% + var(--sl-globo-dx, 0px)));
+}
+.ova-hotspot:hover .ova-hotspot__tooltip,
+.ova-hotspot.is-open .ova-hotspot__tooltip { display: block; opacity: 1; }
+.ova-hotspot:hover,
+.ova-hotspot.is-open { z-index: 5; }
+.sl-hotspot--arriba .ova-hotspot__tooltip { top: auto; bottom: calc(100% + 14px); }
+
+/* --- Llamado a la acción e indicio de interacción --------------------------
+   Guía del cliente (2026-10-09, docs/llamados-a-la-accion-cliente-2026-10-09.png):
+   antes de cada contenedor interactivo va un llamado a la acción en usted,
+   con el texto de su tabla (o el que traiga el Word, que manda). Es texto HTML
+   real: lo leen los lectores de pantalla. Va entre el título del bloque y el
+   componente, pegado a este.
+
+   El indicio es sutil y se repite **cada vez que el bloque aparece en pantalla**,
+   al bajar o al subir (decisión del 2026-10-09). skin.js («indicio de
+   interacción») pone .sl-indicio al componente y a su llamado cuando se ve al
+   menos un 25 %, y la quita cuando sale del todo; al volver, la animación
+   arranca de nuevo:
+     ① la manito del llamado hace dos «toques» con un aro que se abre;
+     ② el primer control que invita a actuar late dos veces con un halo violeta.
+   Nada se anima encima del contenido y cada aparición dura ~2,5 s y queda
+   quieta (WCAG 2.2.2 pide poder detener lo que se mueve más de 5 s; aquí lo
+   dispara el propio desplazamiento). El pulso infinito del motor en los
+   puntos de interés queda en dos latidos por aparición. Con movimiento
+   reducido no se mueve nada (ver el bloque de accesibilidad). */
+.sl-cta {
+  display: flex;
+  align-items: flex-start;   /* si el llamado ocupa dos líneas, la manito va con la primera */
+  gap: 10px;
+  margin: 24px 0 0;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--text-pri) 85%, transparent);   /* ≈ 6,8:1 sobre la crema */
+}
+.ova-screen > .sl-rotulo + .sl-cta { margin-top: 8px; }
+.ova-screen > .sl-cta + :is(.ova-acordeon, .ova-carrusel, .ova-tabs, .ova-timeline-h, .ova-hotspots,
+  .ova-video, .ova-audio, .ova-beforeafter, .sl-descarga) { margin-top: 14px; }
+.sl-cta__mano {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  color: color-mix(in srgb, var(--c-acento) 70%, transparent);
+  transform-origin: 50% 85%;
+}
+.sl-cta__mano::after {      /* el aro del toque, centrado en la yema del dedo de mdi:cursor-pointer (≈ 10, 2 px) */
+  content: '';
+  position: absolute;
+  left: 5px; top: -3px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--c-acento);
+  opacity: 0;
+}
+@keyframes sl-toque {
+  0%, 100% { transform: none; }
+  35%      { transform: translateY(2px) scale(.86); }
+  60%      { transform: none; }
+}
+@keyframes sl-aro {
+  0%, 30% { opacity: 0; transform: scale(.4); }
+  45%     { opacity: .7; }
+  100%    { opacity: 0; transform: scale(2.2); }
+}
+@keyframes sl-halo {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--c-acento) 40%, transparent); }
+  100% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--c-acento) 0%, transparent); }
+}
+.sl-cta.sl-indicio .sl-cta__mano         { animation: sl-toque 1s ease-in-out .3s 2; }
+.sl-cta.sl-indicio .sl-cta__mano::after  { animation: sl-aro 1s ease-out .3s 2; }
+/* ② El control que invita: la franja, pestaña o paso que todavía no se ve,
+   la flecha que avanza, el botón que reproduce o descarga. */
+.ova-acordeon.sl-indicio .ova-acordeon__item:nth-child(2) .ova-acordeon__head,
+.ova-tabs.sl-indicio .ova-tabs__btn:nth-child(2),
+.ova-timeline-h.sl-indicio .ova-step-card:nth-child(2),
+.ova-carrusel.sl-indicio [data-ova-carrusel-next],
+.ova-audio.sl-indicio .ova-audio__play,
+.ova-beforeafter.sl-indicio .ova-beforeafter__handle,
+.sl-descarga.sl-indicio .ova-btn { animation: sl-halo 1.1s ease-out .6s 2; }
+.ova-hotspot__pulse { animation: none; }
+.ova-hotspots.sl-indicio .ova-hotspot__pulse { animation: ova-pulse 1.4s ease-out .6s 2; }
+
 /* --- Pódcast de la unidad · la barra de progreso se puede tocar ---------- */
 [data-sl-audio] .ova-audio__progress { cursor: pointer; height: 6px; }
 [data-sl-audio] .ova-audio__play:focus-visible { outline: 2px solid var(--c-calido); outline-offset: 3px; }
+
+/* =========================================================
+   RITMO VERTICAL Y HUECOS · 2026-09-29
+   ========================================================= */
+
+/* 1 · Aire alrededor de los componentes -----------------------------------
+   Los componentes del motor no traen margen propio: hasta ahora cada pantalla
+   lo resolvía con `style="margin-top:44px"` a mano, y donde faltaba el párrafo
+   quedaba pegado a la caja de arriba (visto en la Unidad 3, 2026-09-29).
+   Se fija aquí para todas las pantallas Scala. Un `style` en línea sigue
+   ganando, así que las pantallas que ya lo traen no cambian. */
+.ova-screen > :is(
+  .ova-callout, .ova-acordeon, .ova-carrusel, .ova-tabs, .ova-stepper, .ova-tabla,
+  .ova-vs, .ova-infografia, .ova-timeline, .ova-timeline-h, .ova-grid-2, .ova-quiz,
+  .sl-cifras, .sl-nota, .sl-caso, .sl-diagrama, .sl-anatomia, .sl-escenas,
+  .sl-tabla-apa, .sl-pendiente
+) {
+  margin-block: 40px;
+}
+/* El primer bloque después de la cabecera no necesita el doble de aire */
+.ova-screen__head + * { margin-top: 0; }
+
+/* 2 · Hueco de una imagen que no ha llegado -------------------------------
+   Marca el sitio de una figura o una foto que diseño gráfico todavía debe
+   entregar, con la descripción que el DI le dio. Se ve que falta; no se
+   disimula. Desaparece cuando llega el archivo. */
+.sl-pendiente {
+  display: grid;
+  gap: 14px;
+  place-items: center;
+  text-align: center;
+  padding: 44px 28px;
+  border-radius: var(--r-md);
+  background: color-mix(in srgb, var(--text-mut) 10%, var(--bg-surface));
+  border: 1px dashed color-mix(in srgb, var(--text-mut) 45%, transparent);
+  color: var(--text-mut);
+}
+.sl-pendiente__marco {
+  width: 96px; height: 72px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--text-mut) 16%, transparent);
+}
+.sl-pendiente__marco iconify-icon { font-size: 2.2rem; color: color-mix(in srgb, var(--text-mut) 70%, transparent); }
+.sl-pendiente__tag {
+  font-family: var(--font-display);
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+}
+.sl-pendiente__desc { margin: 0; max-width: 62ch; font-size: 0.9rem; line-height: 1.6; }
+.sl-pendiente + figcaption { font-size: 0.85rem; color: var(--text-mut); margin-top: 10px; }
+
+/* En portada el hueco va dentro del retrato circular */
+.sl-portada__figura .sl-pendiente {
+  aspect-ratio: 1; border-radius: 50%;
+  background: color-mix(in srgb, #ffffff 12%, transparent);
+  border-color: color-mix(in srgb, #ffffff 40%, transparent);
+  color: color-mix(in srgb, #ffffff 82%, transparent);
+  padding: 32px;
+}
+.sl-portada__figura .sl-pendiente__marco { background: color-mix(in srgb, #ffffff 16%, transparent); }
+.sl-portada__figura .sl-pendiente__marco iconify-icon { color: color-mix(in srgb, #ffffff 80%, transparent); }
+
+/* 3 · Hueco de un texto que no ha llegado ---------------------------------
+   Mismo criterio que el hueco de imagen, para un párrafo que el DI todavía
+   no trae: se ve el sitio, se dice qué debe ir ahí y no se inventa el texto.
+   Las rayas son decorativas (aria-hidden): sugieren el párrafo ausente. */
+.sl-pendiente--texto {
+  place-items: start;
+  text-align: left;
+  padding: 26px 28px;
+  gap: 12px;
+}
+.sl-pendiente__lineas {
+  display: grid;
+  gap: 9px;
+  width: 100%;
+  max-width: 62ch;
+}
+.sl-pendiente__lineas span {
+  height: 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text-mut) 22%, transparent);
+}
+.sl-pendiente__lineas span:nth-child(2) { width: 92%; }
+.sl-pendiente__lineas span:nth-child(3) { width: 64%; }
+
+/* 4 · Rótulo de un bloque ------------------------------------------------
+   El título que el DI le pone a un componente (el nombre del acordeón, del
+   carrusel, del recorrido de pasos). Va pegado al bloque que nombra. */
+.sl-rotulo {
+  margin: 40px 0 0;
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-head);
+}
+.ova-screen > .sl-rotulo + * { margin-top: 14px; }
+
+/* 4b · Campo: subtítulo con su texto ----------------------------------------
+   Varios subtítulos del mismo nivel del DI, cada uno con su párrafo (los
+   campos de «¿Qué va a lograr en esta unidad?»: resultado de aprendizaje,
+   público objetivo, qué va a aprender, evidencia). Todos pesan igual y ninguno
+   va en tarjeta. Varios campos van juntos en .sl-campos: una sola columna, un
+   campo por fila, cada uno con un filete fino arriba. Sin cuadrícula: los
+   textos del DI tienen largos muy distintos (2 a 6 líneas) y en dos columnas
+   las filas quedan desparejas (decisión del 2026-10-09).
+   Icono opcional (.sl-campo__icono): outline del set mdi, en violeta atenuado
+   al 55 % — el mismo criterio que las viñetas de lista: el amarillo es señal
+   de sección, no de ítem, y el violeta lleno significa «clicable». Es
+   decorativo (aria-hidden): el subtítulo ya dice lo que es.
+   El espacio lo pone esta regla, nunca un style en línea:
+   título de sección → campos 28 px · filete → icono 20 px · icono → subtítulo
+   12 px · subtítulo → texto 6 px · entre campos 32 px.
+   Los márgenes verticales se colapsan (gana el mayor, no se suman): por eso
+   el bloque que va bajo el título declara los 28 px enteros. Dentro de una
+   .sl-seccion se alinea con el texto del título (después del filo amarillo);
+   fuera de ella, al borde de la columna. */
+.sl-campo { margin: 32px 0 0; }
+.sl-seccion__titulo + .sl-campo,
+.sl-seccion__titulo + .sl-campos { margin-top: 28px; }
+.sl-seccion > .sl-campo,
+.sl-seccion > .sl-campos { padding-left: 22px; }
+.sl-campos {
+  display: grid;
+  gap: 32px;
+  margin: 32px 0 0;
+}
+.sl-campos > .sl-campo {
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-c);
+}
+.sl-campo__icono {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: color-mix(in srgb, var(--c-acento) 55%, transparent);
+}
+.sl-campo__titulo {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-head);
+}
+/* El texto de un campo es contenido del DI: va en el cuerpo (tamaño, peso y
+   color heredados), no en el registro de «lead», que es de lo que acompaña. */
+.sl-campo > p {
+  margin: 0;
+  max-width: 68ch;
+}
+
+/* 4c · Cuerpo: un solo tamaño para el texto del DI --------------------------
+   Todo párrafo de contenido va en el cuerpo: 16 px (1rem), peso 400,
+   interlínea 1,65, esté suelto o dentro de un componente. El motor baja a
+   .9–.98rem el texto de varias piezas; en la línea Scala no (2026-10-09,
+   INSTITUCION §2.3). Se quedan más chicos, como texto secundario, las celdas
+   de tabla, las notas y fuentes de tabla, las leyendas y pies de figura o de
+   pieza (.sl-caso__pie), las etiquetas de las actividades de arrastrar y
+   ordenar, y los rótulos de UI. Tienen tamaño propio, por diseño, la apertura,
+   la banda, la cita, el lead (.sl-seccion__lead, .ova-screen__lead) y los
+   subtítulos. Nunca un font-size en línea en el contenido: le gana a esta
+   regla. */
+.ova-callout p,
+.ova-vs__card li,
+.ova-timeline__card p,
+.ova-step-detail__tip,
+.ova-infografia__desc,
+.ova-carrusel__slide p,
+.sl-paso__desc,
+.ova-quiz__opt,
+.ova-quiz__feedback {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* 4d · Lista numerada: párrafos largos del DI en serie ------------------------
+   Para una enumeración de párrafos completos del DI (los tres «En el primer /
+   segundo / tercer tema…» de una introducción). La infografía del motor es
+   para una línea por ítem; con párrafos de 8–11 líneas el número y el icono
+   se comían un cuarto del ancho y el texto quedaba gris (≈ 4,3:1, bajo AA).
+   Misma familia que .sl-campos: sin tarjeta, filete fino arriba de cada ítem.
+   Al margen, en una columna fija (el texto alinea igual en todos): el número
+   en peso 300 y violeta al 46 % (el gesto de .sl-escena, §7.2) y, opcional,
+   el icono outline en violeta al 55 % (como .sl-campo__icono). La marca es
+   decorativa (aria-hidden): el <ol> ya numera para el lector de pantalla.
+   Espacios: bloque anterior → lista 40 px · lista → bloque siguiente 40 px ·
+   filete → contenido 20 px · entre ítems 32 px · marca → texto 24 px. En
+   ≤720 px la marca pasa a una fila encima del texto (número e icono en línea,
+   10 px antes del texto): al margen le robaba un quinto del ancho. */
+.sl-numerada {
+  list-style: none;
+  margin: 40px 0;
+  padding: 0;
+  display: grid;
+  gap: 32px;
+}
+.sl-numerada__item {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  column-gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-c);
+}
+.sl-numerada__marca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.sl-numerada__num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in srgb, var(--c-acento) 46%, transparent);
+}
+.sl-numerada__icono {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: color-mix(in srgb, var(--c-acento) 55%, transparent);
+}
+.sl-numerada__item > p { margin: 0; max-width: 68ch; }
+@media (max-width: 720px) {
+  .sl-numerada__item { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
+  .sl-numerada__marca { flex-direction: row; align-items: center; gap: 12px; }
+  .sl-numerada__num { font-size: 1.8rem; }
+}
+
+/* 5 · Temario · lo que el índice del DI declara pendiente ------------------
+   Las filas que el documento escribe pero cuyo contenido todavía no llegó.
+   No enlazan a ninguna parte: se ven apagadas y con la misma sangría que las
+   demás. Se borran del contenido cuando el envío llegue. */
+.sl-temario--pendiente { margin-top: 0; }
+.sl-temario--pendiente .sl-bloque {
+  background: transparent;
+  border-style: dashed;
+  border-left-color: color-mix(in srgb, var(--text-mut) 45%, transparent);
+  color: var(--text-mut);
+}
+.sl-temario--pendiente .sl-bloque__tag { color: var(--text-mut); }
+.sl-temario--pendiente .sl-bloque li { padding-left: 14px; }
+.sl-temario--pendiente .sl-bloque li .n--icono { color: var(--text-mut); }
