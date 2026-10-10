@@ -128,7 +128,7 @@
    ------------------------------------------------------------------
    El motor abre el globo de un `.ova-hotspot` siempre hacia abajo, centrado
    en el punto, dentro de una imagen que recorta. Un punto cerca del borde
-   inferior o lateral dejaba el texto cortado (unidad-3-v2, tema 1, punto 6,
+   inferior o lateral dejaba el texto cortado (unidad-3-con-ilustrador, tema 1, punto 6,
    2026-10-09). Aquí, al abrirlo, se mide: si no cabe abajo y sí arriba, se
    abre hacia arriba (.sl-hotspot--arriba), y si se sale por un costado de la
    imagen o de la ventana, se corre lo justo (--sl-globo-dx). El CSS de la

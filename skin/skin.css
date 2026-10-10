@@ -642,7 +642,7 @@
 /* --- Ventana de detalle con ilustración ------------------------------------
    La ventana del motor mide 560 px: una ilustración de 1200 dentro quedaba a
    menos de la mitad y sus rótulos en ~5 px. Si la ventana lleva una
-   ilustración, se ensancha (unidad-3-v2, «Volviendo al reto», 2026-10-09). */
+   ilustración, se ensancha (unidad-3-con-ilustrador, «Volviendo al reto», 2026-10-09). */
 .ova-modal__dialog:has(.sl-ilustracion) { max-width: min(900px, 94vw); }
 .ova-modal__body .sl-ilustracion { margin: 0 0 20px; }
 
@@ -1256,7 +1256,7 @@ a.sl-bloque__tag--link:focus-visible { outline: 2px solid var(--c-acento); outli
 /* --- Puntos de interés · el globo se ve entero -----------------------------
    El motor recorta la imagen (overflow:hidden, para redondear sus esquinas) y
    abre el globo siempre hacia abajo: el de un punto cerca del borde inferior
-   quedaba cortado (unidad-3-v2, tema 1, «Destrucción», 158 px fuera). Aquí la
+   quedaba cortado (unidad-3-con-ilustrador, tema 1, «Destrucción», 158 px fuera). Aquí la
    caja deja de recortar, las esquinas las redondea la propia imagen, y el
    globo cerrado no existe en el layout (display:none, no opacity: invisible
    seguía ocupando el área de scroll; ver .sl-termino). skin.js lo abre hacia
